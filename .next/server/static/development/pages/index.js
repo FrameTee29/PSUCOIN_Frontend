@@ -152,7 +152,7 @@ const Index = () => {
       lineNumber: 19,
       columnNumber: 13
     }
-  }, "JWT Token with Next"), __jsx("div", {
+  }, "JWT Token with Next"), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -178,6 +178,7 @@ const Index = () => {
       columnNumber: 28
     }
   })), __jsx("button", {
+    type: "submit",
     onClick: () => login(),
     __self: undefined,
     __source: {

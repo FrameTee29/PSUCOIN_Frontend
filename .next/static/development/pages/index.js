@@ -2875,7 +2875,7 @@ var Index = function Index() {
       lineNumber: 19,
       columnNumber: 13
     }
-  }, "JWT Token with Next"), __jsx("div", {
+  }, "JWT Token with Next"), __jsx("form", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -2905,6 +2905,7 @@ var Index = function Index() {
       columnNumber: 28
     }
   })), __jsx("button", {
+    type: "submit",
     onClick: function onClick() {
       return login();
     },
