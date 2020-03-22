@@ -104,19 +104,88 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "D:\\CoE\\CoE3\\Frontend\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
+
 const Index = () => {
+  const {
+    0: user,
+    1: setUsername
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: pass,
+    1: setPassword
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: token,
+    1: setToken
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const body = {
+    "username": "Frame",
+    "password": "076271419"
+  };
+
+  const login = async () => {
+    const result = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:3001/auth/login', {
+      username: user,
+      password: pass
+    });
+    console.log(result.data.access_token);
+  };
+
   return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3,
+      lineNumber: 18,
       columnNumber: 9
     }
-  }, "Hello");
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, "JWT Token with Next"), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, "Email : ", __jsx("input", {
+    type: "text",
+    onChange: e => setUsername(e.target.value),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 25
+    }
+  }), "Password : ", __jsx("input", {
+    type: "text",
+    onChange: e => setPassword(e.target.value),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 28
+    }
+  })), __jsx("button", {
+    onClick: () => login(),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }, "Login"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -132,6 +201,17 @@ const Index = () => {
 
 module.exports = __webpack_require__(/*! D:\CoE\CoE3\Frontend\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
