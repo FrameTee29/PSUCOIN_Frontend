@@ -2836,6 +2836,7 @@ var Index = function Index() {
     "username": "Frame",
     "password": "076271419"
   };
+  var work = false;
 
   var login = function login() {
     var result;
@@ -2852,8 +2853,11 @@ var Index = function Index() {
           case 2:
             result = _context.sent;
             console.log(result.data.access_token);
+            localStorage.setItem('login', JSON.stringify({
+              token: result.data.access_token
+            }));
 
-          case 4:
+          case 5:
           case "end":
             return _context.stop();
         }
@@ -2865,21 +2869,21 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 24,
       columnNumber: 13
     }
   }, "JWT Token with Next"), __jsx("form", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 25,
       columnNumber: 13
     }
   }, "Email : ", __jsx("input", {
@@ -2890,7 +2894,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 26,
       columnNumber: 25
     }
   }), "Password : ", __jsx("input", {
@@ -2901,8 +2905,8 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 28
+      lineNumber: 27,
+      columnNumber: 31
     }
   })), __jsx("button", {
     type: "submit",
@@ -2912,7 +2916,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 29,
       columnNumber: 13
     }
   }, "Login"));

@@ -129,6 +129,7 @@ const Index = () => {
     "username": "Frame",
     "password": "076271419"
   };
+  const work = false;
 
   const login = async () => {
     const result = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:3001/auth/login', {
@@ -136,27 +137,30 @@ const Index = () => {
       password: pass
     });
     console.log(result.data.access_token);
+    localStorage.setItem('login', JSON.stringify({
+      token: result.data.access_token
+    }));
   };
 
   return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 24,
       columnNumber: 13
     }
   }, "JWT Token with Next"), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 25,
       columnNumber: 13
     }
   }, "Email : ", __jsx("input", {
@@ -165,7 +169,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 26,
       columnNumber: 25
     }
   }), "Password : ", __jsx("input", {
@@ -174,8 +178,8 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 28
+      lineNumber: 27,
+      columnNumber: 31
     }
   })), __jsx("button", {
     type: "submit",
@@ -183,7 +187,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 29,
       columnNumber: 13
     }
   }, "Login"));
