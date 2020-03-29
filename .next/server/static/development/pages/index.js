@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\CoE\\CoE3\\Frontend\\pages\\index.js";
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -122,46 +122,77 @@ const Index = () => {
     1: setPassword
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
+    0: status,
+    1: setStatus
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
     0: token,
     1: setToken
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  const body = {
-    "username": "Frame",
-    "password": "076271419"
+  const {
+    0: profile,
+    1: setProfile
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+
+  const Checklogin = () => {
+    const resultlogin = JSON.parse(localStorage.getItem('login'));
+
+    if (resultlogin) {
+      setToken(resultlogin.token);
+    }
   };
-  const work = false;
 
   const login = async () => {
     const result = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:3001/auth/login', {
       username: user,
       password: pass
     });
-    console.log(result.data.access_token);
     localStorage.setItem('login', JSON.stringify({
       token: result.data.access_token
     }));
+    setStatus(true);
+    Checklogin();
   };
 
+  const getProfile = async () => {
+    const result = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:3001/profile', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    setProfile(JSON.stringify(result.data));
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    Checklogin();
+  }, []);
   return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 42,
       columnNumber: 9
+    }
+  }, !status ? __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 21
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
+      lineNumber: 46,
+      columnNumber: 25
     }
   }, "JWT Token with Next"), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
+      lineNumber: 47,
+      columnNumber: 25
     }
   }, "Email : ", __jsx("input", {
     type: "text",
@@ -169,8 +200,8 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 25
+      lineNumber: 48,
+      columnNumber: 37
     }
   }), "Password : ", __jsx("input", {
     type: "text",
@@ -178,8 +209,8 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 31
+      lineNumber: 49,
+      columnNumber: 40
     }
   })), __jsx("button", {
     type: "submit",
@@ -187,10 +218,26 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
+      lineNumber: 51,
+      columnNumber: 25
     }
-  }, "Login"));
+  }, "Login")) : __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 21
+    }
+  }, "Hello", __jsx("button", {
+    type: "submit",
+    onClick: () => getProfile(),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 25
+    }
+  }, "getProfile"), profile));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -204,7 +251,7 @@ const Index = () => {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\CoE\CoE3\Frontend\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! D:\CoE\PROJECT\PSUCOIN_Frontend\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

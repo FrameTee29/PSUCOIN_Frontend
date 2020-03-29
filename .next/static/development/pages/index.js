@@ -1825,10 +1825,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CCoE3%5CFrontend%5Cpages%5Cindex.js!./":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CCoE3%5CFrontend%5Cpages%5Cindex.js ***!
-  \************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js!./":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2812,7 +2812,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "D:\\CoE\\CoE3\\Frontend\\pages\\index.js";
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -2828,15 +2828,25 @@ var Index = function Index() {
       pass = _useState2[0],
       setPassword = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
-      token = _useState3[0],
-      setToken = _useState3[1];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      status = _useState3[0],
+      setStatus = _useState3[1];
 
-  var body = {
-    "username": "Frame",
-    "password": "076271419"
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
+      token = _useState4[0],
+      setToken = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+      profile = _useState5[0],
+      setProfile = _useState5[1];
+
+  var Checklogin = function Checklogin() {
+    var resultlogin = JSON.parse(localStorage.getItem('login'));
+
+    if (resultlogin) {
+      setToken(resultlogin.token);
+    }
   };
-  var work = false;
 
   var login = function login() {
     var result;
@@ -2852,12 +2862,13 @@ var Index = function Index() {
 
           case 2:
             result = _context.sent;
-            console.log(result.data.access_token);
             localStorage.setItem('login', JSON.stringify({
               token: result.data.access_token
             }));
+            setStatus(true);
+            Checklogin();
 
-          case 5:
+          case 6:
           case "end":
             return _context.stop();
         }
@@ -2865,26 +2876,61 @@ var Index = function Index() {
     }, null, null, null, Promise);
   };
 
+  var getProfile = function getProfile() {
+    var result;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getProfile$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://localhost:3001/profile', {
+              headers: {
+                'Authorization': "Bearer ".concat(token)
+              }
+            }));
+
+          case 2:
+            result = _context2.sent;
+            setProfile(JSON.stringify(result.data));
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, null, null, null, Promise);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    Checklogin();
+  }, []);
   return __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 42,
       columnNumber: 9
+    }
+  }, !status ? __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 21
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
+      lineNumber: 46,
+      columnNumber: 25
     }
   }, "JWT Token with Next"), __jsx("form", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
+      lineNumber: 47,
+      columnNumber: 25
     }
   }, "Email : ", __jsx("input", {
     type: "text",
@@ -2894,8 +2940,8 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 25
+      lineNumber: 48,
+      columnNumber: 37
     }
   }), "Password : ", __jsx("input", {
     type: "text",
@@ -2905,8 +2951,8 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 31
+      lineNumber: 49,
+      columnNumber: 40
     }
   })), __jsx("button", {
     type: "submit",
@@ -2916,10 +2962,28 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
+      lineNumber: 51,
+      columnNumber: 25
     }
-  }, "Login"));
+  }, "Login")) : __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 21
+    }
+  }, "Hello", __jsx("button", {
+    type: "submit",
+    onClick: function onClick() {
+      return getProfile();
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 25
+    }
+  }, "getProfile"), profile));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -2927,13 +2991,13 @@ var Index = function Index() {
 /***/ }),
 
 /***/ 1:
-/*!****************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CCoE3%5CFrontend%5Cpages%5Cindex.js ***!
-  \****************************************************************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CCoE3%5CFrontend%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CCoE3%5CFrontend%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
