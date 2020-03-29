@@ -2803,6 +2803,51 @@ try {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _src_components_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/components/login */ "./src/components/login.js");
+var _this = undefined,
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var Index = function Index() {
+  return __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, __jsx(_src_components_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./src/components/login.js":
+/*!*********************************!*\
+  !*** ./src/components/login.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -2812,14 +2857,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\login.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-var Index = function Index() {
+var Login = function Login() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
       user = _useState[0],
       setUsername = _useState[1];
@@ -2838,15 +2883,38 @@ var Index = function Index() {
 
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
       profile = _useState5[0],
-      setProfile = _useState5[1];
+      setProfile = _useState5[1]; // const Checklogin = () => {
+  //     const resultlogin = JSON.parse(localStorage.getItem('login'));
+  //     if (resultlogin) {
+  //         setToken(resultlogin.token);
+  //     }
+  // }
+  // const login = async () => {
+  //     const result = await axios.post('http://localhost:3001/auth/login',
+  //         { username: user, password: pass })
+  //     localStorage.setItem('login', JSON.stringify({
+  //         token: result.data.access_token
+  //     }))
+  //     setStatus(true);
+  //     Checklogin();
+  // }
+  // const getProfile = async () => {
+  //     const result = await axios.get('http://localhost:3001/profile', {headers: {'Authorization': `Bearer ${token}`}})
+  //     setProfile(JSON.stringify(result.data));
+  // }
+  // useEffect(() => {
+  //     Checklogin();
+  // }, [])
+  // const login = async () => {
+  //     const result = await axios.post('http://localhost:3001/auth/login',
+  //         { username: user, password: pass })
+  //     localStorage.setItem('login', JSON.stringify({
+  //         token: result.data.access_token
+  //     }))
+  //     setStatus(true);
+  //     Checklogin();
+  // }
 
-  var Checklogin = function Checklogin() {
-    var resultlogin = JSON.parse(localStorage.getItem('login'));
-
-    if (resultlogin) {
-      setToken(resultlogin.token);
-    }
-  };
 
   var login = function login() {
     var result;
@@ -2855,20 +2923,16 @@ var Index = function Index() {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('http://localhost:3001/auth/login', {
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('http://localhost:3001/users/signin', {
               username: user,
               password: pass
             }));
 
           case 2:
             result = _context.sent;
-            localStorage.setItem('login', JSON.stringify({
-              token: result.data.access_token
-            }));
-            setStatus(true);
-            Checklogin();
+            setProfile(result.data);
 
-          case 6:
+          case 4:
           case "end":
             return _context.stop();
         }
@@ -2876,63 +2940,35 @@ var Index = function Index() {
     }, null, null, null, Promise);
   };
 
-  var getProfile = function getProfile() {
-    var result;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getProfile$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://localhost:3001/profile', {
-              headers: {
-                'Authorization': "Bearer ".concat(token)
-              }
-            }));
-
-          case 2:
-            result = _context2.sent;
-            setProfile(JSON.stringify(result.data));
-
-          case 4:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, null, null, null, Promise);
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    Checklogin();
-  }, []);
   return __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 57,
       columnNumber: 9
     }
   }, !status ? __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 60,
       columnNumber: 21
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 61,
       columnNumber: 25
     }
-  }, "JWT Token with Next"), __jsx("form", {
+  }, "PSU PASSPORT"), __jsx("form", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 62,
       columnNumber: 25
     }
-  }, "Email : ", __jsx("input", {
+  }, "Username : ", __jsx("input", {
     type: "text",
     onChange: function onChange(e) {
       return setUsername(e.target.value);
@@ -2940,18 +2976,18 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 37
+      lineNumber: 63,
+      columnNumber: 40
     }
   }), "Password : ", __jsx("input", {
-    type: "text",
+    type: "password",
     onChange: function onChange(e) {
       return setPassword(e.target.value);
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 64,
       columnNumber: 40
     }
   })), __jsx("button", {
@@ -2962,31 +2998,20 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 66,
       columnNumber: 25
     }
-  }, "Login")) : __jsx("div", {
+  }, "Login"), JSON.stringify(profile)) : __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 70,
       columnNumber: 21
     }
-  }, "Hello", __jsx("button", {
-    type: "submit",
-    onClick: function onClick() {
-      return getProfile();
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56,
-      columnNumber: 25
-    }
-  }, "getProfile"), profile));
+  }, "Hello"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ }),
 
