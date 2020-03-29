@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -212,35 +212,42 @@ const Login = () => {
       username: user,
       password: pass
     });
-    setProfile(result.data);
+    sessionStorage.setItem('login', JSON.stringify({
+      user: result.data
+    }));
+  };
+
+  const getUser = async () => {
+    const result = sessionStorage.getItem('login');
+    console.log(result);
   };
 
   return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, !status ? __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 70,
       columnNumber: 21
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 71,
       columnNumber: 25
     }
   }, "PSU PASSPORT"), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 72,
       columnNumber: 25
     }
   }, "Username : ", __jsx("input", {
@@ -249,7 +256,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 73,
       columnNumber: 40
     }
   }), "Password : ", __jsx("input", {
@@ -258,7 +265,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 74,
       columnNumber: 40
     }
   })), __jsx("button", {
@@ -267,14 +274,23 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 76,
       columnNumber: 25
     }
-  }, "Login"), JSON.stringify(profile)) : __jsx("div", {
+  }, "Login"), __jsx("button", {
+    type: "submit",
+    onClick: () => getUser(),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 77,
+      columnNumber: 25
+    }
+  }, "Get User")) : __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
       columnNumber: 21
     }
   }, "Hello"));
@@ -284,7 +300,7 @@ const Login = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

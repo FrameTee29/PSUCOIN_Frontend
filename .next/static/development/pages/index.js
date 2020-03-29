@@ -2930,7 +2930,9 @@ var Login = function Login() {
 
           case 2:
             result = _context.sent;
-            setProfile(result.data);
+            sessionStorage.setItem('login', JSON.stringify({
+              user: result.data
+            }));
 
           case 4:
           case "end":
@@ -2940,32 +2942,49 @@ var Login = function Login() {
     }, null, null, null, Promise);
   };
 
+  var getUser = function getUser() {
+    var result;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getUser$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            result = sessionStorage.getItem('login');
+            console.log(result);
+
+          case 2:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, null, null, null, Promise);
+  };
+
   return __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, !status ? __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 70,
       columnNumber: 21
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 71,
       columnNumber: 25
     }
   }, "PSU PASSPORT"), __jsx("form", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 72,
       columnNumber: 25
     }
   }, "Username : ", __jsx("input", {
@@ -2976,7 +2995,7 @@ var Login = function Login() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 73,
       columnNumber: 40
     }
   }), "Password : ", __jsx("input", {
@@ -2987,7 +3006,7 @@ var Login = function Login() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 74,
       columnNumber: 40
     }
   })), __jsx("button", {
@@ -2998,14 +3017,25 @@ var Login = function Login() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 76,
       columnNumber: 25
     }
-  }, "Login"), JSON.stringify(profile)) : __jsx("div", {
+  }, "Login"), __jsx("button", {
+    type: "submit",
+    onClick: function onClick() {
+      return getUser();
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 77,
+      columnNumber: 25
+    }
+  }, "Get User")) : __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
       columnNumber: 21
     }
   }, "Hello"));
@@ -3015,7 +3045,7 @@ var Login = function Login() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js ***!
   \***************************************************************************************************************************/
@@ -3038,5 +3068,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

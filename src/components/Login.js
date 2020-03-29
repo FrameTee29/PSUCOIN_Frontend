@@ -50,9 +50,19 @@ const Login = () => {
     const login = async () => {
         const result = await axios.post('http://localhost:3001/users/signin',
             { username: user, password: pass })
-       setProfile(result.data);
+        sessionStorage.setItem('login', JSON.stringify({
+            user: result.data
+        }))
 
     }
+
+    const getUser = async () => {
+
+        const result = sessionStorage.getItem('login')
+        console.log(result);
+
+    }
+
     return (
         <div>
             {
@@ -64,7 +74,8 @@ const Login = () => {
                             Password : <input type="password" onChange={(e) => setPassword(e.target.value)} />
                         </form>
                         <button type="submit" onClick={() => login()}>Login</button>
-                        {JSON.stringify(profile)}
+                        <button type="submit" onClick={() => getUser()}>Get User</button>
+
                     </div>
                     :
                     <div>Hello
