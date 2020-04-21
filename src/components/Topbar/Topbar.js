@@ -1,6 +1,8 @@
 
 import styled from 'styled-components';
 import Link from 'next/link';
+import Route from 'next/router';
+import { useState, useEffect } from 'react';
 const Menubar = styled.div`
 display: flex;
 flex-direction:row;
@@ -52,7 +54,18 @@ color: rgb(0, 131, 253);
 }
 
 `
+
+const removesession = () => {
+    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('token')
+    Route.push('/')
+}
 const menubar = () => {
+    const [user, setUser] = useState('')
+
+    useEffect(() => {
+        setUser(sessionStorage.getItem('username'))
+    }, [])
     return (
         <Menubar>
             <div className="barmenu">
@@ -69,6 +82,10 @@ const menubar = () => {
                 <Link href="/transfer">
                     <button className="btn-menu">Transfer</button>
                 </Link>
+            </div>
+            <div>
+                <button className="btn-menu">{user}</button>
+                <button type="button" class="btn btn-dark" onClick={() => removesession()}>Sign out</button>
             </div>
         </Menubar>
     )
