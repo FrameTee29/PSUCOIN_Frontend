@@ -207,9 +207,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\FormLogin.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -227,6 +230,10 @@ const FormLogin = () => {
     0: password,
     1: setPassword
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: token,
+    1: setToken
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
 
   const Signin = async () => {
     const result = await axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('http://localhost:3001/auth/login', {
@@ -234,13 +241,17 @@ const FormLogin = () => {
       password: password
     });
     sessionStorage.setItem('token', result.data.access_token);
+    setToken(result.data.access_token);
+    next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/Home');
   };
+
+  const getUser = async () => {};
 
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -249,7 +260,7 @@ const FormLogin = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 68,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -257,7 +268,7 @@ const FormLogin = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 69,
       columnNumber: 17
     }
   }, "PSU PASSPORT"), __jsx("input", {
@@ -269,7 +280,7 @@ const FormLogin = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 70,
       columnNumber: 17
     }
   }), __jsx("input", {
@@ -281,7 +292,7 @@ const FormLogin = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 71,
       columnNumber: 17
     }
   }), __jsx("button", {
@@ -291,7 +302,7 @@ const FormLogin = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, "Sign in")));

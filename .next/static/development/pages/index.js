@@ -7995,6 +7995,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
 
 
 var _this = undefined,
@@ -8002,6 +8004,7 @@ var _this = undefined,
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -8019,6 +8022,10 @@ var FormLogin = function FormLogin() {
       password = _useState2[0],
       setPassword = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+      token = _useState3[0],
+      setToken = _useState3[1];
+
   var Signin = function Signin() {
     var result;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function Signin$(_context) {
@@ -8034,10 +8041,24 @@ var FormLogin = function FormLogin() {
           case 2:
             result = _context.sent;
             sessionStorage.setItem('token', result.data.access_token);
+            setToken(result.data.access_token);
+            next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/Home');
 
-          case 4:
+          case 6:
           case "end":
             return _context.stop();
+        }
+      }
+    }, null, null, null, Promise);
+  };
+
+  var getUser = function getUser() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getUser$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+          case "end":
+            return _context2.stop();
         }
       }
     }, null, null, null, Promise);
@@ -8047,7 +8068,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -8056,7 +8077,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 68,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -8064,7 +8085,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 69,
       columnNumber: 17
     }
   }, "PSU PASSPORT"), __jsx("input", {
@@ -8078,7 +8099,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 70,
       columnNumber: 17
     }
   }), __jsx("input", {
@@ -8092,7 +8113,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 71,
       columnNumber: 17
     }
   }), __jsx("button", {
@@ -8104,7 +8125,7 @@ var FormLogin = function FormLogin() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, "Sign in")));

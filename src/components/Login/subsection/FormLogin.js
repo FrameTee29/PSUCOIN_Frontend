@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Route from 'next/router';
 
 
 const StyledWrapper = styled.div`
@@ -50,10 +51,15 @@ const StyledWrapper = styled.div`
 const FormLogin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
+    const [token, setToken] = useState(null);
     const Signin = async () => {
         const result = await Axios.post('http://localhost:3001/auth/login', { username: username, password: password });
         sessionStorage.setItem('token', result.data.access_token)
+        setToken(result.data.access_token)
+        Route.push('/Home');
+    }
+
+    const getUser = async () => {
 
     }
 
