@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledWrapper = styled.div`
         display:flex;
-        background-image:url('/static/images/coin3.jpg');
+        background-image: linear-gradient(-150deg, #92e7d0,#fcf696);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

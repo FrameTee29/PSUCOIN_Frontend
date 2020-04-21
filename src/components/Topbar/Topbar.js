@@ -23,6 +23,7 @@ color: rgb(0, 131, 253);
 .PSU{
     width: 170px;
     height: 60px;
+    cursor: pointer;
 }
 
 .btn-menu{
@@ -58,7 +59,7 @@ const menubar = () => {
                 <Link href="/Home">
                     <img className="PSU" src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"></img>
                 </Link>
-                <Link href="/">
+                <Link href="/Home">
                     <button className="btn-menu">Home</button>
                 </Link>
                 <Link href="/profile">

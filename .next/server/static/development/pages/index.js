@@ -168,7 +168,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["display:flex;background-image:url('/static/images/coin3.jpg');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
+})(["display:flex;background-image:linear-gradient(-150deg,#92e7d0,#fcf696);background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
 
 const Login = () => {
   return __jsx(StyledWrapper, {
