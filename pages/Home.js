@@ -1,9 +1,8 @@
 import Login from "../src/components/Login/Login";
 import { useEffect, useState } from "react";
-import Route from 'next/router'
+import Topbar from "../src/components/Topbar/Topbar";
 
-
-const Index = () => {
+const Home = () => {
 
   const [token, setToken] = useState(null);
 
@@ -25,11 +24,11 @@ const Index = () => {
   else{
     return (
       <>
-        {Route.push('/Home')}
+        <Topbar/>
       </>
     )
   }
   
 }
 
-export default Index;
+export default Home;
