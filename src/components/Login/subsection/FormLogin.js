@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Route from 'next/router';
+import { useDispatch } from 'react-redux';
 
 
 const StyledWrapper = styled.div`
@@ -49,6 +50,9 @@ const StyledWrapper = styled.div`
 
 
 const FormLogin = () => {
+
+    const Dispatch=useDispatch();
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useState(null);

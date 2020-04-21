@@ -1,34 +1,39 @@
 import Login from "../src/components/Login/Login";
 import { useEffect, useState } from "react";
 import Topbar from "../src/components/Topbar/Topbar";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
 
-  const [token, setToken] = useState(null);
+    const user = useSelector(state=>state.User)
+    console.log(user)
 
-  const CheckToken = async () => {
-    setToken(sessionStorage.getItem('token'))
-  }
 
-  useEffect(() => {
-    CheckToken()
-  }, [])
+    const [token, setToken] = useState(null);
 
-  if(token === null){
-    return (
-      <>
-        <Login />
-      </>
-    )
-  }
-  else{
-    return (
-      <>
-        <Topbar/>
-      </>
-    )
-  }
-  
+    const CheckToken = async () => {
+        setToken(sessionStorage.getItem('token'))
+    }
+
+    useEffect(() => {
+        CheckToken()
+    }, [])
+
+    if (token === null) {
+        return (
+            <>
+                <Login />
+            </>
+        )
+    }
+    else {
+        return (
+            <>
+                <Topbar />
+            </>
+        )
+    }
+
 }
 
 export default Profile;
