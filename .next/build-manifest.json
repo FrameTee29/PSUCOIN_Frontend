@@ -8,10 +8,6 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/Home": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -28,15 +24,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/profile": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/transfer": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
