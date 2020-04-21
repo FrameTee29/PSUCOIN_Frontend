@@ -1,6 +1,5 @@
 import Document, { Head, Html, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import 'bootstrap/dist/css/bootstrap.min.css';
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()

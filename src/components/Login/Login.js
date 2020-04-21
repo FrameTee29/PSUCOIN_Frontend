@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledWrapper = styled.div`
         display:flex;
-        background-image:url('https://steemitimages.com/DQmacPhdW15QgQH7ab6Se1QKvDawFC4tFiLsgbeLhhy6MJX/bitcoin.jpg');
+        background-image:url('/static/images/coin3.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

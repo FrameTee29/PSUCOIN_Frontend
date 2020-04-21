@@ -1,19 +1,84 @@
-import { Navbar } from 'react-bootstrap';
-const Topbar = () => {
+  
+import styled from 'styled-components';
+import Link from 'next/link';
+const Menubar = styled.div`
+    display: flex;
+    width:100%;
+    flex-direction:row;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 100px;
+    align-items:center;
+    font-family:'Roboto-Black';
+    font-weight:bold;
+    background: #facb00;
+    color:white;
+    .menu-container{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+        width:15%;
+        color:white;
+        font-weight:bold;
+    }
+    .menu-button{
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        background-color: #fff;
+        border-color:white;
+        outline: none;
+        border:none;
+        font-size:20px;
+        cursor: pointer;
+        background: #facb00;
+        color:white;
+        font-weight:bold;
+        transition: background-color 0.5s;
+    }
+    .menu-button:hover{
+        background-color:white;
+        color: black;
+        border-radius: 8px;
+    }
+    .logo{
+        font-size:30px;
+        transition: font-size 0.4s;
+    }
+    .logo:hover{
+        color: white;
+        font-size:40px;
+        cursor: pointer;
+    }
+`
+const menubar = () => {
     return (
-        <Navbar bg="primary" variant="dark">
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-            <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-            </Nav>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-light">Search</Button>
-            </Form>
-        </Navbar>
+        <Menubar>
+            <div className="logo">
+                <Link href="/Home">
+                    <p>PSU COIN</p>
+                </Link>
+            </div>
+            <div className="menu-container">
+                <div>
+                    <Link href="/Home">
+                        <button className="menu-button">Home</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link href="/profile">
+                        <button className="menu-button">profile</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link href="/transfer">
+                        <button className="menu-button">transfer</button>
+                    </Link>
+                </div>
+            </div>
+        </Menubar>
     )
 }
 
-export default Topbar;
+export default menubar;

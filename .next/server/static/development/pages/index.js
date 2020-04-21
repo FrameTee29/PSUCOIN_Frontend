@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_Login_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/components/Login/Login */ "./src/components/Login/Login.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\pages\\index.js";
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subsection/FormLogin */ "./src/components/Login/subsection/FormLogin.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\src\\components\\Login\\Login.js";
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -168,7 +168,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["display:flex;background-image:url('https://steemitimages.com/DQmacPhdW15QgQH7ab6Se1QKvDawFC4tFiLsgbeLhhy6MJX/bitcoin.jpg');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
+})(["display:flex;background-image:url('/static/images/coin3.jpg');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
 
 const Login = () => {
   return __jsx(StyledWrapper, {
@@ -207,7 +207,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\src\\components\\Login\\subsection\\FormLogin.js";
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\FormLogin.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -301,14 +301,14 @@ const FormLogin = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\CoE\PROJECT\PSUCOIN_Frontend\nextjs-blog\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! D:\CoE\PROJECT\PSUCOIN_Frontend\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

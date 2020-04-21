@@ -3003,10 +3003,10 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cnextjs-blog%5Cpages%5Cindex.js!./":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cnextjs-blog%5Cpages%5Cindex.js ***!
-  \*************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js!./":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7882,7 +7882,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\pages\\index.js";
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\index.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -7946,7 +7946,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subsection/FormLogin */ "./src/components/Login/subsection/FormLogin.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 var _this = undefined,
-    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\src\\components\\Login\\Login.js";
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -7955,7 +7955,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["display:flex;background-image:url('https://steemitimages.com/DQmacPhdW15QgQH7ab6Se1QKvDawFC4tFiLsgbeLhhy6MJX/bitcoin.jpg');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
+})(["display:flex;background-image:url('/static/images/coin3.jpg');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;"]);
 
 var Login = function Login() {
   return __jsx(StyledWrapper, {
@@ -7998,7 +7998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\nextjs-blog\\src\\components\\Login\\subsection\\FormLogin.js";
+    _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\FormLogin.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -8114,14 +8114,14 @@ var FormLogin = function FormLogin() {
 
 /***/ }),
 
-/***/ 1:
-/*!*****************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cnextjs-blog%5Cpages%5Cindex.js ***!
-  \*****************************************************************************************************************************************/
+/***/ 3:
+/*!***************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cnextjs-blog%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cnextjs-blog%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CCoE%5CPROJECT%5CPSUCOIN_Frontend%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
@@ -8137,5 +8137,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
