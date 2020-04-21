@@ -1,18 +1,11 @@
 
-const initialState = {
-    user:{
-        sid:"6035512080",
-        firstname:"teeraphat"
-    }
-}
+const initialState = {}
 
-export const UserReducer =(state=initialState,action)=>{
+export const UserReducer =(states=initialState,action)=>{
     switch(action.type){
-        case 'KEEP_USER':
-            return{
-                ...state,user:action.payload
-            }
-        default:return state;
+        case 'ADD_USER':
+            return  action.frame;
+        default:return states;
     }
 
 }

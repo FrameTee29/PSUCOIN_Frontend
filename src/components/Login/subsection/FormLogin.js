@@ -51,14 +51,15 @@ const StyledWrapper = styled.div`
 
 const FormLogin = () => {
 
-    const Dispatch=useDispatch();
-
+    const dispatch=useDispatch();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useState(null);
+
     const Signin = async () => {
         const result = await Axios.post('http://localhost:3001/auth/login', { username: username, password: password });
         sessionStorage.setItem('token', result.data.access_token)
+        sessionStorage.setItem('username', username)
         setToken(result.data.access_token)
         Route.push('/Home');
     }
