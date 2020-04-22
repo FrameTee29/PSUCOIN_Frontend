@@ -107,7 +107,8 @@ const ProfileForm = (props) => {
                                     <th scope="col">#</th>
                                     <th scope="col">From</th>
                                     <th scope="col">To</th>
-                                    <th scope="col">Amout(PSUCOIN)</th>
+                                    <th scope="col">Amout</th>
+                                    <th scope="col">Detail</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -116,12 +117,14 @@ const ProfileForm = (props) => {
                                     <td>6035512080</td>
                                     <td>6035512021</td>
                                     <td>10 </td>
+                                    <td><button type="button" class="btn btn-light">Click</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
                                     <td>6035512080</td>
                                     <td>6035512100</td>
                                     <td>20 </td>
+                                    <td><button type="button" class="btn btn-light">Click</button></td>
                                 </tr>
                                 
                             </tbody>
