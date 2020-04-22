@@ -1,6 +1,7 @@
 import Login from "../src/components/Login/Login";
 import { useEffect, useState } from "react";
 import Topbar from "../src/components/Topbar/Topbar";
+import TransferForm from "../src/components/Transfer/transferForm";
 
 const Transfer = () => {
 
@@ -25,7 +26,7 @@ const Transfer = () => {
     return (
       <>
         <Topbar/>
-        
+        <TransferForm/>
       </>
     )
   }
