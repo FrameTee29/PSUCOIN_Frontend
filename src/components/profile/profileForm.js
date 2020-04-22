@@ -6,7 +6,7 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 95vh;
+    height: 94.8vh;
     background-color: #92e7d0;
     align-items: center;
     justify-content: center;
@@ -101,6 +101,31 @@ const ProfileForm = (props) => {
                     </div>
                     <div className="LayoutHistory">
                         <div class="alert alert-warning" role="alert">HISTORY</div>
+                        <table class="table">
+                            <thead class="table-success">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">From</th>
+                                    <th scope="col">To</th>
+                                    <th scope="col">Amout(PSUCOIN)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>6035512080</td>
+                                    <td>6035512021</td>
+                                    <td>10 </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>6035512080</td>
+                                    <td>6035512100</td>
+                                    <td>20 </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
