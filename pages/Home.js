@@ -1,6 +1,7 @@
 import Login from "../src/components/Login/Login";
 import { useEffect, useState } from "react";
 import Topbar from "../src/components/Topbar/Topbar";
+import HomeForm from "../src/components/Home/HomeForm";
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
     return (
       <>
         <Topbar/>
+        <HomeForm/>
       </>
     )
   }
