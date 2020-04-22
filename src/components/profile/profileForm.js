@@ -18,7 +18,6 @@ const StyledWrapper = styled.div`
         height: 80vh;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;   
     }
     .LayoutBox{
         display: flex;
