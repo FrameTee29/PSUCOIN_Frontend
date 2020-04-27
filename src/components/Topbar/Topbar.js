@@ -90,7 +90,7 @@ const menubar = props => {
                     <div>
                         <DrawerToggleButton click={props.drawerToggleClickHandler} />
                     </div>
-                    <div className="toolbar_logo"><a>PSU COIN</a></div>
+                    <div className="toolbar_logo"><Link href="/Home"><a>PSU COIN</a></Link></div>
                 </div>
 
                 <div>

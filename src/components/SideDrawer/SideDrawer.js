@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Route from 'next/router';
 
 const Side_drawer = styled.nav`
 
@@ -67,6 +68,11 @@ const SideDrawer = props => {
         <Side_drawer>
             <nav className={drawerClasses}>
                 <ul>
+                    <li>
+                        <Link href="/Home">
+                            <a>Home</a>
+                        </Link>
+                    </li>
                     <li>
                         <Link href="/profile">
                             <a>Profile</a>
