@@ -43,7 +43,7 @@ const Toolbar = styled.header`
 
     .toolbar_navigation-items a:hover,
     .toolbar_navigation-items a:active{
-        color:blue;
+        color:#92e7d0;
         text-decoration:none;
     }
 
