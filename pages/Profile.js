@@ -4,6 +4,7 @@ import Topbar from "../src/components/Topbar/Topbar";
 import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import ProfileForm from "../src/components/profile/profileForm";
+import SideDrawer from "../src/components/SideDrawer/SideDrawer";
 
 const Profile = () => {
 
@@ -27,10 +28,13 @@ const Profile = () => {
     }
     else {
         return (
-            <>
+            <div style={{height:'100%'}}>
                 <Topbar />
-                <ProfileForm/>
-            </>
+                <SideDrawer/>
+                <main style={{marginTop:'64px'}}>
+                    <ProfileForm/>
+                </main>
+            </div>
         )
     }
 
