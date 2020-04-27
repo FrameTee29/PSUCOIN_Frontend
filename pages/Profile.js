@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import ProfileForm from "../src/components/profile/profileForm";
 import SideDrawer from "../src/components/SideDrawer/SideDrawer";
+import Backdrop from "../src/components/Backdrop/Backdrop";
 
 const Profile = () => {
 
@@ -31,6 +32,7 @@ const Profile = () => {
             <div style={{height:'100%'}}>
                 <Topbar />
                 <SideDrawer/>
+                <Backdrop />
                 <main style={{marginTop:'64px'}}>
                     <ProfileForm/>
                 </main>
