@@ -3,55 +3,26 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Route from 'next/router';
 import { useState, useEffect } from 'react';
-const Menubar = styled.div`
-display: flex;
-flex-direction:row;
-height: 50px;
-background-color: #ffffff;
-align-items:center;
-justify-content: space-between;
-font-family: 'Mali', cursive;
-font-weight:bold;
-padding:5px;
-color: rgb(0, 131, 253);
 
-.barmenu{
-    display: flex;
-    width: 600px;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-around;
-}
-.PSU{
-    width: 170px;
-    height: 60px;
-    cursor: pointer;
-}
+const Toolbar = styled.header`
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: white;
+    height:60px;
 
-.btn-menu{
-    cursor: pointer;
-    background-color: white;
-    border: none;
-    outline: none;
-    font-family: 'Mali', cursive;
-    font-size: 15px;
-    font-weight: 700;
-    transition: background-color 0.5s,font-weight 1s,border-radius 1s;
-}
-.btn-menu:hover{
-    background-color: #92e7d0;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    height: 30px;
-    font-size: 15px;
-    border-radius: 20px;
-    font-family: 'Mali', cursive;
-}
-.alink{
-    color:black;
-    text-decoration: none;
-}
+    .toolbar_navigation{
+        display:flex;
+        
+    }
+
+    .toolbar_logo{
+        color:black;
+        text-decoration:none;
+        font-size: 2rem
+    }
+
 
 `
 
@@ -67,27 +38,19 @@ const menubar = () => {
         setUser(sessionStorage.getItem('username'))
     }, [])
     return (
-        <Menubar>
-            {/* <div className="barmenu">
-                <Link href="/Home">
-                    <img className="PSU" src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"></img>
-                </Link>
-                <Link href="/Home">
-                    <button className="btn-menu">Home</button>
-                </Link>
-                <Link href="/profile">
-                    <button className="btn-menu">Profile</button>
-                </Link>
-                <button className="btn-menu"><a className="alink" href="https://miniprojectclient.firebaseapp.com/">Activity</a></button>
-                <Link href="/transfer">
-                    <button className="btn-menu">Transfer</button>
-                </Link>
-            </div>
-            <div>
-                <button className="btn-menu">{user}</button>
-                <button type="button" class="btn btn-dark" onClick={() => removesession()}>Sign out</button>
-            </div> */}
-        </Menubar>
+        <Toolbar>
+            <nav className="toolbar_navigation">
+                <div></div>
+                <div className="toolbar_logo">PSU COIN</div>
+                <div className="toolbar_navigation-items">
+                    <ul>
+                        <li>Profile</li>
+                        <li>Transfer</li>
+                        <li>Activity</li>
+                    </ul>
+                </div>
+            </nav>
+        </Toolbar>
     )
 }
 
