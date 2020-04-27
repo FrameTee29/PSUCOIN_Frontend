@@ -7,7 +7,7 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     width: 100%;
     height: 94.8vh;
-    background-color: #92e7d0;
+    background-color: white;
     align-items: center;
     justify-content: center;
     .innerContainer{
