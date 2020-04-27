@@ -14,13 +14,37 @@ const Toolbar = styled.header`
 
     .toolbar_navigation{
         display:flex;
-        
+        height:100%;
+        padding: 0px 1rem;
+        align-items:center;
     }
 
-    .toolbar_logo{
+    .toolbar_logo a{
         color:black;
         text-decoration:none;
         font-size: 2rem
+    }
+
+    .toolbar_navigation-items a{
+        color:black;
+        text-decoration:none;
+    }
+
+    .toolbar_navigation-items ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:flex;
+    }
+
+    .toolbar_navigation-items li{
+        padding: 0 0.5rem;
+    }
+
+    .toolbar_navigation-items a:hover,
+    .toolbar_navigation-items a:active{
+        color:blue;
+        text-decoration:none;
     }
 
 
@@ -41,12 +65,12 @@ const menubar = () => {
         <Toolbar>
             <nav className="toolbar_navigation">
                 <div></div>
-                <div className="toolbar_logo">PSU COIN</div>
+                <div className="toolbar_logo"><a>PSU COIN</a></div>
                 <div className="toolbar_navigation-items">
                     <ul>
-                        <li>Profile</li>
-                        <li>Transfer</li>
-                        <li>Activity</li>
+                        <li><a>Profile</a></li>
+                        <li><a>Transfer</a></li>
+                        <li><a>Activity</a></li>
                     </ul>
                 </div>
             </nav>
