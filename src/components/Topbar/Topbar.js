@@ -60,7 +60,8 @@ const removesession = () => {
     sessionStorage.removeItem('token')
     Route.push('/')
 }
-const menubar = () => {
+
+const menubar = props => {
     const [user, setUser] = useState('')
 
     useEffect(() => {
@@ -70,7 +71,7 @@ const menubar = () => {
         <Toolbar>
             <nav className="toolbar_navigation">
                 <div>
-                    <DrawerToggleButton/>
+                    <DrawerToggleButton click={props.drawerToggleClickHandler}/>
                 </div>
                 <div className="toolbar_logo"><a>PSU COIN</a></div>
                 <div className="toolbar_navigation-items">

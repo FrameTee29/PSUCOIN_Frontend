@@ -30,7 +30,7 @@ const Side_drawer = styled.nav`
         font-size: 1.2rem;
     }
 
-    a:hover{
+    a:hover,a:active{
         color: orange;
         text-decoration:none;
         font-size: 1.2rem;

@@ -24,7 +24,7 @@ const Toggle_button= styled.button`
 `
 
 const DrawerToggleButton = props =>(
-    <Toggle_button>
+    <Toggle_button  onClick={props.click}>
         <div className="toggle-button_line" />
         <div className="toggle-button_line" />
         <div className="toggle-button_line" />

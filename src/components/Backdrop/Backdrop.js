@@ -14,7 +14,7 @@ const Backdrop_div = styled.nav`
 `
 
 const Backdrop = props =>(
-    <Backdrop_div />
+    <Backdrop_div onClick={props.click}/>
 )
 
 export default Backdrop;

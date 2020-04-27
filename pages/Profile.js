@@ -10,15 +10,25 @@ import Backdrop from "../src/components/Backdrop/Backdrop";
 const Profile = () => {
 
     const [token, setToken] = useState(null);
+    const [sideDrawerOpen,setSideDrawerOpen] = useState(false)
 
-    const CheckToken = async () => {
-        setToken(sessionStorage.getItem('token'))
+    const drawerToggleClickHandler = () => {
+        setSideDrawerOpen(!sideDrawerOpen)
+    };
 
+    const backdropClickHandler=()=>{
+        setSideDrawerOpen(false);
     }
 
+
+
     useEffect(() => {
-        CheckToken()
+        setToken(sessionStorage.getItem('token'))
     }, [])
+
+
+    let sideDrawer;
+    let backdrop;
 
     if (token === null) {
         return (
@@ -28,13 +38,19 @@ const Profile = () => {
         )
     }
     else {
+
+        if(sideDrawerOpen){
+            sideDrawer=<SideDrawer />;
+            backdrop=<Backdrop  click={backdropClickHandler}/>;
+        }
+
         return (
-            <div style={{height:'100%'}}>
-                <Topbar />
-                <SideDrawer/>
-                <Backdrop />
-                <main style={{marginTop:'64px'}}>
-                    <ProfileForm/>
+            <div style={{ height: '100%' }}>
+                <Topbar  drawerToggleClickHandler={drawerToggleClickHandler}/>
+                {sideDrawer}
+                {backdrop}
+                <main style={{ marginTop: '64px' }}>
+                    <ProfileForm />
                 </main>
             </div>
         )
