@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Route from 'next/router';
 import { useState, useEffect } from 'react';
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 
 const Toolbar = styled.header`
     position:fixed;
@@ -19,10 +20,14 @@ const Toolbar = styled.header`
         align-items:center;
     }
 
+    .toolbar_logo{
+        margin-left:0.5rem;
+    }
+
     .toolbar_logo a{
         color:black;
         text-decoration:none;
-        font-size: 2rem
+        font-size: 1.5rem
     }
 
     .toolbar_navigation-items a{
@@ -64,7 +69,9 @@ const menubar = () => {
     return (
         <Toolbar>
             <nav className="toolbar_navigation">
-                <div></div>
+                <div>
+                    <DrawerToggleButton/>
+                </div>
                 <div className="toolbar_logo"><a>PSU COIN</a></div>
                 <div className="toolbar_navigation-items">
                     <ul>
