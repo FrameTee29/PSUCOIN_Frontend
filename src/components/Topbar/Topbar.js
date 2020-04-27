@@ -96,9 +96,17 @@ const menubar = props => {
                 <div>
                     <div className="toolbar_navigation-items">
                         <ul>
-                            <li><a>Profile</a></li>
-                            <li><a>Transfer</a></li>
-                            <li><a>Activity</a></li>
+                            <li>
+                                <Link href="/profile">
+                                    <a>Profile</a>
+                                </Link>
+                            </li>
+                            <li><a href="https://miniprojectclient.firebaseapp.com/">Activity</a></li>
+                            <li>
+                                <Link href="/transfer">
+                                    <a>Transfer</a>
+                                </Link>
+                            </li>
                             <li><a onClick={() => removesession()}>Sign out</a></li>
                         </ul>
                     </div>

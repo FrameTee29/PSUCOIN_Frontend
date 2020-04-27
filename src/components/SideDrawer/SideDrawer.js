@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const Side_drawer = styled.nav`
 
@@ -33,7 +34,7 @@ const Side_drawer = styled.nav`
     }
 
     a{
-        color: #521751;
+        color: black;
         text-decoration:none;
         font-size: 1.2rem;
     }
@@ -52,6 +53,12 @@ const SideDrawer = props => {
 
     let drawerClasses = 'side-drawer';
 
+    const removesession = () => {
+        sessionStorage.removeItem('username')
+        sessionStorage.removeItem('token')
+        Route.push('/')
+    }
+
     if (props.show) {
         drawerClasses = 'side-drawer open';
     }
@@ -60,9 +67,18 @@ const SideDrawer = props => {
         <Side_drawer>
             <nav className={drawerClasses}>
                 <ul>
-                    <li><a>Profile</a></li>
-                    <li><a>Activity</a></li>
-                    <li><a>Transfer</a></li>
+                    <li>
+                        <Link href="/profile">
+                            <a>Profile</a>
+                        </Link>
+                    </li>
+                    <li><a href="https://miniprojectclient.firebaseapp.com/">Activity</a></li>
+                    <li>
+                        <Link href="/transfer">
+                            <a>Transfer</a>
+                        </Link>
+                    </li>
+                    <li><a onClick={() => removesession()}>Sign out</a></li>
                 </ul>
             </nav>
         </Side_drawer>
