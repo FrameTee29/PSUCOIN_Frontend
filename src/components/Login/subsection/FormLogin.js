@@ -7,10 +7,12 @@ import { useDispatch } from 'react-redux';
 
 const StyledWrapper = styled.div`
 
+    display:block;
+
         
     @media (min-width: 320px){
         .heightForm{
-            display:flex;
+            display:block;
             align-items:center;
             justify-content:center;
             flex-direction:column;
@@ -18,11 +20,12 @@ const StyledWrapper = styled.div`
             height:400px;
             background-color:white;
             border-radius:20px;
+            box-shadow: 0px 0px 5px 4px  #888888;
             }
     }
     @media (min-width: 375px){
         .heightForm{
-            display:flex;
+            display:block;
             align-items:center;
             justify-content:center;
             flex-direction:column;
@@ -34,7 +37,7 @@ const StyledWrapper = styled.div`
     }
     @media (min-width: 2560px){
         .heightForm{
-            display:flex;
+            display:block;
             align-items:center;
             justify-content:center;
             flex-direction:column;
@@ -71,10 +74,13 @@ const FormLogin = () => {
     return (
         <StyledWrapper>
             <form class="text-center border border-light p-5 heightForm" action="#!">
+                <p class="h4 mb-4">SIGN IN</p>
                 <p class="h4 mb-4">PSU PASSPORT</p>
+                <br></br>
                 <input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Username" onChange={e => setUsername(e.target.value)} />
                 <input type="password" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-                <button class="btn btn-info btn-block" type="submit" onClick={() => Signin()}>Sign in</button>
+                <br></br>
+                <button class="btn btn-light btn-block" type="submit" onClick={() => Signin()}>Sign in</button>
             </form>
         </StyledWrapper >
     )
