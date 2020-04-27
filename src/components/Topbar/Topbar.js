@@ -68,7 +68,7 @@ const menubar = () => {
     }, [])
     return (
         <Menubar>
-            <div className="barmenu">
+            {/* <div className="barmenu">
                 <Link href="/Home">
                     <img className="PSU" src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"></img>
                 </Link>
@@ -86,7 +86,7 @@ const menubar = () => {
             <div>
                 <button className="btn-menu">{user}</button>
                 <button type="button" class="btn btn-dark" onClick={() => removesession()}>Sign out</button>
-            </div>
+            </div> */}
         </Menubar>
     )
 }
