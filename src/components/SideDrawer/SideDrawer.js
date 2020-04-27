@@ -2,16 +2,24 @@ import styled from 'styled-components';
 
 const Side_drawer = styled.nav`
 
-    height:100%;
-    background: white;
-    box-shadow:2px 0px 5px rgba(0,0,0,0.5);
-    position:fixed;
-    top:0;
-    left:0;
-    width:70%;
-    max-width:400px;
-    z-index:200;
+    .side-drawer{
+        height:100%;
+        background: white;
+        box-shadow:1px 0px 7px rgba(0,0,0,0.5);
+        position:fixed;
+        top:0;
+        left:0;
+        width:70%;
+        max-width:400px;
+        z-index:200;
+        transform:translateX(-100%);
+        transition: transform 0.5s ease-out;
 
+    }
+    .side-drawer.open{
+        transform:translateX(0);
+    }
+    
     ul{
         height:100%;
         list-style:none;
@@ -35,17 +43,30 @@ const Side_drawer = styled.nav`
         text-decoration:none;
         font-size: 1.2rem;
     }
+
+    
 `
 
 
-const SideDrawer = props =>(
-    <Side_drawer>
-        <ul>
-            <li><a>Profile</a></li>
-            <li><a>Activity</a></li>
-            <li><a>Transfer</a></li>
-        </ul>
-    </Side_drawer>
-)
+const SideDrawer = props => {
+
+    let drawerClasses = 'side-drawer';
+
+    if (props.show) {
+        drawerClasses = 'side-drawer open';
+    }
+
+    return (
+        <Side_drawer>
+            <nav className={drawerClasses}>
+                <ul>
+                    <li><a>Profile</a></li>
+                    <li><a>Activity</a></li>
+                    <li><a>Transfer</a></li>
+                </ul>
+            </nav>
+        </Side_drawer>
+    )
+}
 
 export default SideDrawer;

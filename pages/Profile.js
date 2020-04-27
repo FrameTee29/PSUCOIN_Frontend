@@ -27,7 +27,6 @@ const Profile = () => {
     }, [])
 
 
-    let sideDrawer;
     let backdrop;
 
     if (token === null) {
@@ -40,14 +39,13 @@ const Profile = () => {
     else {
 
         if(sideDrawerOpen){
-            sideDrawer=<SideDrawer />;
             backdrop=<Backdrop  click={backdropClickHandler}/>;
         }
 
         return (
             <div style={{ height: '100%' }}>
                 <Topbar  drawerToggleClickHandler={drawerToggleClickHandler}/>
-                {sideDrawer}
+                <SideDrawer show={sideDrawerOpen} />
                 {backdrop}
                 <main style={{ marginTop: '64px' }}>
                     <ProfileForm />
