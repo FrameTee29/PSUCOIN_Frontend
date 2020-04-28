@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import Profile from '../../../pages/Profile';
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -71,11 +72,14 @@ const StyledWrapper = styled.div`
 const ProfileForm = (props) => {
 
     const [username, setUsername] = useState('');
-    const [profile, setProfile] = useState({})
+    const [profileuser, setProfile] = useState({});
+    const [key, setKey] = useState({});
 
     const getUser = async () => {
         const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
-        setProfile(user.data)
+        setProfile(user.data[0])
+        setKey(user.data[0].profile)
+        
     }
 
     useEffect(() => {
@@ -88,13 +92,13 @@ const ProfileForm = (props) => {
                 <div className="LayoutBox">
                     <div className="LayoutProfile">
                         <img className="QRcode" src="https://th.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/basic_market/generator/dist/generator/assets/images/websiteQRCode_noFrame.png"></img>
-                        <div>0 PSUCOIN</div>
+                        <div>{key.coin} PSUCOIN</div>
                         <div className="DetailBox">
-                            <div class="alert alert-primary DetailText" role="alert"><div className="Boxtext1">รหัสนักศึกษา</div><div>{profile.sid}</div></div>
-                            <div class="alert alert-secondary DetailText" role="alert"><div className="Boxtext1">ชื่อ</div><div>{profile.firstname}</div></div>
-                            <div class="alert alert-success DetailText" role="alert"><div className="Boxtext1">นามสกุล</div><div>{profile.lastname}</div></div>
-                            <div class="alert alert-danger DetailText" role="alert"><div className="Boxtext1">เลขบัตรประชาชน</div><div>{profile.cid}</div></div>
-                            <div class="alert alert-warning" role="alert"><div className="Boxtext1">Public Key</div><div>0x35dd8Bcd4f864835cc1D23Eb459506bdA8983cB2</div></div>
+                            <div class="alert alert-primary DetailText" role="alert"><div className="Boxtext1">รหัสนักศึกษา</div><div>{profileuser.sid}</div></div>
+                            <div class="alert alert-secondary DetailText" role="alert"><div className="Boxtext1">ชื่อ</div><div>{profileuser.firstname}</div></div>
+                            <div class="alert alert-success DetailText" role="alert"><div className="Boxtext1">นามสกุล</div><div>{profileuser.lastname}</div></div>
+                            <div class="alert alert-danger DetailText" role="alert"><div className="Boxtext1">เลขบัตรประชาชน</div><div>{profileuser.cid}</div></div>
+                            <div class="alert alert-warning" role="alert"><div className="Boxtext1">Public Key</div><div>{key.publickey}</div></div>
                             <div><button type="button" class="btn btn-info">Private Key</button></div>
                         </div>
 
@@ -126,12 +130,12 @@ const ProfileForm = (props) => {
                                     <td>20 </td>
                                     <td><button type="button" class="btn btn-light">Click</button></td>
                                 </tr>
-                                
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+            
         </StyledWrapper>
     )
 }
