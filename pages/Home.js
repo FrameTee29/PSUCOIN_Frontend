@@ -31,7 +31,7 @@ const Home = () => {
         <SideDrawer show={sideDrawerOpen} />
         {backdrop}
         <main style={{ marginTop: '64px' }}>
-          <WithAuth data={HomeForm}/>
+          <WithAuth component={HomeForm}/>
         </main>
       </div>
     )

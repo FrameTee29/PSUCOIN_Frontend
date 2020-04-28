@@ -33,7 +33,7 @@ const Profile = () => {
             <SideDrawer show={sideDrawerOpen} />
             {backdrop}
             <main style={{ marginTop: '64px' }}>
-                <WithAuth data={ProfileForm} />
+                <WithAuth component={ProfileForm} />
             </main>
         </div>
     )

@@ -1231,7 +1231,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const WithAuth = props => {
-  const WithAuthComponent = props.data;
+  const WithAuthComponent = props.component;
   const {
     0: token,
     1: setToken

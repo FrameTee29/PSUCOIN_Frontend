@@ -28,7 +28,7 @@ const Transfer = () => {
       <SideDrawer show={sideDrawerOpen} />
       {backdrop}
       <main style={{ marginTop: '64px' }}>
-        <WithAuth data={TransferForm} />
+        <WithAuth component={TransferForm} />
       </main>
     </div>
   )
