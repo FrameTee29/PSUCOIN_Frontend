@@ -1231,7 +1231,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const WithAuth = props => {
-  const Newprops = props.data;
+  const WithAuthComponent = props.data;
   const {
     0: token,
     1: setToken
@@ -1257,7 +1257,7 @@ const WithAuth = props => {
         lineNumber: 26,
         columnNumber: 13
       }
-    }, __jsx(Newprops, {
+    }, __jsx(WithAuthComponent, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,

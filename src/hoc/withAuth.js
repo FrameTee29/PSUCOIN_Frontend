@@ -5,7 +5,7 @@ import Route from 'next/router'
 
 const WithAuth = (props) => {
 
-    const Newprops = props.data;
+    const WithAuthComponent = props.data;
 
     const [token, setToken] = useState(null);
 
@@ -23,7 +23,7 @@ const WithAuth = (props) => {
     }
     else {
         return (
-            <div><Newprops /></div>
+            <div><WithAuthComponent /></div>
         )
     }
 
