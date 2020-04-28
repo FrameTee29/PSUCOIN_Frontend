@@ -27,7 +27,7 @@ const HomeForm = (props) => {
     return (
         <StyledWrapper>
             <div className="innerContainer">
-              5555
+              HOME
             </div>
         </StyledWrapper>
     )

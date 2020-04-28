@@ -23,7 +23,7 @@ const TransferForm = () => {
     return (
         <StyledWrapper>
             <div className="innerContainer">
-
+                Transfer
             </div>
         </StyledWrapper>
     )
