@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
         width:400px;
     }
     .QRcode{
-        width:200px;
+        width:150px;
     }
     .DetailBox{
         display: flex;
@@ -67,10 +67,14 @@ const StyledWrapper = styled.div`
         width:170px;
         font-weight: 700;
     }
+    .Sizebox{
+        max-width:404px;
+        word-wrap: break-word;
+    }
 `
 
 const ProfileForm = (props) => {
-
+    const [statusprivatekey, setStatusprivatekey] = useState(false)
     const [username, setUsername] = useState('');
     const [profileuser, setProfile] = useState({});
     const [key, setKey] = useState({});
@@ -79,8 +83,9 @@ const ProfileForm = (props) => {
         const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
         setProfile(user.data[0])
         setKey(user.data[0].profile)
-        
+
     }
+    
 
     useEffect(() => {
         getUser()
@@ -99,7 +104,10 @@ const ProfileForm = (props) => {
                             <div class="alert alert-success DetailText" role="alert"><div className="Boxtext1">นามสกุล</div><div>{profileuser.lastname}</div></div>
                             <div class="alert alert-danger DetailText" role="alert"><div className="Boxtext1">เลขบัตรประชาชน</div><div>{profileuser.cid}</div></div>
                             <div class="alert alert-warning" role="alert"><div className="Boxtext1">Public Key</div><div>{key.publickey}</div></div>
-                            <div><button type="button" class="btn btn-info">Private Key</button></div>
+                            <div>{!statusprivatekey?
+                            <button type="button" class="btn btn-info" onClick={()=>setStatusprivatekey(true)}>Private Key</button>
+                            :
+                            <div class="alert alert-warning Sizebox" role="alert" onClick={()=>setStatusprivatekey(true)}><div className="Boxtext1">Private Key</div><div>{key.privatekey}</div></div>}</div>
                         </div>
 
                     </div>
@@ -135,7 +143,7 @@ const ProfileForm = (props) => {
                     </div>
                 </div>
             </div>
-            
+
         </StyledWrapper>
     )
 }
