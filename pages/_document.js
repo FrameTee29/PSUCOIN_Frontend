@@ -1,5 +1,6 @@
 import Document, { Head, Html, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import WithAuth from '../src/hoc/withAuth'
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()

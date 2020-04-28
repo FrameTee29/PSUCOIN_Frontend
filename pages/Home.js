@@ -4,10 +4,11 @@ import Topbar from "../src/components/Topbar/Topbar";
 import HomeForm from "../src/components/Home/HomeForm";
 import SideDrawer from "../src/components/SideDrawer/SideDrawer";
 import Backdrop from "../src/components/Backdrop/Backdrop";
+import WithAuth from "../src/hoc/withAuth";
+
 
 const Home = () => {
   let backdrop;
-  const [token, setToken] = useState(null);
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
 
   const drawerToggleClickHandler = () => {
@@ -18,20 +19,6 @@ const Home = () => {
     setSideDrawerOpen(false);
   }
 
-
-
-  useEffect(() => {
-    setToken(sessionStorage.getItem('token'))
-  }, [])
-
-  if (token === null) {
-    return (
-      <>
-        <Login />
-      </>
-    )
-  }
-  else {
 
     if (sideDrawerOpen) {
       backdrop = <Backdrop click={backdropClickHandler} />;
@@ -44,11 +31,11 @@ const Home = () => {
         <SideDrawer show={sideDrawerOpen} />
         {backdrop}
         <main style={{ marginTop: '64px' }}>
-          <HomeForm />
+          <WithAuth data={HomeForm}/>
         </main>
       </div>
     )
-  }
+
 
 }
 
