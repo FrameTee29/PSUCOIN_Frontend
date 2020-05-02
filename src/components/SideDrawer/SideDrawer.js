@@ -6,7 +6,10 @@ const Side_drawer = styled.nav`
 
     .side-drawer{
         height:100%;
-        background: white;
+        background-image: url('/static/images/coin4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         box-shadow:1px 0px 7px rgba(0,0,0,0.5);
         position:fixed;
         top:0;
@@ -32,15 +35,26 @@ const Side_drawer = styled.nav`
         display:flex;
         flex-direction:column;
         // justify-content:center;
+        padding-inline-start: 0px;
     }
 
     li{
-        margin: 0.5rem 0;
-        box-shadow: rgba(0,0,0,0.5)
+        margin: 0.3rem;
+        box-shadow:0px 0px 3px 0px rgba(0,0,0,0.4);
+        text-align: center;
+        transition: box-shadow 0.5s;
+        background-color:black;
+        border-radius:10px;      
+    }
+    li:hover,li:active{
+        cursor:pointer;
+        box-shadow:0px 0px 7px 0px rgba(0,0,0,0.8);
+        color: orange;
+        text-decoration:none;
     }
 
     a{
-        color: black;
+        color:white;
         text-decoration:none;
         font-size: 1.2rem;
     }
@@ -49,6 +63,17 @@ const Side_drawer = styled.nav`
         color: orange;
         text-decoration:none;
         font-size: 1.2rem;
+    }
+
+    .box-li{
+        display:flex;
+        box-shadow:0px 0px 2px 0px rgba(0,0,0,0.4);
+        align-items:center;
+        justify-content:center;
+        
+    }
+    .psulogo{
+        max-width:300px;
     }
 
     

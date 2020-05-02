@@ -1007,26 +1007,52 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         lineNumber: 40,
         columnNumber: 11
       }
-    })), __jsx("body", {
+    }), __jsx("link", {
+      href: "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css",
+      rel: "stylesheet",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 11
+      }
+    }), __jsx("script", {
+      src: "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/icon?family=Material+Icons",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43,
-        columnNumber: 9
+        columnNumber: 11
+      }
+    })), __jsx("body", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 11
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
-        columnNumber: 11
+        lineNumber: 48,
+        columnNumber: 13
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
-        columnNumber: 11
+        lineNumber: 49,
+        columnNumber: 13
       }
     })));
   }
