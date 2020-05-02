@@ -10,10 +10,15 @@ const Toolbar = styled.header`
     top:0;
     left:0;
     width:100%;
-    background: white;
+    // background: white;
+    background-image: url('/static/images/coin4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height:60px;
     font-family:'BalooPaaji2-Bold';
     font-weight:700;
+    
 
     .toolbar_navigation{
         display:flex;
@@ -32,6 +37,7 @@ const Toolbar = styled.header`
     .toolbar_logo{
         font-weight:700;
         margin-left:0.5rem;
+        
     }
 
     .toolbar_logo a{
@@ -41,7 +47,7 @@ const Toolbar = styled.header`
     }
 
     .toolbar_navigation-items a{
-        color:black;
+        color:white;
         text-decoration:none;
     }
 
@@ -92,7 +98,7 @@ const menubar = props => {
                     <div>
                         <DrawerToggleButton click={props.drawerToggleClickHandler} />
                     </div>
-                    <div className="toolbar_logo"><Link href="/Home"><a>PSU COIN</a></Link></div>
+                    <div className="toolbar_logo"><Link href="/Home"><a style={{color:'white'}}>PSU COIN</a></Link></div>
                 </div>
 
                 <div>

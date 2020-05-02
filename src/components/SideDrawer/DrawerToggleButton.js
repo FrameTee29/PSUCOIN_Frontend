@@ -17,8 +17,8 @@ const Toggle_button= styled.button`
 
     .toggle-button_line{
         width: 30px;
-        height: 2px;
-        background: black;
+        height: 3px;
+        background: white;
     }
     
 `
