@@ -35,21 +35,21 @@ const Side_drawer = styled.nav`
         display:flex;
         flex-direction:column;
         // justify-content:center;
-        padding-inline-start: 0px;
+        padding-inline-start:0px;
+        margin-top:40px;
     }
 
     li{
         margin: 0.3rem;
         box-shadow:0px 0px 3px 0px rgba(0,0,0,0.4);
         text-align: center;
-        transition: box-shadow 0.5s;
+        transition: box-shadow 0.25s;
         background-color:black;
         border-radius:10px;      
     }
     li:hover,li:active{
         cursor:pointer;
-        box-shadow:0px 0px 7px 0px rgba(0,0,0,0.8);
-        color: orange;
+        box-shadow:0px 0px 7px 0px rgba(255,159,0,0.8);
         text-decoration:none;
     }
 
@@ -98,22 +98,24 @@ const SideDrawer = props => {
         <Side_drawer>
             <nav className={drawerClasses}>
                 <ul>
-                    <li>
-                        <Link href="/Home">
+                    <Link href="/Home">
+                        <li>
                             <a>Home</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/profile">
+                        </li>
+                    </Link>
+
+                    <Link href="/profile">
+                        <li>
                             <a>Profile</a>
-                        </Link>
-                    </li>
-                    <li><a href="https://miniprojectclient.firebaseapp.com/">Activity</a></li>
-                    <li>
-                        <Link href="/transfer">
-                            <a>Transfer</a>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
+
+                    <li><a href="https://miniprojectclient.firebaseapp.com/"> Activity</a></li>
+
+                    <Link href="/transfer">
+                        <li><a>Transfer</a></li>
+                    </Link>
+
                     <li><a onClick={() => removesession()}>Sign out</a></li>
                 </ul>
             </nav>
