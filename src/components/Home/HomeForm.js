@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
 
+
 const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;

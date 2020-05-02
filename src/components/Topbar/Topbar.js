@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Route from 'next/router';
 import { useState, useEffect } from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import { RiExchangeDollarLine,RiExchangeLine } from "react-icons/ri";
+import { FaUserAlt,FaSignOutAlt} from "react-icons/fa";
+import { FiActivity} from "react-icons/fi";
 
 const Toolbar = styled.header`
     position:fixed;
@@ -103,7 +106,7 @@ const menubar = props => {
                     <div>
                         <DrawerToggleButton click={props.drawerToggleClickHandler} />
                     </div>
-                    <div className="toolbar_logo"><Link href="/Home"><a style={{color:'white'}}>PSU COIN</a></Link></div>
+                    <div className="toolbar_logo"><Link href="/Home"><a style={{color:'white'}}>PSU COIN<RiExchangeDollarLine/></a></Link></div>
                 </div>
 
                 <div>
@@ -111,16 +114,17 @@ const menubar = props => {
                         <ul>
                             <li>
                                 <Link href="/profile">
-                                    <a>Profile</a>
+                                    
+                                    <a><FaUserAlt/>Profile</a>
                                 </Link>
                             </li>
-                            <li><a href="https://miniprojectclient.firebaseapp.com/">Activity</a></li>
+                            <li><a href="https://miniprojectclient.firebaseapp.com/"><FiActivity/>Activity</a></li>
                             <li>
                                 <Link href="/transfer">
-                                    <a>Transfer</a>
+                                    <a><RiExchangeLine/>Transfer</a>
                                 </Link>
                             </li>
-                            <li ><a onClick={() => removesession()}>Sign out</a></li>
+                            <li ><a onClick={() => removesession()}><FaSignOutAlt/>Sign out</a></li>
                         </ul>
                     </div>
                 </div>

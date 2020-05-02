@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Route from 'next/router';
+import { FcHome, FcContacts, FcCurrencyExchange, FcLandscape,FcExport } from "react-icons/fc";
 
 const Side_drawer = styled.nav`
 
@@ -42,7 +43,7 @@ const Side_drawer = styled.nav`
     li{
         margin: 0.3rem;
         box-shadow:0px 0px 3px 0px rgba(0,0,0,0.4);
-        text-align: center;
+        // text-align: center;
         transition: box-shadow 0.25s;
         background-color:black;
         border-radius:10px;      
@@ -57,6 +58,7 @@ const Side_drawer = styled.nav`
         color:white;
         text-decoration:none;
         font-size: 1.2rem;
+        margin-left:0.4rem;
     }
 
     a:hover,a:active{
@@ -76,6 +78,9 @@ const Side_drawer = styled.nav`
         max-width:300px;
     }
 
+    .flat_logo{
+        margin-left:1rem;
+    }
     
 `
 
@@ -100,23 +105,30 @@ const SideDrawer = props => {
                 <ul>
                     <Link href="/Home">
                         <li>
+                            <FcHome className="flat_logo" />
                             <a>Home</a>
                         </li>
                     </Link>
 
                     <Link href="/profile">
                         <li>
+                            <FcContacts className="flat_logo"/>
                             <a>Profile</a>
                         </li>
                     </Link>
 
-                    <li><a href="https://miniprojectclient.firebaseapp.com/"> Activity</a></li>
-
+                    <li>
+                        <FcLandscape className="flat_logo"/>
+                        <a href="https://miniprojectclient.firebaseapp.com/"> Activity</a>
+                    </li>
                     <Link href="/transfer">
-                        <li><a>Transfer</a></li>
+                        <li>
+                            <FcCurrencyExchange className="flat_logo"/>
+                            <a>Transfer</a>
+                        </li>
                     </Link>
 
-                    <li><a onClick={() => removesession()}>Sign out</a></li>
+                    <li><FcExport className="flat_logo"/><a onClick={() => removesession()}>Sign out</a></li>
                 </ul>
             </nav>
         </Side_drawer>

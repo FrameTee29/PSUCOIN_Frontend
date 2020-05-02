@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { RiMenuAddLine} from "react-icons/ri";
+import { TiThMenuOutline} from "react-icons/ti";
 
 const Toggle_button= styled.button`
     display:flex;
@@ -9,6 +11,8 @@ const Toggle_button= styled.button`
     background: transparent;
     border:none;
     padding:0;
+    color:white;
+    font-size:30px;
     box-sizing:border-box;
 
     .Toggle_button:focus{
@@ -25,9 +29,11 @@ const Toggle_button= styled.button`
 
 const DrawerToggleButton = props =>(
     <Toggle_button  onClick={props.click}>
+        {/* <RiMenuAddLine/> */}
+        <TiThMenuOutline/>
+        {/* <div className="toggle-button_line" />
         <div className="toggle-button_line" />
-        <div className="toggle-button_line" />
-        <div className="toggle-button_line" />
+        <div className="toggle-button_line" /> */}
     </Toggle_button>
 )
 
