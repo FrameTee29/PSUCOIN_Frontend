@@ -37,6 +37,11 @@ const Toolbar = styled.header`
     .toolbar_logo{
         font-weight:700;
         margin-left:0.5rem;
+        transition: color 0.5s;
+        
+    }
+    .toolbar_logo:hover,.toolbar_logo:active{
+        color:#ffce2e;
         
     }
 
@@ -63,10 +68,9 @@ const Toolbar = styled.header`
         font-weight:700;
         padding: 0 0.5rem;
     }
-
     .toolbar_navigation-items a:hover,
     .toolbar_navigation-items a:active{
-        color:#92e7d0;
+        color:#ffce2e;
         text-decoration:none;
     }
 
@@ -75,6 +79,7 @@ const Toolbar = styled.header`
             display:none;
         }
     }
+    
 
 
 `
@@ -115,7 +120,7 @@ const menubar = props => {
                                     <a>Transfer</a>
                                 </Link>
                             </li>
-                            <li><a onClick={() => removesession()}>Sign out</a></li>
+                            <li ><a onClick={() => removesession()}>Sign out</a></li>
                         </ul>
                     </div>
                 </div>
