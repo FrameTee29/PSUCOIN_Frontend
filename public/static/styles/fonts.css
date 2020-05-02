@@ -1,0 +1,29 @@
+
+ /* - - - - - - - - - - -  BalooPaaji2 - - - - - - - - - */
+
+@font-face{
+    font-family:'BalooPaaji2-Bold';
+    src:url('/static/fonts/BalooPaaji2-Bold.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-ExtraBold';
+    src:url('/static/fonts/BalooPaaji2-ExtraBold.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-Medium';
+    src:url('/static/fonts/BalooPaaji2-Medium.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-Regular';
+    src:url('/static/fonts/BalooPaaji2-Regular.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-SemiBold';
+    src:url('/static/fonts/BalooPaaji2-SemiBold.ttf');
+}
+
+ /* - - - - - - - - - - - End  BalooPaaji2 - - - - - - - - - */

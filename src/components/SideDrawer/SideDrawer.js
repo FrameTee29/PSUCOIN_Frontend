@@ -12,10 +12,14 @@ const Side_drawer = styled.nav`
         top:0;
         left:0;
         width:70%;
-        max-width:400px;
+        max-width:300px;
         z-index:200;
         transform:translateX(-100%);
         transition: transform 0.5s ease-out;
+        font-family:'BalooPaaji2-Bold';
+        font-weight:700;
+        font-size:30px;
+
 
     }
     .side-drawer.open{
@@ -27,11 +31,12 @@ const Side_drawer = styled.nav`
         list-style:none;
         display:flex;
         flex-direction:column;
-        justify-content:center;
+        // justify-content:center;
     }
 
     li{
         margin: 0.5rem 0;
+        box-shadow: rgba(0,0,0,0.5)
     }
 
     a{

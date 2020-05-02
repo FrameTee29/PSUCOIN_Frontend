@@ -12,6 +12,8 @@ const Toolbar = styled.header`
     width:100%;
     background: white;
     height:60px;
+    font-family:'BalooPaaji2-Bold';
+    font-weight:700;
 
     .toolbar_navigation{
         display:flex;
