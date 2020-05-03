@@ -27,3 +27,67 @@
 }
 
  /* - - - - - - - - - - - End  BalooPaaji2 - - - - - - - - - */
+
+
+
+ /* - - - - - - - - - - -Krub - - - - - - - - - */
+
+ @font-face{
+    font-family:'Krub-Bold';
+    src:url('/static/fonts/Krub-Bold.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-BoldItalic';
+    src:url('/static/fonts/Krub-BoldItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-ExtraLight';
+    src:url('/static/fonts/Krub-ExtraLight.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-ExtraLightItalic';
+    src:url('/static/fonts/Krub-ExtraLightItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Italic';
+    src:url('/static/fonts/Krub-Italic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Light';
+    src:url('/static/fonts/Krub-Light.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-LightItalic';
+    src:url('/static/fonts/Krub-LightItalic');
+}
+
+ @font-face{
+    font-family:'Krub-Medium';
+    src:url('/static/fonts/Krub-Medium.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-MediumItalic';
+    src:url('/static/fonts/Krub-MediumItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Regular';
+    src:url('/static/fonts/Krub-Regular.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-SemiBold';
+    src:url('/static/fonts/Krub-SemiBold.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-SemiBoldItalic';
+    src:url('/static/fonts/Krub-SemiBoldItalic.ttf');
+}

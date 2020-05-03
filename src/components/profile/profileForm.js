@@ -68,8 +68,8 @@ const ProfileForm = (props) => {
         <StyledWrapper>
             <div className="container">
                 <div className="row-container">
-                    <div className="column-slide">5555555</div>
-                    <div className="column-content"></div>
+                    <div className="column-slide">slidenav</div>
+                    <div className="column-content">ข้อมูลผู้ใช้งาน</div>
                 </div>
             </div>
         </StyledWrapper>
