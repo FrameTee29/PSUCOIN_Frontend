@@ -7,7 +7,8 @@ const Side_drawer = styled.nav`
 
     .side-drawer{
         height:100%;
-        background-image: url('/static/images/coin4.jpg');
+        background: #30b671;
+        /* background-image: url('/static/images/coin4.jpg'); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -42,15 +43,15 @@ const Side_drawer = styled.nav`
 
     li{
         margin: 0.3rem;
-        box-shadow:0px 0px 3px 0px rgba(0,0,0,0.4);
+        box-shadow:0px 0px 3px 0px rgba(0,0,0,0.0);
         // text-align: center;
         transition: box-shadow 0.25s;
-        background-color:black;
+        background-color:#30b671;
         border-radius:10px;      
     }
     li:hover,li:active{
         cursor:pointer;
-        box-shadow:0px 0px 7px 0px rgba(255,159,0,0.8);
+        box-shadow:0px 0px 7px 0px rgba(0,0,0,0.8);
         text-decoration:none;
     }
 
@@ -62,7 +63,7 @@ const Side_drawer = styled.nav`
     }
 
     a:hover,a:active{
-        color: orange;
+        color: black;
         text-decoration:none;
         font-size: 1.2rem;
     }

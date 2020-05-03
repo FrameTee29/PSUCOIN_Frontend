@@ -4,23 +4,26 @@ import Link from 'next/link';
 import Route from 'next/router';
 import { useState, useEffect } from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import { RiExchangeDollarLine,RiExchangeLine } from "react-icons/ri";
-import { FaUserAlt,FaSignOutAlt} from "react-icons/fa";
-import { FiActivity} from "react-icons/fi";
+import { RiExchangeDollarLine, RiExchangeLine } from "react-icons/ri";
+import { FaUserAlt, FaSignOutAlt } from "react-icons/fa";
+import { FiActivity } from "react-icons/fi";
 
 const Toolbar = styled.header`
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    // background: white;
-    background-image: url('/static/images/coin4.jpg');
+    background: #30b671;
+    /* background-image: url('/static/images/coin4.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height:60px;
     font-family:'BalooPaaji2-Bold';
     font-weight:700;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     
 
     .toolbar_navigation{
@@ -73,7 +76,7 @@ const Toolbar = styled.header`
     }
     .toolbar_navigation-items a:hover,
     .toolbar_navigation-items a:active{
-        color:#ffce2e;
+        color:#4a4a4a;
         text-decoration:none;
     }
 
@@ -106,7 +109,7 @@ const menubar = props => {
                     <div>
                         <DrawerToggleButton click={props.drawerToggleClickHandler} />
                     </div>
-                    <div className="toolbar_logo"><Link href="/Home"><a style={{color:'white'}}>PSU COIN<RiExchangeDollarLine/></a></Link></div>
+                    <div className="toolbar_logo"><Link href="/Home"><a style={{ color: 'white' }}>PSU COIN<RiExchangeDollarLine /></a></Link></div>
                 </div>
 
                 <div>
@@ -114,17 +117,17 @@ const menubar = props => {
                         <ul>
                             <li>
                                 <Link href="/profile/info">
-                                    
-                                    <a><FaUserAlt/>Profile</a>
+
+                                    <a><FaUserAlt />Profile</a>
                                 </Link>
                             </li>
-                            <li><a href="https://miniprojectclient.firebaseapp.com/"><FiActivity/>Activity</a></li>
+                            <li><a href="https://miniprojectclient.firebaseapp.com/"><FiActivity />Activity</a></li>
                             <li>
                                 <Link href="/transfer">
-                                    <a><RiExchangeLine/>Transfer</a>
+                                    <a><RiExchangeLine />Transfer</a>
                                 </Link>
                             </li>
-                            <li ><a onClick={() => removesession()}><FaSignOutAlt/>Sign out</a></li>
+                            <li ><a onClick={() => removesession()}><FaSignOutAlt />Sign out</a></li>
                         </ul>
                     </div>
                 </div>

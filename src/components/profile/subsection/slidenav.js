@@ -32,7 +32,6 @@ a{
 
 span{
     margin-left:25px;
-    color:
 }
 
 span:hover{
