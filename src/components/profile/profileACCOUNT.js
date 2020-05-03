@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import { FaUserCircle, } from "react-icons/fa";
+import { FaUserCircle,FaKey } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
-import { AiOutlineFieldNumber } from "react-icons/ai";
-import { FiCreditCard } from "react-icons/fi";
+import { AiOutlineCopy } from "react-icons/ai";
+import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 import Slidenav from './subsection/slidenav';
 
 const StyledWrapper = styled.div`
@@ -108,6 +108,11 @@ const StyledWrapper = styled.div`
         font-size:24px;
         margin-right:20px;
     }
+    .icon-item-key{
+        cursor: pointer;
+        font-size:24px;
+        margin-right:20px;
+    }
     .label{
         max-width: 620px;
         word-wrap: break-word;
@@ -150,21 +155,15 @@ const profileACCOUNT = (props) => {
                         <div className="account-section">
                         <div className="detail-head">กุญแจของฉัน</div>
                         <div className="account-section-item">
-                            <div className="account-section-item-label"><AiOutlineFieldNumber className="icon-item" />กุญแจสาธารณะ</div>
+                            <div className="account-section-item-label"><FaKey className="icon-item" />กุญแจสาธารณะ </div>
                             <div className="account-section-item-label-name">
-                                <div className="label">{key.publickey}</div>
+                                <div className="label">{key.publickey}<AiOutlineCopy className="icon-item-key" /></div>
                             </div>
                         </div>
                         <div className="account-section-item">
-                            <div className="account-section-item-label"><FaUserCircle className="icon-item" />กุญแจส่วนตัว</div>
+                            <div className="account-section-item-label"><RiGitRepositoryPrivateLine className="icon-item" />กุญแจส่วนตัว </div>
                             <div className="account-section-item-label-name">
-                                <div className="label">{key.privatekey}</div>
-                            </div>
-                        </div>
-                        <div className="account-section-item">
-                            <div className="account-section-item-label"><FiCreditCard className="icon-item" />เลขบัตรประชาชน</div>
-                            <div className="account-section-item-label-name">
-                                <div className="label ">{profileuser.cid}</div>
+                                <div className="label">{key.privatekey}<AiOutlineCopy className="icon-item-key" /></div>
                             </div>
                         </div>
                     </div>
