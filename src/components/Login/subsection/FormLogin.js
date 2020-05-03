@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 const StyledWrapper = styled.div`
 
     display:block;
-
+    font-family:'Krub-Bold';
         
     @media (min-width: 320px){
         .heightForm{

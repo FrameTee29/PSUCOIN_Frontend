@@ -1169,7 +1169,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "FormLogin__StyledWrapper",
   componentId: "sc-1l30f0a-0"
-})(["display:block;@media (min-width:320px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:310px;height:400px;background-color:white;border-radius:20px;box-shadow:0px 0px 5px 4px  #888888;}}@media (min-width:375px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:370px;height:400px;background-color:white;border-radius:20px;}}@media (min-width:2560px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:500px;height:500px;background-color:white;border-radius:20px;}}"]);
+})(["display:block;font-family:'Krub-Bold';@media (min-width:320px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:310px;height:400px;background-color:white;border-radius:20px;box-shadow:0px 0px 5px 4px  #888888;}}@media (min-width:375px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:370px;height:400px;background-color:white;border-radius:20px;}}@media (min-width:2560px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:500px;height:500px;background-color:white;border-radius:20px;}}"]);
 
 const FormLogin = () => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
