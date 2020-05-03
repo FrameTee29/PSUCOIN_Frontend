@@ -5,39 +5,42 @@ import { MdChangeHistory } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
 
 const Stylenav = styled.nav`
+
     font-family:'Krub-Regular';
     color: rgb(82, 82, 82);
     font-size: 24px;
     font-weight:500;
 
-    ul{
-        padding:0px 0px 0px 0px;
-        list-style:none;
-    }
 
-    li{
-        margin-bottom: 2rem;
-    }
+ul{
+    padding:0px 0px 0px 0px;
+    list-style:none;
+}
 
-    a{
-        display: flex;
-        align-items: center;
-        cursor:pointer;
-        text-decoration:none;
-    }
+li{
+    margin-bottom: 2rem;
+}
 
-    span{
-        margin-left:25px;
-        color:
-    }
+a{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+}
 
-    span:hover{
-        color:#247d4f;
-    }
+span{
+    margin-left:25px;
+    color:
+}
 
-    .icon-nav{
-        color:#30b671;
-    }
+span:hover{
+    color:#247d4f;
+}
+
+.icon-nav{
+    color:#30b671;
+}
    
 
     
@@ -49,19 +52,19 @@ const Slidenav = () => {
         <Stylenav>
             <ul>
                 <li>
-                    <a>
+                    <a href='/profile/info'>
                        <FaUserCircle className="icon-nav"/>
                         <span>ข้อมูลผู้ใช้</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='/profile/account'>
                         <MdAccountBalanceWallet className="icon-nav"/>
                         <span>บัญชีของฉัน</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='/profile/transaction'>
                         <MdChangeHistory className="icon-nav"/>
                         <span>ประวัติธุรกรรม</span>
                     </a>

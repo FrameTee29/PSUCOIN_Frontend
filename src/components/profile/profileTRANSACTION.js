@@ -6,6 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
+import Slidenav from './subsection/slidenav';
 
 const StyledWrapper = styled.div`
     display:block;
@@ -69,7 +70,8 @@ const StyledWrapper = styled.div`
         display: flex;
         align-items: center;
         cursor:pointer;
-        text-decoration:none;
+        text-decoration: none;
+        color: rgb(82, 82, 82);
     }
 
     span{
@@ -87,7 +89,7 @@ const StyledWrapper = styled.div`
     
 `
 
-const ProfileForm = (props) => {
+const profileTRANSACTION = (props) => {
     const [statusprivatekey, setStatusprivatekey] = useState(false)
     const [username, setUsername] = useState('');
     const [profileuser, setProfile] = useState({});
@@ -110,43 +112,18 @@ const ProfileForm = (props) => {
             <div className="container">
                 <div className="row-container">
                     <div className="column-slide">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href='/partprofile/info'>
-                                        <FaUserCircle className="icon-nav" />
-                                        <span>ข้อมูลผู้ใช้</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <MdAccountBalanceWallet className="icon-nav" />
-                                        <span>บัญชีของฉัน</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <MdChangeHistory className="icon-nav" />
-                                        <span>ประวัติธุรกรรม</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <GoSignOut className="icon-nav" />
-                                        <span>ออกจากระบบ</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                       <Slidenav/>
                     </div>
-                    <div className="column-content">ข้อมูล</div>
+                    <div className="column-content">
+                        ธุรกรรม
+                    </div>
                 </div>
             </div>
         </StyledWrapper>
     )
 }
 
-export default ProfileForm;
+export default profileTRANSACTION;
 
 
 //แบบเก่า

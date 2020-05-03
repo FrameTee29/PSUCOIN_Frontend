@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Topbar from "../../src/components/Topbar/Topbar";
 import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
-import ProfileForm from "../../src/components/profile/profileForm";
+import ProfileINFO from "../../src/components/profile/profileINFO";
 import SideDrawer from "../../src/components/SideDrawer/SideDrawer";
 import Backdrop from "../../src/components/Backdrop/Backdrop";
 import WithAuth from "../../src/hoc/withAuth";
@@ -32,8 +32,7 @@ const Profile = () => {
             <SideDrawer show={sideDrawerOpen} />
             {backdrop}
             <main style={{ marginTop: '64px' }}>
-                <ProfileForm/>
-                
+                <ProfileINFO/>
             </main>
         </div>
     )
