@@ -2,10 +2,11 @@ import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
 
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
-import { GoSignOut } from "react-icons/go";
+import { AiOutlineFieldNumber } from "react-icons/ai";
+import { FiCreditCard } from "react-icons/fi";
 import Slidenav from './subsection/slidenav';
 
 const StyledWrapper = styled.div`
@@ -77,41 +78,68 @@ const StyledWrapper = styled.div`
         margin: 20px 0px;
     }
 
-    nav{
+    .account-profile-img{
+        display:flex;
+        margin-right:30px;
+    }
+
+    .img_profile{
+        width:80px;
+        height:80px;
+        border-radius:40px;
+    }
+
+    .detail-name{
         font-family:'Krub-Regular';
+    }
+  
+    .detail-balance-coin{
+        font-family:'Krub-Regular';
+    }
+    .detail-balance-coin strong{
+        font-family:'Krub-Regular';
+        font-size: 36px;
+        margin-left: 10px;
+        font-weight: 700;
+        color: rgb(29, 77, 160);
+    }
+
+    .account-section{
         color: rgb(82, 82, 82);
+        font-weight: 500;
         font-size: 24px;
-        font-weight:500;
     }
 
-    ul{
-        padding:0px 0px 0px 0px;
-        list-style:none;
+    .detail-head{
+        font-family:'Krub-Regular';
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom:20px;
     }
 
-    li{
-        margin-bottom: 2rem;
-    }
-
-    a{
+    .account-section-item{
         display: flex;
+        font-family:'Krub-Regular';
+        font-weight: 500;
+        font-size: 20px;
         align-items: center;
-        cursor:pointer;
-        text-decoration: none;
-        color: rgb(82, 82, 82);
+        margin-bottom: 8px;
     }
-
-    span{
-        margin-left:25px;
-        color:
+    .account-section-item-label{
+        display: flex;
+        font-family:'Krub-Regular';
+        align-items: center;
+        flex-basis: 260px;
+        margin-right: 10px;
+   
     }
-
-    span:hover{
-        color:#247d4f;
+    .icon-item{
+        font-size:24px;
+        margin-right:20px;
     }
-
-    .icon-nav{
-        color:#30b671;
+    .label{
+        display:flex;
+        max-width: 300px;
     }
     
 `
@@ -149,10 +177,38 @@ const profileINFO = (props) => {
                             <div className="dashedline"></div>
                             <div className="page-body">
                                 <div className="account-profile">
-
+                                    <div className="account-profile-img">
+                                        <img src="/static/images/picture2.png" className="img_profile" />
+                                    </div>
+                                    <div className="account-profile-detail">
+                                        <h3 className="detail-name">คุณ {profileuser.firstname} {profileuser.lastname} </h3>
+                                        <p className="detail-balance-coin">เหรียญสะสม<strong>200 เหรียญ</strong></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="account-section">
+                            <div className="detail-head">ข้อมูลส่วนตัว</div>
+                            <div className="account-section-item">
+                                <div className="account-section-item-label"><AiOutlineFieldNumber className="icon-item" />รหัสนักศึกษา</div>
+                                <div className="account-section-item-label-name">
+                                    <span className="label">{profileuser.sid}</span>
+                                </div>
+                            </div>
+                            <div className="account-section-item">
+                                <div className="account-section-item-label"><FaUserCircle className="icon-item" />ชื่อ</div>
+                                <div className="account-section-item-label-name">
+                                    <span className="label">คุณ {profileuser.firstname} {profileuser.lastname}</span>
+                                </div>
+                            </div>
+                            <div className="account-section-item">
+                                <div className="account-section-item-label"><FiCreditCard className="icon-item" />เลขบัตรประชาชน</div>
+                                <div className="account-section-item-label-name">
+                                    <span className="label">{profileuser.cid}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="dashedline"></div>
                     </div>
                 </div>
             </div>
