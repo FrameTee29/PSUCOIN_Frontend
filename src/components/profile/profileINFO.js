@@ -50,6 +50,33 @@ const StyledWrapper = styled.div`
         flex-basis: calc(100% - 260px);
         max-width: calc(100% - 260px);
     }
+
+    .info-content{
+        
+        max-width: 100%;
+    }
+
+    .page-header{
+       display:flex;
+       width:100%;
+       margin-bottom:10px;
+    }
+
+    .dashedline{
+        display:flex;
+        width:100%;
+        margin-bottom:10px;
+        margin-top:10px;
+        border-bottom: 2px dashed #d9dee3;
+    }
+
+    .account-profile{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0px;
+    }
+
     nav{
         font-family:'Krub-Regular';
         color: rgb(82, 82, 82);
@@ -112,10 +139,20 @@ const profileINFO = (props) => {
             <div className="container">
                 <div className="row-container">
                     <div className="column-slide">
-                       <Slidenav/>
+                        <Slidenav />
                     </div>
                     <div className="column-content">
-                        ข้อมูล
+                        <div className="info-content">
+                            <div className="page-header">
+                                <h2>ข้อมูลผู้ใช้งาน</h2>
+                            </div>
+                            <div className="dashedline"></div>
+                            <div className="page-body">
+                                <div className="account-profile">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
