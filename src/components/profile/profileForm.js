@@ -6,6 +6,7 @@ import Profile from '../../../pages/Profile';
 const StyledWrapper = styled.div`
     display:block;
     width:100%;
+    font-family:'Krub-Bold';
 
     
     @media (min-width: 425px){
@@ -30,6 +31,7 @@ const StyledWrapper = styled.div`
     }
 
     .row-container{
+        display:flex;
         width:100%;
         padding:60px 0px;
     }
