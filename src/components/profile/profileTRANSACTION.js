@@ -50,43 +50,26 @@ const StyledWrapper = styled.div`
         flex-basis: calc(100% - 260px);
         max-width: calc(100% - 260px);
     }
-    nav{
-        font-family:'Krub-Regular';
-        color: rgb(82, 82, 82);
-        font-size: 24px;
-        font-weight:500;
+
+    .info-content{
+        
+        max-width: 100%;
     }
 
-    ul{
-        padding:0px 0px 0px 0px;
-        list-style:none;
+    .page-header{
+       display:flex;
+       width:100%;
+       margin-bottom:10px;
     }
 
-    li{
-        margin-bottom: 2rem;
+    .dashedline{
+        display:flex;
+        width:100%;
+        margin-bottom:10px;
+        margin-top:10px;
+        border-bottom: 2px dashed #d9dee3;
     }
 
-    a{
-        display: flex;
-        align-items: center;
-        cursor:pointer;
-        text-decoration: none;
-        color: rgb(82, 82, 82);
-    }
-
-    span{
-        margin-left:25px;
-        color:
-    }
-
-    span:hover{
-        color:#247d4f;
-    }
-
-    .icon-nav{
-        color:#30b671;
-    }
-    
 `
 
 const profileTRANSACTION = (props) => {
@@ -109,17 +92,22 @@ const profileTRANSACTION = (props) => {
 
     return (
         <StyledWrapper>
-            <div className="container">
-                <div className="row-container">
-                    <div className="column-slide">
-                       <Slidenav/>
-                    </div>
-                    <div className="column-content">
-                        ธุรกรรม
-                    </div>
+        <div className="container">
+            <div className="row-container">
+                <div className="column-slide">
+                    <Slidenav />
+                </div>
+                <div className="column-content">
+                    <div className="info-content">
+                        <div className="page-header">
+                            <h2>ประวัติธุรกรรม</h2>
+                        </div>
+                        <div className="dashedline"></div>                    
+                    </div>                        
                 </div>
             </div>
-        </StyledWrapper>
+        </div>
+    </StyledWrapper>
     )
 }
 
