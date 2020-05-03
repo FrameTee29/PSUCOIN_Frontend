@@ -110,7 +110,7 @@ const SideDrawer = props => {
                         </li>
                     </Link>
 
-                    <Link href="/profile">
+                    <Link href="/profile/info">
                         <li>
                             <FcContacts className="flat_logo"/>
                             <a>Profile</a>

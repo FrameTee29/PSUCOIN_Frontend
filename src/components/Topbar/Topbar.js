@@ -113,7 +113,7 @@ const menubar = props => {
                     <div className="toolbar_navigation-items">
                         <ul>
                             <li>
-                                <Link href="/profile">
+                                <Link href="/profile/info">
                                     
                                     <a><FaUserAlt/>Profile</a>
                                 </Link>
