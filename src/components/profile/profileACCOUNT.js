@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import { FaUserCircle,FaKey } from "react-icons/fa";
+import { FaUserCircle, FaKey } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
 import { AiOutlineCopy } from "react-icons/ai";
@@ -125,6 +125,7 @@ const profileACCOUNT = (props) => {
     const [username, setUsername] = useState('');
     const [profileuser, setProfile] = useState({});
     const [key, setKey] = useState({});
+    const [copied, setCopied] = useState(false);
 
     const getUser = async () => {
         const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
@@ -153,20 +154,27 @@ const profileACCOUNT = (props) => {
                             <div className="dashedline"></div>
                         </div>
                         <div className="account-section">
-                        <div className="detail-head">กุญแจของฉัน</div>
-                        <div className="account-section-item">
-                            <div className="account-section-item-label"><FaKey className="icon-item" />กุญแจสาธารณะ </div>
-                            <div className="account-section-item-label-name">
-                                <div className="label">{key.publickey}<AiOutlineCopy className="icon-item-key" /></div>
+                            <div className="detail-head">กุญแจของฉัน</div>
+                            <div className="account-section-item">
+                                <div className="account-section-item-label"><FaKey className="icon-item" />กุญแจสาธารณะ </div>
+                                <div className="account-section-item-label-name">
+                                    <div className="label">{key.publickey}
+                                        <CopyToClipboard text={key.publickey} onCopy={() => setCopied(true)}>
+                                            <AiOutlineCopy className="icon-item-key" />
+                                        </CopyToClipboard>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="account-section-item">
+                                <div className="account-section-item-label"><RiGitRepositoryPrivateLine className="icon-item" />กุญแจส่วนตัว </div>
+                                <div className="account-section-item-label-name">
+                                    <div className="label">{key.privatekey}
+                                        <CopyToClipboard text={key.privatekey} onCopy={() => setCopied(true)}>
+                                            <AiOutlineCopy className="icon-item-key" />
+                                        </CopyToClipboard></div>
+                                </div>
                             </div>
                         </div>
-                        <div className="account-section-item">
-                            <div className="account-section-item-label"><RiGitRepositoryPrivateLine className="icon-item" />กุญแจส่วนตัว </div>
-                            <div className="account-section-item-label-name">
-                                <div className="label">{key.privatekey}<AiOutlineCopy className="icon-item-key" /></div>
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>

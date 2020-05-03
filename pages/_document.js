@@ -38,16 +38,18 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/styles/fonts.css" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
           <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-          <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet"/>
+          <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
           <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <script src="dist/clipboard.min.js"></script>
+          <script src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+          <script src="https://unpkg.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
 
         </Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
       </Html>
     )
   }

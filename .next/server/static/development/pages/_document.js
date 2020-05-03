@@ -1033,26 +1033,50 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         lineNumber: 43,
         columnNumber: 11
       }
+    }), __jsx("script", {
+      src: "dist/clipboard.min.js",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 11
+      }
+    }), __jsx("script", {
+      src: "https://unpkg.com/react@16.0.0/umd/react.production.min.js",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 11
+      }
+    }), __jsx("script", {
+      src: "https://unpkg.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 11
+      }
     })), __jsx("body", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 11
+        lineNumber: 49,
+        columnNumber: 9
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
-        columnNumber: 13
+        lineNumber: 50,
+        columnNumber: 11
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49,
-        columnNumber: 13
+        lineNumber: 51,
+        columnNumber: 11
       }
     })));
   }
