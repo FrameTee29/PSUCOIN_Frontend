@@ -48,6 +48,14 @@ span:hover{
 `
 
 const Slidenav = () => {
+
+
+    const removesession = () => {
+        sessionStorage.removeItem('username')
+        sessionStorage.removeItem('token')
+        Route.push('/')
+    }
+
     return (
         <Stylenav>
             <ul>
@@ -70,7 +78,7 @@ const Slidenav = () => {
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a onClick={() => removesession()}>
                         <GoSignOut className="icon-nav"/>
                         <span>ออกจากระบบ</span>
                     </a>
