@@ -3,6 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
+import Route from 'next/router';
 
 const Stylenav = styled.nav`
 
