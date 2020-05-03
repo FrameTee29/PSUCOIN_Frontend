@@ -64,7 +64,7 @@ const FormLogin = () => {
         sessionStorage.setItem('token', result.data.access_token)
         sessionStorage.setItem('username', username)
         setToken(result.data.access_token)
-        Route.push('/Home');
+        Route.push('/profile/info');
     }
 
     const getUser = async () => {

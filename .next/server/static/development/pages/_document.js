@@ -1170,7 +1170,7 @@ const FormLogin = () => {
     sessionStorage.setItem('token', result.data.access_token);
     sessionStorage.setItem('username', username);
     setToken(result.data.access_token);
-    next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/Home');
+    next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/profile/info');
   };
 
   const getUser = async () => {};

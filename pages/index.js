@@ -25,7 +25,7 @@ const Index = () => {
   else{
     return (
       <>
-        {Route.push('/Home')}
+        {Route.push('/profile/info')}
       </>
     )
   }
