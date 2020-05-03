@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import Profile from '../../../pages/Profile';
+import Slidenav from './subsection/slidenav';
 
 const StyledWrapper = styled.div`
     display:block;
@@ -70,7 +71,7 @@ const ProfileForm = (props) => {
         <StyledWrapper>
             <div className="container">
                 <div className="row-container">
-                    <div className="column-slide">slidenav</div>
+                    <div className="column-slide"><Slidenav/></div>
                     <div className="column-content">ข้อมูลผู้ใช้งาน</div>
                 </div>
             </div>
