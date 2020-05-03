@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import Profile from '../../../pages/Profile';
-import Slidenav from './subsection/slidenav';
+
+import { FaUserCircle } from "react-icons/fa";
+import { MdAccountBalanceWallet } from "react-icons/md";
+import { MdChangeHistory } from "react-icons/md";
+import { GoSignOut } from "react-icons/go";
 
 const StyledWrapper = styled.div`
     display:block;
@@ -46,6 +49,41 @@ const StyledWrapper = styled.div`
         flex-basis: calc(100% - 260px);
         max-width: calc(100% - 260px);
     }
+    nav{
+        font-family:'Krub-Regular';
+        color: rgb(82, 82, 82);
+        font-size: 24px;
+        font-weight:500;
+    }
+
+    ul{
+        padding:0px 0px 0px 0px;
+        list-style:none;
+    }
+
+    li{
+        margin-bottom: 2rem;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    span{
+        margin-left:25px;
+        color:
+    }
+
+    span:hover{
+        color:#247d4f;
+    }
+
+    .icon-nav{
+        color:#30b671;
+    }
     
 `
 
@@ -71,8 +109,37 @@ const ProfileForm = (props) => {
         <StyledWrapper>
             <div className="container">
                 <div className="row-container">
-                    <div className="column-slide"><Slidenav/></div>
-                    <div className="column-content">ข้อมูลผู้ใช้งาน</div>
+                    <div className="column-slide">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href='/partprofile/info'>
+                                        <FaUserCircle className="icon-nav" />
+                                        <span>ข้อมูลผู้ใช้</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <MdAccountBalanceWallet className="icon-nav" />
+                                        <span>บัญชีของฉัน</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <MdChangeHistory className="icon-nav" />
+                                        <span>ประวัติธุรกรรม</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <GoSignOut className="icon-nav" />
+                                        <span>ออกจากระบบ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="column-content">ข้อมูล</div>
                 </div>
             </div>
         </StyledWrapper>
