@@ -21,7 +21,7 @@ const Toolbar = styled.header`
     height:60px;
     font-family:'BalooPaaji2-Bold';
     font-weight:700;
-    box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+    box-shadow:0px 0px 15px rgba(0,0,0,0.4);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     

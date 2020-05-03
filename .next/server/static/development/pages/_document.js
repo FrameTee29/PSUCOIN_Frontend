@@ -1083,14 +1083,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["display:flex;background-image:url('https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;.position-login{display:flex;right:30px;}"]);
+})(["display:flex;background-image:linear-gradient(to top,rgba(7,127,65,1),rgba(48,182,113,1));background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;.position-login{display:flex;right:30px;}"]);
 
 const Login = () => {
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 25,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1098,14 +1098,14 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 13
     }
   }, __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 17
     }
   })));
