@@ -152,12 +152,16 @@ const Slipmoney = () => {
 
         const balancefrom = await Axios.get(`http://localhost:3001/tranfer/balanceof/${sessionStorage.getItem('from')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
         setCoinfrom(balancefrom.data[0].coin);
-        setAmount(sessionStorage.getItem('amout'));
+        setAmount(sessionStorage.getItem('amount'));
         setHash(sessionStorage.getItem('hash'));
 
     }
 
     const success=()=>{
+        sessionStorage.removeItem('hash','amount','from','to');
+        sessionStorage.removeItem('amount');
+        sessionStorage.removeItem('from');
+        sessionStorage.removeItem('to');
         Route.push('/profile/info')
     }
 

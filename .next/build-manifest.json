@@ -28,11 +28,27 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/profile/account": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/profile/info": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/transfer/beforesend": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/transfer/checkdetail": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/transfer/finsishsend": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
