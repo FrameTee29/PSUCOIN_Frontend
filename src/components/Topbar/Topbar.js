@@ -123,7 +123,7 @@ const menubar = props => {
                             </li>
                             <li><a href="https://miniprojectclient.firebaseapp.com/"><FiActivity />Activity</a></li>
                             <li>
-                                <Link href="/transfer">
+                                <Link href="/transfer/beforesend">
                                     <a><RiExchangeLine />Transfer</a>
                                 </Link>
                             </li>

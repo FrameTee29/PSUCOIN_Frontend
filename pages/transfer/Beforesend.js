@@ -1,10 +1,10 @@
-import Login from "../src/components/Login/Login";
+import Login from "../../src/components/Login/Login";
 import { useEffect, useState } from "react";
-import Topbar from "../src/components/Topbar/Topbar";
-import TransferForm from "../src/components/Transfer/transferForm";
-import SideDrawer from "../src/components/SideDrawer/SideDrawer";
-import Backdrop from "../src/components/Backdrop/Backdrop";
-import WithAuth from "../src/hoc/withAuth";
+import Topbar from "../../src/components/Topbar/Topbar";
+import TransferForm from "../../src/components/Transfer/transferForm";
+import SideDrawer from "../../src/components/SideDrawer/SideDrawer";
+import Backdrop from "../../src/components/Backdrop/Backdrop";
+import WithAuth from "../../src/hoc/withAuth";
 
 const Transfer = () => {
   let backdrop;

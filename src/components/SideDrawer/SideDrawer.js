@@ -122,7 +122,7 @@ const SideDrawer = props => {
                         <FcLandscape className="flat_logo"/>
                         <a href="https://miniprojectclient.firebaseapp.com/"> Activity</a>
                     </li>
-                    <Link href="/transfer">
+                    <Link href="/transfer/beforesend">
                         <li>
                             <FcCurrencyExchange className="flat_logo"/>
                             <a>Transfer</a>

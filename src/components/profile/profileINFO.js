@@ -52,8 +52,7 @@ const StyledWrapper = styled.div`
         max-width: calc(100% - 260px);
     }
 
-    .info-content{
-        
+    .info-content{  
         max-width: 100%;
     }
 
