@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import Route from 'next/router'
 
 const StyledWrapper = styled.div`
 display:block;
@@ -33,7 +32,7 @@ display:block;
         display:flex;
         flex-direction:column;
         width:100%;
-        padding:60px 0px;
+        padding:30px 0px;
     }
     .info-content{  
         max-width: 860px;
@@ -124,39 +123,33 @@ display:block;
 
 `
 
-const TransferForm = () => {
+const Checkdetailfrom = () => {
 
-    const [profileuser, setProfile] = useState({});
-    const [coin, setCoin] = useState(0);
-    const [from, setFrom] = useState('');
-    const [to, setTo] = useState('');
+    const [fromprofileuser, setFromProfile] = useState({});
+    const [toprofileuser, setToProfile] = useState({});
+    const [coinfrom, setCoinfrom] = useState(0);
     const [amount, setAmount] = useState(0);
 
 
     const getUser = async () => {
-        const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
-        setProfile(user.data[0]);
-        setFrom(user.data[0].sid);
-        const balance = await Axios.get(`http://localhost:3001/tranfer/balanceof/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
-        setCoin(balance.data[0].coin);
+        const userfrom = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('from')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
+        setFromProfile(userfrom.data[0]);
+        const userto = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('to')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
+        setToProfile(userto.data[0]);
+
+        const balancefrom = await Axios.get(`http://localhost:3001/tranfer/balanceof/${sessionStorage.getItem('from')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
+        setCoinfrom(balancefrom.data[0].coin);
+
     }
 
     const sendcoin = async () => {
-        if (to == '') {
-            alert("กรุณากรอกรหัสผู้รับ")
-        }
-        else {
-            const user = await Axios.get(`http://localhost:3001/users/${to}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
-            if(user.data[0] == undefined){
-                alert("ไม่มีบัญชีนี้อยู่ในระบบ กรุณากรอกรหัสผู้รับใหม่")
-            }
-            else{
-                sessionStorage.setItem('from', from);
-                sessionStorage.setItem('to', to);
-                {Route.push('/transfer/checkdetail')}
-            }
-
-
+        if(amount>coinfrom){
+            alert("เงินไม่พอ")
+        }else{
+            const txhash= await Axios.post('http://localhost:3001/tranfer/sendcoin',{from:fromprofileuser.sid,to:toprofileuser.sid,amount:amount});
+            console.log(txhash)
+            sessionStorage.removeItem('from');
+            sessionStorage.removeItem('to');
         }
 
     }
@@ -176,22 +169,31 @@ const TransferForm = () => {
                     <div className="page-body">
                         <div className="account-profile">
                             <div className="account-profile-detail">
-                                <h3 className="detail-name">{profileuser.sid}</h3>
-                                <h3 className="detail-name">คุณ {profileuser.firstname} {profileuser.lastname} </h3>
-                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coin} เหรียญ</strong></p>
+                                <h3 className="detail-name">{fromprofileuser.sid}</h3>
+                                <h3 className="detail-name">คุณ {fromprofileuser.firstname} {fromprofileuser.lastname} </h3>
+                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coinfrom} เหรียญ</strong></p>
                             </div>
                         </div>
                     </div>
                     <div className="detail-head">ถึง</div>
+                    <div className="page-body">
+                        <div className="account-profile">
+                            <div className="account-profile-detail">
+                                <h3 className="detail-name">{toprofileuser.sid}</h3>
+                                <h3 className="detail-name">คุณ {toprofileuser.firstname} {toprofileuser.lastname} </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="detail-head">จำนวนเงิน</div>
                     <div className="to-profile">
                         <div className="to-profile-detail">
-                            <p className="detail-balance-coin">กรอกรหัสนักศึกษา</p>
-                            <input className="inputbox" onChange={e => setTo(e.target.value)} />
+                            <p className="detail-balance-coin">กรอกจำนวนเงิน</p>
+                            <input className="inputbox" onChange={e => setAmount(e.target.value)} />
                         </div>
                         <div className="solidline"></div>
                     </div>
                     <div className="dashedline"></div>
-                    <button type="button" class="btn btn-outline-success btn-confirm" onClick={() => sendcoin()}>ยืนยัน</button>
+                    <button type="button" class="btn btn-outline-success btn-confirm" onClick={()=>sendcoin()}>ยืนยัน</button>
                 </div>
 
             </div>
@@ -199,4 +201,4 @@ const TransferForm = () => {
     )
 }
 
-export default TransferForm;
+export default Checkdetailfrom;

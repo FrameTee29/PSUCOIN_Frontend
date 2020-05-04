@@ -27,6 +27,10 @@
     "/transfer/beforesend": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/transfer/checkdetail": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
