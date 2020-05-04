@@ -149,12 +149,15 @@ const profileINFO = (props) => {
     const [username, setUsername] = useState('');
     const [profileuser, setProfile] = useState({});
     const [key, setKey] = useState({});
+    const [coin,setCoin]=useState(0);
 
     const getUser = async () => {
         const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
-        setProfile(user.data[0])
-        setKey(user.data[0].profile)
+        setProfile(user.data[0]);
+        setKey(user.data[0].profile);
 
+        const balance = await Axios.get(`http://localhost:3001/tranfer/balanceof/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
+        setCoin(balance.data[0].coin);
     }
 
 
@@ -178,11 +181,11 @@ const profileINFO = (props) => {
                             <div className="page-body">
                                 <div className="account-profile">
                                     <div className="account-profile-img">
-                                        <img src="/static/images/picture2.png" className="img_profile" />
+                                        <img src="/static/images/picture2.png" className="img_profile" onClick={()=>getBalance()}/>
                                     </div>
                                     <div className="account-profile-detail">
                                         <h3 className="detail-name">คุณ {profileuser.firstname} {profileuser.lastname} </h3>
-                                        <p className="detail-balance-coin">เหรียญสะสม<strong>200 เหรียญ</strong></p>
+                                        <p className="detail-balance-coin">เหรียญสะสม<strong>{coin} เหรียญ</strong></p>
                                     </div>
                                 </div>
                             </div>
