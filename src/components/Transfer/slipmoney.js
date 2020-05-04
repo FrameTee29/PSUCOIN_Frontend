@@ -54,7 +54,7 @@ display:block;
     }
     .detail-head{
         font-family:'Krub-Regular';
-        font-weight: 500;
+        font-weight: 700;
         font-size: 20px;
         margin-bottom:20px;
     }
@@ -81,6 +81,17 @@ display:block;
 
     .detail-name{
         font-family:'Krub-Regular';
+        font-size:24px;
+        margin-left:30px;
+        margin-bottom:15px;
+        
+    }
+    .detail-hash{
+        font-family:'Krub-Regular';
+        font-size:15px;
+        margin-left:30px;
+        margin-bottom:15px;
+        
     }
   
     .detail-balance-coin{
@@ -124,12 +135,13 @@ display:block;
 
 `
 
-const Checkdetailfrom = () => {
+const Slipmoney = () => {
 
     const [fromprofileuser, setFromProfile] = useState({});
     const [toprofileuser, setToProfile] = useState({});
     const [coinfrom, setCoinfrom] = useState(0);
     const [amount, setAmount] = useState(0);
+    const [hash, setHash] = useState('');
 
 
     const getUser = async () => {
@@ -140,20 +152,13 @@ const Checkdetailfrom = () => {
 
         const balancefrom = await Axios.get(`http://localhost:3001/tranfer/balanceof/${sessionStorage.getItem('from')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
         setCoinfrom(balancefrom.data[0].coin);
+        setAmount(sessionStorage.getItem('amout'));
+        setHash(sessionStorage.getItem('hash'));
 
     }
 
-    const sendcoin = async () => {
-        if(amount>coinfrom){
-            alert("เงินไม่พอ")
-        }else{
-            const txhash= await Axios.post('http://localhost:3001/tranfer/sendcoin',{from:fromprofileuser.sid,to:toprofileuser.sid,amount:amount});
-            sessionStorage.setItem('hash', "https://ropsten.etherscan.io/tx/"+txhash.data);
-            sessionStorage.setItem('amount', amount);
-            Route.push('/transfer/finsishsend')
-
-        }
-
+    const success=()=>{
+        Route.push('/profile/info')
     }
 
     useEffect(() => {
@@ -164,38 +169,33 @@ const Checkdetailfrom = () => {
             <div className="container">
                 <div className="row-container">
                     <div className="page-header">
-                        <h2>โอนเหรียญ</h2>
+                        <h2>ใบเสร็จ</h2>
                     </div>
                     <div className="dashedline"></div>
                     <div className="detail-head">จาก</div>
                     <div className="page-body">
-                        <div className="account-profile">
-                            <div className="account-profile-detail">
-                                <h3 className="detail-name">{fromprofileuser.sid}</h3>
-                                <h3 className="detail-name">คุณ {fromprofileuser.firstname} {fromprofileuser.lastname} </h3>
-                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coinfrom} เหรียญ</strong></p>
-                            </div>
+                        <div className="account-profile-detail">
+                            <h3 className="detail-name">{fromprofileuser.sid} คุณ {fromprofileuser.firstname} {fromprofileuser.lastname} </h3>
                         </div>
                     </div>
                     <div className="detail-head">ถึง</div>
                     <div className="page-body">
-                        <div className="account-profile">
-                            <div className="account-profile-detail">
-                                <h3 className="detail-name">{toprofileuser.sid}</h3>
-                                <h3 className="detail-name">คุณ {toprofileuser.firstname} {toprofileuser.lastname} </h3>
-                            </div>
+                        <div className="account-profile-detail">
+                            <h3 className="detail-name">{toprofileuser.sid} คุณ {toprofileuser.firstname} {toprofileuser.lastname} </h3>
                         </div>
                     </div>
-                    <div className="detail-head">จำนวนเงิน</div>
-                    <div className="to-profile">
-                        <div className="to-profile-detail">
-                            <p className="detail-balance-coin">กรอกจำนวนเงิน</p>
-                            <input className="inputbox" onChange={e => setAmount(e.target.value)} />
-                        </div>
-                        <div className="solidline"></div>
+                    <div className="page-body">
+                        <div className="detail-head">จำนวนเงิน</div>
+                        <h3 className="detail-name">{amount} PSUCOIN</h3>
                     </div>
+                    <div className="page-body">
+                        <div className="detail-head">รายละเอียดการโอน</div>
+                        <h3 className="detail-hash"><a href={hash}>{hash}</a></h3>
+                    </div>
+
+
                     <div className="dashedline"></div>
-                    <button type="button" class="btn btn-outline-success btn-confirm" onClick={()=>sendcoin()}>ยืนยัน</button>
+                    <button type="button" class="btn btn-outline-success btn-confirm" onClick={() => success()}>ยืนยัน</button>
                 </div>
 
             </div>
@@ -203,4 +203,4 @@ const Checkdetailfrom = () => {
     )
 }
 
-export default Checkdetailfrom;
+export default Slipmoney;

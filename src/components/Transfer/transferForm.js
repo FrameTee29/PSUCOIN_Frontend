@@ -153,7 +153,7 @@ const TransferForm = () => {
             else{
                 sessionStorage.setItem('from', from);
                 sessionStorage.setItem('to', to);
-                {Route.push('/transfer/checkdetail')}
+                Route.push('/transfer/checkdetail')
             }
 
 
