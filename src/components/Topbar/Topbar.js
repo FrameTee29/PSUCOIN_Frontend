@@ -9,7 +9,7 @@ import { FaUserAlt, FaSignOutAlt } from "react-icons/fa";
 import { FiActivity } from "react-icons/fi";
 
 const Toolbar = styled.header`
-    position:fixed;
+    /* position:fixed; */
     top:0;
     left:0;
     width:100%;

@@ -27,14 +27,14 @@ const Transfer = () => {
       <Topbar drawerToggleClickHandler={drawerToggleClickHandler} />
       <SideDrawer show={sideDrawerOpen} />
       {backdrop}
-      <main style={{ marginTop: '64px' }}>
+      <div style={{ marginTop: '0px' }}>
         <TransferForm />
-      </main>
+      </div>
     </div>
   )
 
 }
 
-const WithTransfer =()=><WithAuth component={Transfer} />
+const WithTransfer = () => <WithAuth component={Transfer} />
 
 export default WithTransfer;
