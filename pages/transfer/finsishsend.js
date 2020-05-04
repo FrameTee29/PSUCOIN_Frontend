@@ -29,7 +29,7 @@ const Checkdetail = () => {
       <Topbar drawerToggleClickHandler={drawerToggleClickHandler} />
       <SideDrawer show={sideDrawerOpen} />
       {backdrop}
-      <main style={{ marginTop: '64px' }}>
+      <main style={{ marginTop: '0px' }}>
         <Slipmoney/>
       </main>
     </div>
