@@ -4,6 +4,7 @@ import { TiThMenuOutline} from "react-icons/ti";
 
 const Toggle_button= styled.button`
     display:flex;
+    
     flex-direction:column;
     justify-content:space-around;
     height:24px;
