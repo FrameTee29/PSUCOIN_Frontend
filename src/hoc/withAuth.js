@@ -17,7 +17,7 @@ const WithAuth = (props) => {
     if (token === null) {
         return (
             <>
-                <Login/>
+                <Login />
             </>
         )
     }

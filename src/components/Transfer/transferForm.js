@@ -143,7 +143,10 @@ const TransferForm = () => {
 
     const sendcoin = async () => {
         if (to == '') {
-            alert("กรุณากรอกรหัสผู้รับ")
+            alert("กรุณากรอกรหัสผู้รับ");
+        }
+        else if(from == to){
+            alert("ไม่สามารถส่งให้รหัสเดียวกันได้ กรุณากรอกรหัสผู้รับใหม่");
         }
         else {
             const user = await Axios.get(`http://localhost:3001/users/${to}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } });
