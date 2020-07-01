@@ -173,7 +173,7 @@ const Checkdetailfrom = () => {
                             <div className="account-profile-detail">
                                 <h3 className="detail-name">{fromprofileuser.sid}</h3>
                                 <h3 className="detail-name">คุณ {fromprofileuser.firstname} {fromprofileuser.lastname} </h3>
-                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coinfrom} เหรียญ</strong></p>
+                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coinfrom} PSUCOIN</strong></p>
                             </div>
                         </div>
                     </div>

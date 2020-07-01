@@ -181,7 +181,7 @@ const TransferForm = () => {
                             <div className="account-profile-detail">
                                 <h3 className="detail-name">{profileuser.sid}</h3>
                                 <h3 className="detail-name">คุณ {profileuser.firstname} {profileuser.lastname} </h3>
-                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coin} เหรียญ</strong></p>
+                                <p className="detail-balance-coin">เหรียญสะสม<strong>{coin} PSUCOIN</strong></p>
                             </div>
                         </div>
                     </div>

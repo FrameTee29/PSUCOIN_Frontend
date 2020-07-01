@@ -5,6 +5,8 @@ import Route from 'next/router'
 
 const WithAuth = (props) => {
 
+
+    // HOC
     const WithAuthComponent = props.component;
 
     const [token, setToken] = useState(null);
