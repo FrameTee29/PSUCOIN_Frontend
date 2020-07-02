@@ -1107,29 +1107,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["display:flex;background-image:linear-gradient(to top,rgba(7,127,65,1),rgba(48,182,113,1));background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;justify-content:center;height:100vh;.position-login{display:flex;right:30px;}"]);
+})(["display:flex;background-color:white;background-position:center;background-repeat:no-repeat;background-size:cover;align-items:center;flex-direction:column;height:100vh;.position-login{display:flex;right:30px;}"]);
 
 const Login = () => {
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 28,
       columnNumber: 9
     }
-  }, __jsx("div", {
+  }, "\u0E41\u0E16\u0E1A login \u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E / \u0E2B\u0E19\u0E49\u0E32\u0E2A\u0E21\u0E31\u0E04\u0E23", __jsx("div", {
     className: "position-login",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 31,
       columnNumber: 13
     }
-  }, "\u0E41\u0E16\u0E1A login \u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E / \u0E2B\u0E19\u0E49\u0E32\u0E2A\u0E21\u0E31\u0E04\u0E23", __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 32,
       columnNumber: 17
     }
   })));
