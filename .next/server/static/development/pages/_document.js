@@ -1107,28 +1107,28 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{max-width:960px;width:100%;margin:0 auto;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}"]);
+})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{max-width:960px;width:100%;margin:0 auto;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}div.input-id-pass{display:grid;grid-template-columns:repeat(3,1fr);}.input-id-pass{margin:0px;text-transform:uppercase;}"]);
 
 const Login = () => {
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 52,
       columnNumber: 9
     }
   }, __jsx("header", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 53,
       columnNumber: 13
     }
   }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 54,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1136,7 +1136,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 55,
       columnNumber: 21
     }
   }, __jsx("div", {
@@ -1144,7 +1144,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 56,
       columnNumber: 25
     }
   }, __jsx("div", {
@@ -1152,21 +1152,21 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 57,
       columnNumber: 29
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 58,
       columnNumber: 33
     }
   }, "Psucoin"), __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 59,
       columnNumber: 33
     }
   }, "Cryptocurrency ")), __jsx("div", {
@@ -1174,40 +1174,81 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 61,
       columnNumber: 29
+    }
+  }, __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 33
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 33
+      lineNumber: 63,
+      columnNumber: 37
     }
   }, "Username"), __jsx("input", {
-    placeholder: "\u0E23\u0E2B\u0E31\u0E2A\u0E19\u0E31\u0E01\u0E28\u0E36\u0E01\u0E29\u0E32",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 64,
+      columnNumber: 37
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
       columnNumber: 33
     }
-  }), __jsx("h5", {
+  }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 33
+      lineNumber: 67,
+      columnNumber: 37
     }
   }, "Password"), __jsx("input", {
-    placeholder: "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 68,
+      columnNumber: 37
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
       columnNumber: 33
     }
-  })))))));
+  }, __jsx("button", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 37
+    }
+  }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E23\u0E30\u0E1A\u0E1A"))))))), __jsx("div", {
+    className: "position-login",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 13
+    }
+  }, __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 17
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);

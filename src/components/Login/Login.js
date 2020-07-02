@@ -35,6 +35,15 @@ const StyledWrapper = styled.div`
     .logo span{
         font-size:12px;
     }
+    div.input-id-pass{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .input-id-pass{
+        margin:0px;
+        text-transform:uppercase;
+    }
    
 `
 
@@ -50,10 +59,17 @@ const Login = () => {
                                 <span>Cryptocurrency </span>
                             </div>
                             <div className="input-id-pass">
-                                <h5>Username</h5>
-                                <input placeholder="รหัสนักศึกษา" />
-                                <h5>Password</h5>
-                                <input placeholder="รหัสผ่าน" />
+                                <div>
+                                    <h5>Username</h5>
+                                    <input />
+                                </div>
+                                <div>
+                                    <h5>Password</h5>
+                                    <input/>
+                                </div>
+                                <div>
+                                    <button>เข้าสู่ระบบ</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,9 +77,9 @@ const Login = () => {
                 </nav>
             </header>
 
-            {/* <div className="position-login">
+            <div className="position-login">
                 <FormLogin />
-            </div> */}
+            </div>
         </StyledWrapper>
     )
 }
