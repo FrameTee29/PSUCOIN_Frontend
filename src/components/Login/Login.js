@@ -1,5 +1,9 @@
 import FormLogin from "./subsection/FormLogin"
 import styled from 'styled-components'
+import { useState, useEffect } from 'react';
+import Axios from 'axios';
+import Route from 'next/router';
+import { useDispatch } from 'react-redux';
 
 const StyledWrapper = styled.div`
     margin: 0px;
@@ -64,6 +68,20 @@ const StyledWrapper = styled.div`
 `
 
 const Login = () => {
+
+    const dispatch=useDispatch();
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [token, setToken] = useState(null);
+
+    const Signin = async () => {
+        const result = await Axios.post('http://localhost:3001/auth/login', { username: username, password: password });
+        sessionStorage.setItem('token', result.data.access_token)
+        sessionStorage.setItem('username', username)
+        setToken(result.data.access_token)
+        Route.push('/profile/info');
+    }
+
     return (
         <StyledWrapper>
             <header>
@@ -81,14 +99,14 @@ const Login = () => {
                         <div className="input-id-pass">
                             <div className="input-id-pass-div">
                                 <h5>Username</h5>
-                                <input type="text" />
+                                <input type="text"  onChange={e => setUsername(e.target.value)}/>
                             </div>
                             <div className="input-id-pass-div">
                                 <h5>Password</h5>
-                                <input type="password" />
+                                <input type="password" onChange={e => setPassword(e.target.value)}/>
                             </div>
                             <div className="input-id-pass-button">
-                                <button type="button" class="btn btn-primary">SIGN IN</button>
+                                <button type="button" class="btn btn-primary" onClick={() => Signin()}>SIGN IN</button>
                             </div>
                         </div>
 
