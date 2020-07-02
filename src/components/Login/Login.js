@@ -24,6 +24,8 @@ const Login = () => {
     return (
         <StyledWrapper>
             <div className="position-login">
+                แถบ login 
+                รูปภาพ / หน้าสมัคร
                 <FormLogin />
             </div>
         </StyledWrapper>

@@ -1125,11 +1125,11 @@ const Login = () => {
       lineNumber: 26,
       columnNumber: 13
     }
-  }, __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "\u0E41\u0E16\u0E1A login \u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E / \u0E2B\u0E19\u0E49\u0E32\u0E2A\u0E21\u0E31\u0E04\u0E23", __jsx(_subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 29,
       columnNumber: 17
     }
   })));
@@ -1308,6 +1308,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const WithAuth = props => {
+  // HOC
   const WithAuthComponent = props.component;
   const {
     0: token,
@@ -1322,7 +1323,7 @@ const WithAuth = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 22,
         columnNumber: 17
       }
     }));
@@ -1331,14 +1332,14 @@ const WithAuth = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 13
       }
     }, __jsx(WithAuthComponent, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 18
       }
     }));
