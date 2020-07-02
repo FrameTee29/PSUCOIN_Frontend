@@ -11,6 +11,7 @@ const StyledWrapper = styled.div`
         max-width:960px;
         width : 100%;
         margin: 0 auto;
+        justify-content:space-between;
     }
 
     header{
@@ -39,7 +40,7 @@ const StyledWrapper = styled.div`
     }
     div.input-id-pass{
         display:grid;
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
     .input-id-pass{
@@ -68,39 +69,32 @@ const Login = () => {
             <header>
                 <nav>
                     <div className="container">
-                        <div className="nav-grid">
 
+                        <div className="nav-grid">
                             <div className="logo">
                                 <h1>Psucoin</h1>
                                 <span>Cryptocurrency </span>
                             </div>
-
-                            <div className="input-id-pass">
-                                <div>
-                                    
-                                </div>
-                                <div className="input-id-pass-div">  
-                                    <h5>Username</h5>
-                                    <input />
-                                </div>
-                                <div className="input-id-pass-div">
-                                    <h5>Password</h5>
-                                    <input/>
-                                </div>
-                                <div className="input-id-pass-button">
-                                    <button type="button" class="btn btn-primary">SIGN IN</button>
-                                </div>
-                            </div>
-
                         </div>
-                    </div>
 
+
+                        <div className="input-id-pass">
+                            <div className="input-id-pass-div">
+                                <h5>Username</h5>
+                                <input type="text" />
+                            </div>
+                            <div className="input-id-pass-div">
+                                <h5>Password</h5>
+                                <input type="password" />
+                            </div>
+                            <div className="input-id-pass-button">
+                                <button type="button" class="btn btn-primary">SIGN IN</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </nav>
             </header>
-
-            <div className="position-login">
-                <FormLogin />
-            </div>
         </StyledWrapper>
     )
 }
