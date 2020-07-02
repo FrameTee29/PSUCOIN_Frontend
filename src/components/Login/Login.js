@@ -7,6 +7,7 @@ const StyledWrapper = styled.div`
     box-sizing: border-box;
     font-family:'BalooPaaji2-Bold';
     .container{
+        display:flex;
         max-width:960px;
         width : 100%;
         margin: 0 auto;
@@ -22,6 +23,7 @@ const StyledWrapper = styled.div`
     .nav-grid{
         display:grid;
         grid-template-columns:225px 1fr;
+        
     }
     .logo{
         margin-top:20px;
@@ -37,12 +39,25 @@ const StyledWrapper = styled.div`
     }
     div.input-id-pass{
         display:grid;
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(4,1fr);
     }
 
     .input-id-pass{
         margin:0px;
         text-transform:uppercase;
+        justify-content:center;
+        align-items:center;
+    }
+    .input-id-pass-div{
+        width:170px;
+    }
+    .input-id-pass input{ 
+        width:150px;
+    }
+
+    .input-id-pass-button{
+        display:flex;
+        justify-content:center;
     }
    
 `
@@ -54,23 +69,29 @@ const Login = () => {
                 <nav>
                     <div className="container">
                         <div className="nav-grid">
+
                             <div className="logo">
                                 <h1>Psucoin</h1>
                                 <span>Cryptocurrency </span>
                             </div>
+
                             <div className="input-id-pass">
                                 <div>
+                                    
+                                </div>
+                                <div className="input-id-pass-div">  
                                     <h5>Username</h5>
                                     <input />
                                 </div>
-                                <div>
+                                <div className="input-id-pass-div">
                                     <h5>Password</h5>
                                     <input/>
                                 </div>
-                                <div>
-                                    <button>เข้าสู่ระบบ</button>
+                                <div className="input-id-pass-button">
+                                    <button type="button" class="btn btn-primary">SIGN IN</button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
