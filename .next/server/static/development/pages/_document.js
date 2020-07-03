@@ -1117,7 +1117,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Login__StyledWrapper",
   componentId: "sc-1x6szmh-0"
-})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{display:flex;max-width:960px;width:100%;margin:0 auto;justify-content:space-between;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}div.input-id-pass{display:grid;grid-template-columns:repeat(3,1fr);}.input-id-pass{margin:0px;text-transform:uppercase;justify-content:center;align-items:center;}.input-id-pass-div{width:170px;}.input-id-pass input{width:150px;}.input-id-pass-button{display:flex;justify-content:center;}"]);
+})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{display:flex;max-width:960px;width:100%;margin:0 auto;justify-content:space-between;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}div.input-id-pass{display:grid;grid-template-columns:repeat(3,1fr);}.input-id-pass{margin:0px;text-transform:uppercase;justify-content:center;align-items:center;}.input-id-pass-div{width:170px;}form{display:flex;flex-direction:row;justify-content:center;}.input-id-pass input{width:150px;}.input-id-pass-button{display:flex;justify-content:center;}"]);
 
 const Login = () => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
@@ -1149,21 +1149,21 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 93,
       columnNumber: 9
     }
   }, __jsx("header", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 94,
       columnNumber: 13
     }
   }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 95,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1171,7 +1171,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 96,
       columnNumber: 21
     }
   }, __jsx("div", {
@@ -1179,7 +1179,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 98,
       columnNumber: 25
     }
   }, __jsx("div", {
@@ -1187,45 +1187,52 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 99,
       columnNumber: 29
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 100,
       columnNumber: 33
     }
   }, "Psucoin"), __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 101,
       columnNumber: 33
     }
-  }, "Cryptocurrency "))), __jsx("div", {
+  }, "Cryptocurrency "))), __jsx("form", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105,
+      columnNumber: 25
+    }
+  }, __jsx("div", {
     className: "input-id-pass",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
-      columnNumber: 25
+      lineNumber: 106,
+      columnNumber: 29
     }
   }, __jsx("div", {
     className: "input-id-pass-div",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
-      columnNumber: 29
+      lineNumber: 107,
+      columnNumber: 33
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
-      columnNumber: 33
+      lineNumber: 108,
+      columnNumber: 37
     }
   }, "Username"), __jsx("input", {
     type: "text",
@@ -1233,23 +1240,23 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
-      columnNumber: 33
+      lineNumber: 109,
+      columnNumber: 37
     }
   })), __jsx("div", {
     className: "input-id-pass-div",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104,
-      columnNumber: 29
+      lineNumber: 111,
+      columnNumber: 33
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
-      columnNumber: 33
+      lineNumber: 112,
+      columnNumber: 37
     }
   }, "Password"), __jsx("input", {
     type: "password",
@@ -1257,28 +1264,28 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106,
-      columnNumber: 33
+      lineNumber: 113,
+      columnNumber: 37
     }
   })), __jsx("div", {
     className: "input-id-pass-button",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108,
-      columnNumber: 29
+      lineNumber: 115,
+      columnNumber: 33
     }
   }, __jsx("button", {
-    type: "button",
+    type: "submit",
     class: "btn btn-primary",
     onClick: () => Signin(),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109,
-      columnNumber: 33
+      lineNumber: 116,
+      columnNumber: 37
     }
-  }, "SIGN IN")))))));
+  }, "SIGN IN"))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);

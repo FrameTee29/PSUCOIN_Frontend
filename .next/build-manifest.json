@@ -32,7 +32,19 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/profile/account": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/profile/info": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/profile/transaction": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/transfer/beforesend": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

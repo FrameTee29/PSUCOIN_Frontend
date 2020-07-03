@@ -56,6 +56,13 @@ const StyledWrapper = styled.div`
     .input-id-pass-div{
         width:170px;
     }
+
+    form{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+    }
+
     .input-id-pass input{ 
         width:150px;
     }
@@ -69,7 +76,7 @@ const StyledWrapper = styled.div`
 
 const Login = () => {
 
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useState(null);
@@ -95,20 +102,21 @@ const Login = () => {
                             </div>
                         </div>
 
-
-                        <div className="input-id-pass">
-                            <div className="input-id-pass-div">
-                                <h5>Username</h5>
-                                <input type="text"  onChange={e => setUsername(e.target.value)}/>
+                        <form>
+                            <div className="input-id-pass">
+                                <div className="input-id-pass-div">
+                                    <h5>Username</h5>
+                                    <input type="text" onChange={e => setUsername(e.target.value)} />
+                                </div>
+                                <div className="input-id-pass-div">
+                                    <h5>Password</h5>
+                                    <input type="password" onChange={e => setPassword(e.target.value)} />
+                                </div>
+                                <div className="input-id-pass-button">
+                                    <button type="submit" class="btn btn-primary" onClick={() => Signin()}>SIGN IN</button>
+                                </div>
                             </div>
-                            <div className="input-id-pass-div">
-                                <h5>Password</h5>
-                                <input type="password" onChange={e => setPassword(e.target.value)}/>
-                            </div>
-                            <div className="input-id-pass-button">
-                                <button type="button" class="btn btn-primary" onClick={() => Signin()}>SIGN IN</button>
-                            </div>
-                        </div>
+                        </form>
 
                     </div>
                 </nav>
