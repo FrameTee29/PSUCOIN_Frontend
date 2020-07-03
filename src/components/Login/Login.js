@@ -71,6 +71,80 @@ const StyledWrapper = styled.div`
         display:flex;
         justify-content:center;
     }
+
+    @media only screen and (max-width:480px){
+
+        .container{
+        display:flex;
+        max-width:960px;
+        width : 100%;
+        margin: 0 auto;
+        flex-direction:column;
+        }
+
+        header{
+        height:auto;
+        }
+
+        .nav-grid{
+        text-align:center;
+        grid-template-columns: 1fr; 
+        }
+        div.input-id-pass{
+            grid-template-columns:1fr;
+        }
+        .input-id-pass-div{
+        width:200px;
+        margin-top:20px;
+        text-align:center;
+        }
+
+        .input-id-pass input{ 
+        width:100%;
+        }
+
+        .input-id-pass-button{
+            margin:20px 0px 20px 0px;
+        }
+
+    }
+
+    @media only screen and (max-width:600px){
+
+        .container{
+        display:flex;
+        max-width:960px;
+        width : 100%;
+        margin: 0 auto;
+        flex-direction:column;
+        }
+
+        header{
+        height:auto;
+        }
+
+        .nav-grid{
+        text-align:center;
+        grid-template-columns: 1fr; 
+        }
+        div.input-id-pass{
+            grid-template-columns:1fr;
+        }
+        .input-id-pass-div{
+        width:220px;
+        margin-top:20px;
+        text-align:center;
+        }
+
+        .input-id-pass input{ 
+        width:100%;
+        }
+
+        .input-id-pass-button{
+            margin:20px 0px 20px 0px;
+        }
+
+    }
    
 `
 
