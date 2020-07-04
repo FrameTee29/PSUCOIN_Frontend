@@ -1096,213 +1096,6 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _subsection_FormLogin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subsection/FormLogin */ "./src/components/Login/subsection/FormLogin.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "Login__StyledWrapper",
-  componentId: "sc-1x6szmh-0"
-})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{display:flex;max-width:960px;width:100%;margin:0 auto;justify-content:space-between;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}div.input-id-pass{display:grid;grid-template-columns:repeat(3,1fr);}.input-id-pass{margin:0px;text-transform:uppercase;justify-content:center;align-items:center;}.input-id-pass-div{width:170px;}form{display:flex;flex-direction:row;justify-content:center;}.input-id-pass input{width:150px;}.input-id-pass-button{display:flex;justify-content:center;}@media only screen and (max-width:480px){.container{display:flex;max-width:960px;width:100%;margin:0 auto;flex-direction:column;}header{height:auto;}.nav-grid{text-align:center;grid-template-columns:1fr;}div.input-id-pass{grid-template-columns:1fr;}.input-id-pass-div{width:200px;margin-top:20px;text-align:center;}.input-id-pass input{width:100%;}.input-id-pass-button{margin:20px 0px 20px 0px;}}@media only screen and (max-width:600px){.container{display:flex;max-width:960px;width:100%;margin:0 auto;flex-direction:column;}header{height:auto;}.nav-grid{text-align:center;grid-template-columns:1fr;}div.input-id-pass{grid-template-columns:1fr;}.input-id-pass-div{width:220px;margin-top:20px;text-align:center;}.input-id-pass input{width:100%;}.input-id-pass-button{margin:20px 0px 20px 0px;}}"]);
-
-const Login = () => {
-  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
-  const {
-    0: username,
-    1: setUsername
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  const {
-    0: password,
-    1: setPassword
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  const {
-    0: token,
-    1: setToken
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-
-  const Signin = async () => {
-    const result = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/auth/login', {
-      username: username,
-      password: password
-    });
-    sessionStorage.setItem('token', result.data.access_token);
-    sessionStorage.setItem('username', username);
-    setToken(result.data.access_token);
-    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/profile/info');
-  };
-
-  return __jsx(StyledWrapper, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 167,
-      columnNumber: 9
-    }
-  }, __jsx("header", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 168,
-      columnNumber: 13
-    }
-  }, __jsx("nav", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 169,
-      columnNumber: 17
-    }
-  }, __jsx("div", {
-    className: "container",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170,
-      columnNumber: 21
-    }
-  }, __jsx("div", {
-    className: "nav-grid",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 172,
-      columnNumber: 25
-    }
-  }, __jsx("div", {
-    className: "logo",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 173,
-      columnNumber: 29
-    }
-  }, __jsx("h1", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 174,
-      columnNumber: 33
-    }
-  }, "Psucoin"), __jsx("span", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 175,
-      columnNumber: 33
-    }
-  }, "Cryptocurrency "))), __jsx("form", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 179,
-      columnNumber: 25
-    }
-  }, __jsx("div", {
-    className: "input-id-pass",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 180,
-      columnNumber: 29
-    }
-  }, __jsx("div", {
-    className: "input-id-pass-div",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 181,
-      columnNumber: 33
-    }
-  }, __jsx("h5", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 182,
-      columnNumber: 37
-    }
-  }, "Username"), __jsx("input", {
-    type: "text",
-    onChange: e => setUsername(e.target.value),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 183,
-      columnNumber: 37
-    }
-  })), __jsx("div", {
-    className: "input-id-pass-div",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 185,
-      columnNumber: 33
-    }
-  }, __jsx("h5", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 186,
-      columnNumber: 37
-    }
-  }, "Password"), __jsx("input", {
-    type: "password",
-    onChange: e => setPassword(e.target.value),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 187,
-      columnNumber: 37
-    }
-  })), __jsx("div", {
-    className: "input-id-pass-button",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 189,
-      columnNumber: 33
-    }
-  }, __jsx("button", {
-    type: "submit",
-    class: "btn btn-primary",
-    onClick: () => Signin(),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 190,
-      columnNumber: 37
-    }
-  }, "SIGN IN"))))))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Login);
-
-/***/ }),
-
-/***/ "./src/components/Login/subsection/FormLogin.js":
-/*!******************************************************!*\
-  !*** ./src/components/Login/subsection/FormLogin.js ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
@@ -1311,7 +1104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\FormLogin.js";
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1320,11 +1113,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
-  displayName: "FormLogin__StyledWrapper",
-  componentId: "sc-1l30f0a-0"
-})(["display:block;font-family:'Krub-Bold';@media (min-width:320px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:310px;height:400px;background-color:white;border-radius:20px;box-shadow:0px 0px 5px 4px  #888888;}}@media (min-width:375px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:370px;height:400px;background-color:white;border-radius:20px;}}@media (min-width:2560px){.heightForm{display:block;align-items:center;justify-content:center;flex-direction:column;min-width:500px;height:500px;background-color:white;border-radius:20px;}}"]);
+  displayName: "Login__StyledWrapper",
+  componentId: "sc-1x6szmh-0"
+})(["margin:0px;padding:0px;box-sizing:border-box;font-family:'BalooPaaji2-Bold';.container{display:flex;max-width:960px;width:100%;margin:0 auto;justify-content:space-between;}header{width:100%;height:120px;background:#30b671;border-top:5px solid #3075b6;}.nav-grid{display:grid;grid-template-columns:225px 1fr;}.logo{margin-top:20px;color:#fff;}.logo h1{margin:0px;text-transform:uppercase;}.logo span{font-size:12px;}div.input-id-pass{display:grid;grid-template-columns:repeat(3,1fr);}.input-id-pass{margin:0px;text-transform:uppercase;justify-content:center;align-items:center;}.input-id-pass-div{width:170px;}form{display:flex;flex-direction:row;justify-content:center;}.input-id-pass input{width:150px;}.input-id-pass-button{display:flex;justify-content:center;}@media only screen and (max-width:480px){.container{display:flex;max-width:960px;width:100%;margin:0 auto;flex-direction:column;}header{height:auto;}.nav-grid{text-align:center;grid-template-columns:1fr;}div.input-id-pass{grid-template-columns:1fr;}.input-id-pass-div{width:200px;margin-top:20px;text-align:center;}.input-id-pass input{width:100%;}.input-id-pass-button{margin:20px 0px 20px 0px;}}@media only screen and (max-width:600px){.container{display:flex;max-width:960px;width:100%;margin:0 auto;flex-direction:column;}header{height:auto;}.nav-grid{text-align:center;grid-template-columns:1fr;}div.input-id-pass{grid-template-columns:1fr;}.input-id-pass-div{width:220px;margin-top:20px;text-align:center;}.input-id-pass input{width:100%;}.input-id-pass-button{margin:20px 0px 20px 0px;}}"]);
 
-const FormLogin = () => {
+const Login = () => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
   const {
     0: username,
@@ -1350,92 +1143,150 @@ const FormLogin = () => {
     next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/profile/info');
   };
 
-  const getUser = async () => {};
-
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 166,
       columnNumber: 9
     }
-  }, __jsx("form", {
-    class: "text-center border border-light p-5 heightForm",
-    action: "#!",
+  }, __jsx("header", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 167,
       columnNumber: 13
     }
-  }, __jsx("p", {
-    class: "h4 mb-4",
+  }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 168,
       columnNumber: 17
     }
-  }, "SIGN IN"), __jsx("p", {
-    class: "h4 mb-4",
+  }, __jsx("div", {
+    className: "container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
-      columnNumber: 17
+      lineNumber: 169,
+      columnNumber: 21
     }
-  }, "PSU PASSPORT"), __jsx("br", {
+  }, __jsx("div", {
+    className: "nav-grid",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
-      columnNumber: 17
+      lineNumber: 171,
+      columnNumber: 25
     }
-  }), __jsx("input", {
+  }, __jsx("div", {
+    className: "logo",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 172,
+      columnNumber: 29
+    }
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 173,
+      columnNumber: 33
+    }
+  }, "Psucoin"), __jsx("span", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174,
+      columnNumber: 33
+    }
+  }, "Cryptocurrency "))), __jsx("form", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 178,
+      columnNumber: 25
+    }
+  }, __jsx("div", {
+    className: "input-id-pass",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 179,
+      columnNumber: 29
+    }
+  }, __jsx("div", {
+    className: "input-id-pass-div",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 180,
+      columnNumber: 33
+    }
+  }, __jsx("h5", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 181,
+      columnNumber: 37
+    }
+  }, "Username"), __jsx("input", {
     type: "text",
-    id: "defaultSubscriptionFormPassword",
-    class: "form-control mb-4",
-    placeholder: "Username",
     onChange: e => setUsername(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
-      columnNumber: 17
+      lineNumber: 182,
+      columnNumber: 37
     }
-  }), __jsx("input", {
+  })), __jsx("div", {
+    className: "input-id-pass-div",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 184,
+      columnNumber: 33
+    }
+  }, __jsx("h5", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 185,
+      columnNumber: 37
+    }
+  }, "Password"), __jsx("input", {
     type: "password",
-    id: "defaultSubscriptionFormEmail",
-    class: "form-control mb-4",
-    placeholder: "Password",
     onChange: e => setPassword(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
-      columnNumber: 17
+      lineNumber: 186,
+      columnNumber: 37
     }
-  }), __jsx("br", {
+  })), __jsx("div", {
+    className: "input-id-pass-button",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
-      columnNumber: 17
+      lineNumber: 188,
+      columnNumber: 33
     }
-  }), __jsx("button", {
-    class: "btn btn-light btn-block",
+  }, __jsx("button", {
     type: "submit",
+    class: "btn btn-primary",
     onClick: () => Signin(),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
-      columnNumber: 17
+      lineNumber: 189,
+      columnNumber: 37
     }
-  }, "Sign in")));
+  }, "SIGN IN"))))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (FormLogin);
+/* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ }),
 
