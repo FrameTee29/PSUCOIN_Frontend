@@ -1104,9 +1104,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _subsection_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./subsection/Signup */ "./src/components/Login/subsection/Signup.js");
 var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -1147,21 +1149,21 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166,
+      lineNumber: 167,
       columnNumber: 9
     }
   }, __jsx("header", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167,
+      lineNumber: 168,
       columnNumber: 13
     }
   }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168,
+      lineNumber: 169,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1169,7 +1171,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169,
+      lineNumber: 170,
       columnNumber: 21
     }
   }, __jsx("div", {
@@ -1177,7 +1179,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171,
+      lineNumber: 172,
       columnNumber: 25
     }
   }, __jsx("div", {
@@ -1185,28 +1187,28 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172,
+      lineNumber: 173,
       columnNumber: 29
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173,
+      lineNumber: 174,
       columnNumber: 33
     }
   }, "Psucoin"), __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174,
+      lineNumber: 175,
       columnNumber: 33
     }
   }, "Cryptocurrency "))), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178,
+      lineNumber: 179,
       columnNumber: 25
     }
   }, __jsx("div", {
@@ -1214,7 +1216,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179,
+      lineNumber: 180,
       columnNumber: 29
     }
   }, __jsx("div", {
@@ -1222,14 +1224,14 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180,
+      lineNumber: 181,
       columnNumber: 33
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181,
+      lineNumber: 182,
       columnNumber: 37
     }
   }, "Username"), __jsx("input", {
@@ -1238,7 +1240,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182,
+      lineNumber: 183,
       columnNumber: 37
     }
   })), __jsx("div", {
@@ -1246,14 +1248,14 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184,
+      lineNumber: 185,
       columnNumber: 33
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185,
+      lineNumber: 186,
       columnNumber: 37
     }
   }, "Password"), __jsx("input", {
@@ -1262,7 +1264,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186,
+      lineNumber: 187,
       columnNumber: 37
     }
   })), __jsx("div", {
@@ -1270,7 +1272,7 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188,
+      lineNumber: 189,
       columnNumber: 33
     }
   }, __jsx("button", {
@@ -1280,13 +1282,64 @@ const Login = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189,
+      lineNumber: 190,
       columnNumber: 37
     }
-  }, "SIGN IN"))))))));
+  }, "SIGN IN"))))))), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 198,
+      columnNumber: 13
+    }
+  }, __jsx(_subsection_Signup__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 199,
+      columnNumber: 17
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
+
+/***/ }),
+
+/***/ "./src/components/Login/subsection/Signup.js":
+/*!***************************************************!*\
+  !*** ./src/components/Login/subsection/Signup.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\Signup.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Signup__StyledWrapper",
+  componentId: "zykk5t-0"
+})([""]);
+
+const Signup = () => {
+  return __jsx(StyledWrapper, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }, "\u0E2B\u0E19\u0E49\u0E32\u0E2A\u0E21\u0E31\u0E04\u0E23");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Signup);
 
 /***/ }),
 

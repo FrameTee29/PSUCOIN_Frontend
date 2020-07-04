@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Route from 'next/router';
 import { useDispatch } from 'react-redux';
+import Signup from './subsection/Signup';
 
 const StyledWrapper = styled.div`
     margin: 0px;
@@ -194,6 +195,9 @@ const Login = () => {
                     </div>
                 </nav>
             </header>
+            <div>
+                <Signup/>
+            </div>
         </StyledWrapper>
     )
 }
