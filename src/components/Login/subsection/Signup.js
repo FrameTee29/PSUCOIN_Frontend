@@ -4,7 +4,7 @@ const StyledWrapper = styled.div`
 
     .container-signup{
         display:grid;
-        grid-template-columns:1fr 400px;
+        grid-template-columns:1fr 350px;
 
         font-family:'Mali-Bold';
         background-color:white;
