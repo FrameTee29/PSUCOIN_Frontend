@@ -1300,7 +1300,7 @@ const Login = () => {
       lineNumber: 210,
       columnNumber: 17
     }
-  })));
+  }), "\u0E43\u0E2A\u0E48 copyright"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
