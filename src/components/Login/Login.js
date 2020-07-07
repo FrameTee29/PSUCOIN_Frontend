@@ -72,6 +72,12 @@ const StyledWrapper = styled.div`
         justify-content:center;
     }
 
+    .back-psuphuket{
+        /* background-image: url('/static/images/psuphuket_black.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+
     @media only screen and (max-width:480px){
 
         .container{
@@ -195,8 +201,8 @@ const Login = () => {
                     </div>
                 </nav>
             </header>
-            <div>
-                <Signup/>
+            <div className="back-psuphuket">
+                <Signup />
             </div>
         </StyledWrapper>
     )

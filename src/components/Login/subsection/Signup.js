@@ -2,14 +2,26 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
 
-    /* background-image: url('/static/images/psuphuket_black.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    height:auto;
-
     .container{
+        display:flex;
+        margin-top:50px;
+    }
+
+    .img-psu{
+        width:560px;
+    }
+
+    .content-psuphuket{
         display:grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
+        text-align:center
+    }
+    .content-signup{
+        border-color:black;
+        border-style:solid;
+        border-radius:20px;
+        padding:50px;
+
     }
 `
 
@@ -17,9 +29,9 @@ const Signup = () => {
     return (
         <StyledWrapper>
             <div className="container">
-
-                <div>
-                    รูปภาพ
+                <div className="content-psuphuket">
+                   <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5> 
+                    <img className="img-psu" src="/static/images/psuphuket.jpg"/>
                 </div>
 
                 <div className="content-signup">
@@ -40,6 +52,7 @@ const Signup = () => {
                     <input />
                     <button>สมัคร</button>
                 </div>
+
             </div>
         </StyledWrapper >
     )
