@@ -3,14 +3,12 @@ import styled from 'styled-components';
 const StyledWrapper = styled.div`
 
     .container-signup{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-        align-items:center;
+        display:grid;
+        grid-template-columns:1fr 400px;
+
         font-family:'Mali-Bold';
         background-color:white;
         max-width:960px;
-        width:960px;
         padding:20px;
         border-radius:20px;
     }
@@ -22,9 +20,15 @@ const StyledWrapper = styled.div`
     .content-psuphuket{
         display:flex;
         flex-direction:column;
-        
-       
+        justify-content:center;
+        align-items:center;
     }
+
+    .content-psuphuket h5{
+        font-size:40px;
+        text-align:center;
+    }
+
     .register{
         font-size:35px;
         width:100%;
