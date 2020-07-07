@@ -4,38 +4,47 @@ const StyledWrapper = styled.div`
 
     .container{
         display:flex;
-        margin-top:50px;
     }
 
     .img-psu{
-        width:560px;
+        width:400px;
     }
 
     .content-psuphuket{
-        display:grid;
-        grid-template-columns:1fr;
-        text-align:center
+       display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       text-align:center;
     }
+    .content-psuphuket h5{
+        font-size:40px;
+        color:white;
+    }
+
     .content-signup{
+        background-color:white;
         border-color:black;
         border-style:solid;
         border-radius:20px;
         padding:50px;
-
     }
+
 `
 
 const Signup = () => {
     return (
         <StyledWrapper>
+
             <div className="container">
+
                 <div className="content-psuphuket">
                    <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5> 
-                    <img className="img-psu" src="/static/images/psuphuket.jpg"/>
+                    <img className="img-psu" src="/static/images/coin.png"/>
                 </div>
 
                 <div className="content-signup">
-                    <h5>สมัครบัญชี</h5>
+                    <h3>สมัครบัญชี</h3>
                     <h5>ชื่อ</h5>
                     <input />
                     <h5>นามสกุล</h5>
@@ -54,6 +63,7 @@ const Signup = () => {
                 </div>
 
             </div>
+
         </StyledWrapper >
     )
 }

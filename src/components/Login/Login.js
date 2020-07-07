@@ -73,9 +73,11 @@ const StyledWrapper = styled.div`
     }
 
     .back-psuphuket{
-        /* background-image: url('/static/images/psuphuket_black.jpg');
+        background-image: url('/static/images/psuphuket_black.jpg');
         background-repeat: no-repeat;
-        background-size: cover; */
+        background-size: cover;
+        padding-top:80px;
+        padding-bottom:80px;
     }
 
     @media only screen and (max-width:480px){
