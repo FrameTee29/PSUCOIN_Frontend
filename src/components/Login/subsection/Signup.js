@@ -2,8 +2,17 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
 
-    .container{
+    .container-signup{
         display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        align-items:center;
+        font-family:'Mali-Bold';
+        background-color:white;
+        max-width:960px;
+        width:960px;
+        padding:20px;
+        border-radius:20px;
     }
 
     .img-psu{
@@ -11,24 +20,40 @@ const StyledWrapper = styled.div`
     }
 
     .content-psuphuket{
-       display:flex;
-       flex-direction:column;
-       justify-content:center;
-       align-items:center;
-       text-align:center;
+        display:flex;
+        flex-direction:column;
+        
+       
     }
-    .content-psuphuket h5{
-        font-size:40px;
-        color:white;
+    .register{
+        font-size:35px;
+        width:100%;
+        margin-bottom:5px;
+        
     }
 
     .content-signup{
-        background-color:white;
         border-color:black;
         border-style:solid;
         border-radius:20px;
-        padding:50px;
+        padding:20px;
+  
+
     }
+
+    .content-signup input{
+        width:100%;
+        margin:5px 0px 5px 0px;
+    }
+
+    .content-signup h5{
+      margin-top:5px;
+    }
+
+    .BTN-register{
+        width:100%;
+    }
+
 
 `
 
@@ -36,15 +61,15 @@ const Signup = () => {
     return (
         <StyledWrapper>
 
-            <div className="container">
+            <div className="container-signup">
 
                 <div className="content-psuphuket">
-                   <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5> 
-                    <img className="img-psu" src="/static/images/coin.png"/>
+                    <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5>
+                    <img className="img-psu" src="/static/images/coin.png" />
                 </div>
 
                 <div className="content-signup">
-                    <h3>สมัครบัญชี</h3>
+                    <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
                     <h5>ชื่อ</h5>
                     <input />
                     <h5>นามสกุล</h5>
@@ -59,8 +84,9 @@ const Signup = () => {
                     <input />
                     <h5>Confirm password</h5>
                     <input />
-                    <button>สมัคร</button>
+                    <button type="button" class="btn btn-primary BTN-register">สมัคร</button>
                 </div>
+
 
             </div>
 

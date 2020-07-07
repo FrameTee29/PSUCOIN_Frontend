@@ -91,3 +91,35 @@
     font-family:'Krub-SemiBoldItalic';
     src:url('/static/fonts/Krub-SemiBoldItalic.ttf');
 }
+
+ /* - - - - - - - - - - -End Krub - - - - - - - - - */
+
+
+ /*-------------------- Mali ------------------------*/
+
+ @font-face{
+    font-family:'Mali-Bold';
+    src:url('/static/fonts/Mali-Bold.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-BoldItalic';
+    src:url('/static/fonts/Mali-BoldItalic');
+}
+
+ @font-face{
+    font-family:'Mali-ExtraLight';
+    src:url('/static/fonts/Mali-ExtraLight.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-ExtraLightItalic';
+    src:url('/static/fonts/Mali-ExtraLightItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-Italic';
+    src:url('/static/fonts/Mali-Italic.ttf');
+}
+
+  /*---------------- End Mali -----------------------*/

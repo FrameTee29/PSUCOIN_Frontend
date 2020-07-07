@@ -10,6 +10,7 @@ const StyledWrapper = styled.div`
     padding: 0px;
     box-sizing: border-box;
     font-family:'BalooPaaji2-Bold';
+
     .container{
         display:flex;
         max-width:960px;
@@ -76,8 +77,10 @@ const StyledWrapper = styled.div`
         background-image: url('/static/images/psuphuket_black.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top:80px;
-        padding-bottom:80px;
+        display:flex;
+        justify-content:center;
+        padding-top:50px;
+        padding-bottom:50px;
     }
 
     @media only screen and (max-width:480px){
