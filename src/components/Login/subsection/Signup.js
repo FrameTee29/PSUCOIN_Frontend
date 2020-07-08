@@ -44,6 +44,10 @@ const StyledWrapper = styled.div`
 
     }
 
+    input{
+        color:blue;
+    }
+
     .content-signup input{
         width:100%;
         margin:5px 0px 5px 0px;
@@ -203,24 +207,25 @@ const Signup = () => {
                 <div className="content-signup">
                     <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
                     <h5>ชื่อ</h5>
-                    <input />
+                    <input onChange={e => setName(e.target.value)}/>
                     <h5>นามสกุล</h5>
-                    <input />
+                    <input onChange={e => setSurname(e.target.value)}/>
                     <h5>เลขบัตรประชาชน</h5>
-                    <input />
+                    <input onChange={e => setCardid(e.target.value)}/>
                     <h5>อีเมล์</h5>
-                    <input />
+                    <input onChange={e => setEmail(e.target.value)}/>
                     <h5>Username</h5>
-                    <input />
+                    <input onChange={e => setUsername(e.target.value)}/>
                     <h5>Password</h5>
-                    <input />
+                    <input onChange={e => setPassword(e.target.value)}/>
                     <h5>Confirm password</h5>
-                    <input />
+                    <input onChange={e => setConfirmpassword(e.target.value)}/>
                     <button type="button" class="btn btn-primary BTN-register">สมัคร</button>
                 </div>
 
 
             </div>
+            {JSON.stringify(name)}
 
         </StyledWrapper >
     )
