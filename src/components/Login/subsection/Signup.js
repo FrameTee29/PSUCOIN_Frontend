@@ -59,6 +59,23 @@ const StyledWrapper = styled.div`
 
     
 
+    @media only screen and (max-width:768px){
+        .container-signup{
+        display:grid;
+        grid-template-columns:1fr;
+        background-color:white;
+        width:740px;
+        padding:20px;
+        border-radius:20px;
+    }
+    .img-psu{
+        width:300px;
+    }
+    .content-psuphuket h5{
+        font-size:25px;
+        text-align:center;
+    }
+
     @media only screen and (max-width:480px){
         .container-signup{
         display:grid;
@@ -75,9 +92,47 @@ const StyledWrapper = styled.div`
         font-size:30px;
         text-align:center;
     }
+    
     }
 
-    @media only screen and (max-width:320px){
+    @media only screen and (max-width:425px){
+        .container-signup{
+        display:grid;
+        grid-template-columns:1fr;
+        background-color:white;
+        width:390px;
+        padding:20px;
+        border-radius:20px;
+    }
+    .img-psu{
+        width:180px;
+    }
+    .content-psuphuket h5{
+        font-size:15px;
+        text-align:center;
+    }
+
+    .register{
+        font-size:20px;
+        width:100%;
+        margin-bottom:5px;
+        
+    }
+
+    .content-signup{
+        border-color:black;
+        border-style:solid;
+        border-radius:20px;
+        padding:10px;
+    }
+
+    .content-signup h5{
+      margin-top:5px;
+      font-size:15px;
+    }
+
+    }
+    @media only screen and (max-width:375px){
         .container-signup{
         display:grid;
         grid-template-columns:1fr;
