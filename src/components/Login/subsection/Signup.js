@@ -71,9 +71,17 @@ const StyledWrapper = styled.div`
     .img-psu{
         width:300px;
     }
+
+    .register{
+        font-size:25px;
+        width:100%;
+        margin-bottom:5px;
+        
+    }
     .content-psuphuket h5{
         font-size:25px;
         text-align:center;
+    }
     }
 
     @media only screen and (max-width:480px){
