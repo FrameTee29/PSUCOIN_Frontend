@@ -106,8 +106,11 @@ const StyledWrapper = styled.div`
         border-style:solid;
         border-radius:20px;
         padding:10px;
-  
+    }
 
+    .content-signup h5{
+      margin-top:5px;
+      font-size:15px;
     }
 
     }
