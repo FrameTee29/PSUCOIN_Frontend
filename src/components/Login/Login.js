@@ -79,8 +79,8 @@ const StyledWrapper = styled.div`
         background-size: cover;
         display:flex;
         justify-content:center;
-        padding-top:50px;
-        padding-bottom:50px;
+        padding-top:70px;
+        padding-bottom:70px;
     }
 
     @media only screen and (max-width:480px){
