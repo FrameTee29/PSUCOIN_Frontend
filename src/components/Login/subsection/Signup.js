@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { useState, useEffect } from 'react';
 const StyledWrapper = styled.div`
 
     .container-signup{
@@ -181,6 +181,15 @@ const StyledWrapper = styled.div`
 `
 
 const Signup = () => {
+
+    const [name,setName] = useState('');
+    const [surname,setSurname] = useState('');
+    const [cardid,setCardid] = useState('');
+    const [email,setEmail] = useState('');
+    const [username,setUsername] = useState('');
+    const [password,setPassword] = useState('');
+    const [confirmpassword,setConfirmpassword] = useState('');
+    
     return (
         <StyledWrapper>
 
