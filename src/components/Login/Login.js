@@ -208,7 +208,6 @@ const Login = () => {
             </header>
             <div className="back-psuphuket">
                 <Signup />
-                ใส่ copyright
             </div>
         </StyledWrapper>
     )

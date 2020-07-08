@@ -5,7 +5,6 @@ const StyledWrapper = styled.div`
     .container-signup{
         display:grid;
         grid-template-columns:1fr 350px;
-
         font-family:'Mali-Bold';
         background-color:white;
         max-width:960px;
@@ -58,6 +57,60 @@ const StyledWrapper = styled.div`
         width:100%;
     }
 
+    
+
+    @media only screen and (max-width:480px){
+        .container-signup{
+        display:grid;
+        grid-template-columns:1fr;
+        background-color:white;
+        width:450px;
+        padding:20px;
+        border-radius:20px;
+    }
+    .img-psu{
+        width:300px;
+    }
+    .content-psuphuket h5{
+        font-size:30px;
+        text-align:center;
+    }
+    }
+
+    @media only screen and (max-width:320px){
+        .container-signup{
+        display:grid;
+        grid-template-columns:1fr;
+        background-color:white;
+        width:300px;
+        padding:20px;
+        border-radius:20px;
+    }
+    .img-psu{
+        width:180px;
+    }
+    .content-psuphuket h5{
+        font-size:15px;
+        text-align:center;
+    }
+
+    .register{
+        font-size:20px;
+        width:100%;
+        margin-bottom:5px;
+        
+    }
+
+    .content-signup{
+        border-color:black;
+        border-style:solid;
+        border-radius:20px;
+        padding:10px;
+  
+
+    }
+
+    }
 
 `
 
