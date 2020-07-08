@@ -64,7 +64,7 @@ const StyledWrapper = styled.div`
         display:grid;
         grid-template-columns:1fr;
         background-color:white;
-        width:740px;
+        width:100%;
         padding:20px;
         border-radius:20px;
     }
