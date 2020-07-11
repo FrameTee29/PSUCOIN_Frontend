@@ -1371,8 +1371,7 @@ const Signup = () => {
         username: username,
         password: password
       });
-      alert(regis);
-      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
+      alert(JSON.stringify(regis.data));
     }
 
     if (name == '') {
@@ -1400,7 +1399,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238,
+      lineNumber: 237,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1408,7 +1407,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 239,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1416,14 +1415,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242,
+      lineNumber: 241,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243,
+      lineNumber: 242,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1432,15 +1431,22 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 243,
       columnNumber: 21
     }
-  })), __jsx("div", {
+  })), __jsx("form", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
     className: "content-signup",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 246,
       columnNumber: 21
     }
   }, __jsx("span", {
@@ -1448,14 +1454,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 247,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 248,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
@@ -1464,28 +1470,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 249,
       columnNumber: 25
     }
   }), name == '0' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 250,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 250,
       columnNumber: 66
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 252,
       columnNumber: 25
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
@@ -1494,28 +1500,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 253,
       columnNumber: 25
     }
   }), name == '0' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255,
+      lineNumber: 254,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255,
+      lineNumber: 254,
       columnNumber: 69
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 256,
       columnNumber: 25
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
@@ -1524,28 +1530,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258,
+      lineNumber: 257,
       columnNumber: 25
     }
   }), name == '0' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 258,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 258,
       columnNumber: 76
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 260,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
@@ -1553,28 +1559,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262,
+      lineNumber: 261,
       columnNumber: 25
     }
   }), name == '0' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263,
+      lineNumber: 262,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263,
+      lineNumber: 262,
       columnNumber: 75
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 264,
       columnNumber: 25
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1582,28 +1588,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266,
+      lineNumber: 265,
       columnNumber: 25
     }
   }), name == '0' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267,
+      lineNumber: 266,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267,
+      lineNumber: 266,
       columnNumber: 70
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269,
+      lineNumber: 268,
       columnNumber: 25
     }
   }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1611,7 +1617,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 269,
       columnNumber: 25
     }
   }), __jsx("button", {
@@ -1621,10 +1627,10 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 271,
       columnNumber: 25
     }
-  }, "\u0E2A\u0E21\u0E31\u0E04\u0E23"))), JSON.stringify(name));
+  }, "\u0E2A\u0E21\u0E31\u0E04\u0E23")))), JSON.stringify(name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Signup);

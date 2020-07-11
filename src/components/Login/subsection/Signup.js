@@ -211,8 +211,7 @@ const Signup = () => {
                 username: username,
                 password: password
             })
-            alert(regis );
-            Route.push('/');
+            alert(JSON.stringify(regis.data));
         }
 
         if (name == '') {
@@ -243,7 +242,7 @@ const Signup = () => {
                     <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5>
                     <img className="img-psu" src="/static/images/coin.png" />
                 </div>
-              
+                <form>
                     <div className="content-signup">
                         <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
                         <h5>ชื่อ</h5>
@@ -259,11 +258,11 @@ const Signup = () => {
                         {name == '0' ? <h7>*กรุณากรอกเลขบัตรประชาชน</h7> : <h7></h7>}
 
                         <h5>ชื่อผู้ใช้งาน</h5>
-                        <input  onChange={e => setUsername(e.target.value)} />
+                        <input onChange={e => setUsername(e.target.value)} />
                         {name == '0' ? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7> : <h7></h7>}
 
                         <h5>รหัสผ่าน</h5>
-                        <input  onChange={e => setPassword(e.target.value)} />
+                        <input onChange={e => setPassword(e.target.value)} />
                         {name == '0' ? <h7>*กรุณากรอกรหัสผ่าน</h7> : <h7></h7>}
 
                         <h5>ยืนยันรหัสผ่าน</h5>
@@ -271,7 +270,7 @@ const Signup = () => {
 
                         <button type="submit" class="btn btn-primary BTN-register" onClick={() => Registeraccount()}>สมัคร</button>
                     </div>
-                
+                </form>
 
             </div>
             {JSON.stringify(name)}
