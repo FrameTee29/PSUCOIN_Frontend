@@ -194,6 +194,12 @@ const Signup = () => {
     const [password,setPassword] = useState('');
     const [confirmpassword,setConfirmpassword] = useState('');
     
+
+    const Registeraccount = async ()=>{
+
+
+    }
+
     return (
         <StyledWrapper>
 
@@ -220,7 +226,7 @@ const Signup = () => {
                     <input onChange={e => setPassword(e.target.value)}/>
                     <h5>Confirm password</h5>
                     <input onChange={e => setConfirmpassword(e.target.value)}/>
-                    <button type="button" class="btn btn-primary BTN-register">สมัคร</button>
+                    <button type="button" class="btn btn-primary BTN-register" onClick={()=>Registeraccount()}>สมัคร</button>
                 </div>
 
 
