@@ -1334,54 +1334,73 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Signup__StyledWrapper",
   componentId: "zykk5t-0"
-})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}.content-signup h7{font-family:'Mali-Italic';color:red;font-size:13px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
+})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}.content-signup h7{font-family:'Mali-Italic';color:red;font-size:13px;}.correct-font{font-family:'Mali-Italic';color:green;font-size:13px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
 
 const Signup = () => {
   const {
     0: name,
     1: setName
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     0: surname,
     1: setSurname
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     0: cardid,
     1: setCardid
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     0: username,
     1: setUsername
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     0: password,
     1: setPassword
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     0: confirmpassword,
     1: setConfirmpassword
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
 
   const Registeraccount = async () => {
-    if (name == 'ex' || surname == 'ex' || cardid == 'ex' || username == 'ex' || password == 'ex') {
+    if (name == '' && surname == '' && cardid == '' && username == '' && password == '') {
       alert("กรุณากรอกข้อมูล");
     } else {
-      const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
-        firstname: name,
-        lastname: surname,
-        cid: cardid,
-        username: username,
-        password: password
-      });
-      alert(JSON.stringify(regis.data));
-    }
+      if (name == '') {
+        setName('ex');
+      }
+
+      if (surname == '') {
+        setSurname('ex');
+      }
+
+      if (cardid == '' || cardid.length != 13) {
+        setCardid('ex');
+      }
+
+      if (username == '') {
+        setUsername('ex');
+      }
+
+      if (password == '') {
+        setPassword('ex');
+      }
+    } // const regis = await Axios.post('http://localhost:3001/signup/register', {
+    //     firstname: name,
+    //     lastname: surname,
+    //     cid: cardid,
+    //     username: username,
+    //     password: password
+    // })
+    // alert(JSON.stringify(regis.data));
+
   };
 
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 253,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1389,7 +1408,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
+      lineNumber: 255,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1397,14 +1416,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 257,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 258,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1413,22 +1432,15 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 259,
       columnNumber: 21
     }
-  })), __jsx("form", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 232,
-      columnNumber: 17
-    }
-  }, __jsx("div", {
+  })), __jsx("div", {
     className: "content-signup",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233,
+      lineNumber: 262,
       columnNumber: 21
     }
   }, __jsx("span", {
@@ -1436,14 +1448,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 263,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 265,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
@@ -1452,14 +1464,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 266,
       columnNumber: 25
+    }
+  }), name == 'ex' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 267,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 267,
+      columnNumber: 64
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 269,
       columnNumber: 25
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
@@ -1468,14 +1494,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 270,
       columnNumber: 25
+    }
+  }), surname == 'ex' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 271,
+      columnNumber: 43
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 271,
+      columnNumber: 70
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 273,
       columnNumber: 25
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
@@ -1484,14 +1524,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 274,
       columnNumber: 25
+    }
+  }), cardid == 'ex' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 275,
+      columnNumber: 42
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 275,
+      columnNumber: 76
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 277,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
@@ -1499,14 +1553,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 278,
       columnNumber: 25
+    }
+  }), username == 'ex' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 279,
+      columnNumber: 44
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 279,
+      columnNumber: 77
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 281,
       columnNumber: 25
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1514,14 +1582,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 282,
       columnNumber: 25
+    }
+  }), password == 'ex' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 283,
+      columnNumber: 44
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 283,
+      columnNumber: 72
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 285,
       columnNumber: 25
     }
   }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1529,8 +1611,23 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 286,
       columnNumber: 25
+    }
+  }), password == confirmpassword ? __jsx("h6", {
+    className: "correct-font",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 287,
+      columnNumber: 55
+    }
+  }, "\u0E23\u0E2B\u0E31\u0E2A\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 287,
+      columnNumber: 101
     }
   }), __jsx("button", {
     type: "submit",
@@ -1539,10 +1636,10 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259,
+      lineNumber: 290,
       columnNumber: 25
     }
-  }, "\u0E2A\u0E21\u0E31\u0E04\u0E23")))), JSON.stringify(name));
+  }, "\u0E2A\u0E21\u0E31\u0E04\u0E23"))), JSON.stringify(name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Signup);

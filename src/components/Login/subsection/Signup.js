@@ -51,6 +51,12 @@ const StyledWrapper = styled.div`
 
     }
 
+    .correct-font{
+        font-family:'Mali-Italic';
+        color:green;
+        font-size:13px;
+    }
+
     input{
         color:blue;
     }
@@ -193,29 +199,52 @@ const StyledWrapper = styled.div`
 
 const Signup = () => {
 
-    const [name, setName] = useState('ex');
-    const [surname, setSurname] = useState('ex');
-    const [cardid, setCardid] = useState('ex');
-    const [username, setUsername] = useState('ex');
-    const [password, setPassword] = useState('ex');
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [cardid, setCardid] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmpassword] = useState('ex');
 
 
     const Registeraccount = async () => {
 
-        if(name == 'ex' || surname == 'ex' || cardid == 'ex' || username =='ex' || password == 'ex'){
+        if(name == '' && surname == '' && cardid == '' && username =='' && password == ''){
             alert("กรุณากรอกข้อมูล");
         }
         else{
-            const regis = await Axios.post('http://localhost:3001/signup/register', {
-                firstname: name,
-                lastname: surname,
-                cid: cardid,
-                username: username,
-                password: password
-            })
-            alert(JSON.stringify(regis.data));
+            if(name == ''){
+                setName('ex');
+            }
+        
+            if(surname == ''){
+                setSurname('ex');
+            }
+
+            if(cardid == '' || cardid.length != 13){
+                setCardid('ex');
+            }
+
+            if(username == ''){
+                setUsername('ex');
+            }
+
+            if(password == ''){
+                setPassword('ex');
+            }
+
         }
+        
+
+        
+            // const regis = await Axios.post('http://localhost:3001/signup/register', {
+            //     firstname: name,
+            //     lastname: surname,
+            //     cid: cardid,
+            //     username: username,
+            //     password: password
+            // })
+            // alert(JSON.stringify(regis.data));
            
         
     }
@@ -229,36 +258,38 @@ const Signup = () => {
                     <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5>
                     <img className="img-psu" src="/static/images/coin.png" />
                 </div>
-                <form>
+                
                     <div className="content-signup">
                         <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
 
                         <h5>ชื่อ</h5>
                         <input type="text" onChange={e => setName(e.target.value)} />
-                        
+                        {name == 'ex'? <h7>*กรุณากรอกชื่อ</h7>:<h7></h7>}
 
                         <h5>นามสกุล</h5>
                         <input type="text" onChange={e => setSurname(e.target.value)} />
-                        
+                        {surname == 'ex'? <h7>*กรุณากรอกนามสกุล</h7>:<h7></h7>}
 
                         <h5>เลขบัตรประชาชน</h5>
                         <input type="text" onChange={e => setCardid(e.target.value)} />
-                        
+                        {cardid == 'ex'? <h7>*กรุณากรอกเลขบัตรประชาชน</h7>:<h7></h7>}
 
                         <h5>ชื่อผู้ใช้งาน</h5>
                         <input onChange={e => setUsername(e.target.value)} />
-                        
+                        {username == 'ex'? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7>:<h7></h7>}
 
                         <h5>รหัสผ่าน</h5>
                         <input onChange={e => setPassword(e.target.value)} />
-                        
+                        {password == 'ex'? <h7>*กรุณากรอกรหัสผ่าน</h7>:<h7></h7>}
 
                         <h5>ยืนยันรหัสผ่าน</h5>
                         <input onChange={e => setConfirmpassword(e.target.value)} />
+                        {password == confirmpassword? <h6 className="correct-font">รหัสถูกต้อง</h6>:<h7></h7>}
+
 
                         <button type="submit" class="btn btn-primary BTN-register" onClick={() => Registeraccount()}>สมัคร</button>
                     </div>
-                </form>
+                
 
             </div>
             {JSON.stringify(name)}
