@@ -203,7 +203,7 @@ const Signup = () => {
 
     const Registeraccount = async () => {
 
-        if (name != '' && surname != '' && cardid != '' && username != '' && password != '') {
+       
             const regis = await Axios.post('http://localhost:3001/signup/register', {
                 firstname: name,
                 lastname: surname,
@@ -212,25 +212,7 @@ const Signup = () => {
                 password: password
             })
             alert(JSON.stringify(regis.data));
-        }
-
-        if (name == '') {
-            setName('0');
-        }
-        if (surname == '') {
-            setSurname('0');
-        }
-
-        if (cardid == '' || cardid.length != 13) {
-            setCardid('0');
-        }
-
-        if (username == '') {
-            setUsername('0');
-        }
-        if (password == '') {
-            setPassword('0');
-        }
+        
     }
 
     return (
@@ -245,25 +227,26 @@ const Signup = () => {
                 <form>
                     <div className="content-signup">
                         <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
+                        
                         <h5>ชื่อ</h5>
                         <input type="text" onChange={e => setName(e.target.value)} />
-                        {name == '0' ? <h7>*กรุณากรอกชื่อ</h7> : <h7></h7>}
+                        
 
                         <h5>นามสกุล</h5>
                         <input type="text" onChange={e => setSurname(e.target.value)} />
-                        {name == '0' ? <h7>*กรุณากรอกนามสกุล</h7> : <h7></h7>}
+                        
 
                         <h5>เลขบัตรประชาชน</h5>
                         <input type="text" onChange={e => setCardid(e.target.value)} />
-                        {name == '0' ? <h7>*กรุณากรอกเลขบัตรประชาชน</h7> : <h7></h7>}
+                        
 
                         <h5>ชื่อผู้ใช้งาน</h5>
                         <input onChange={e => setUsername(e.target.value)} />
-                        {name == '0' ? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7> : <h7></h7>}
+                        
 
                         <h5>รหัสผ่าน</h5>
                         <input onChange={e => setPassword(e.target.value)} />
-                        {name == '0' ? <h7>*กรุณากรอกรหัสผ่าน</h7> : <h7></h7>}
+                        
 
                         <h5>ยืนยันรหัสผ่าน</h5>
                         <input onChange={e => setConfirmpassword(e.target.value)} />

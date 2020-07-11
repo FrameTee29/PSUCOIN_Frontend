@@ -1363,43 +1363,21 @@ const Signup = () => {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
 
   const Registeraccount = async () => {
-    if (name != '' && surname != '' && cardid != '' && username != '' && password != '') {
-      const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
-        firstname: name,
-        lastname: surname,
-        cid: cardid,
-        username: username,
-        password: password
-      });
-      alert(JSON.stringify(regis.data));
-    }
-
-    if (name == '') {
-      setName('0');
-    }
-
-    if (surname == '') {
-      setSurname('0');
-    }
-
-    if (cardid == '' || cardid.length != 13) {
-      setCardid('0');
-    }
-
-    if (username == '') {
-      setUsername('0');
-    }
-
-    if (password == '') {
-      setPassword('0');
-    }
+    const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
+      firstname: name,
+      lastname: surname,
+      cid: cardid,
+      username: username,
+      password: password
+    });
+    alert(JSON.stringify(regis.data));
   };
 
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 219,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1407,7 +1385,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 221,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1415,14 +1393,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 223,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242,
+      lineNumber: 224,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1431,14 +1409,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243,
+      lineNumber: 225,
       columnNumber: 21
     }
   })), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 227,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1446,7 +1424,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 228,
       columnNumber: 21
     }
   }, __jsx("span", {
@@ -1454,14 +1432,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 229,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 231,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
@@ -1470,28 +1448,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 232,
       columnNumber: 25
-    }
-  }), name == '0' ? __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 250,
-      columnNumber: 40
-    }
-  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D") : __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 250,
-      columnNumber: 66
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 235,
       columnNumber: 25
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
@@ -1500,28 +1464,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 236,
       columnNumber: 25
-    }
-  }), name == '0' ? __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 254,
-      columnNumber: 40
-    }
-  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25") : __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 254,
-      columnNumber: 69
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 239,
       columnNumber: 25
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
@@ -1530,28 +1480,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 240,
       columnNumber: 25
-    }
-  }), name == '0' ? __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 258,
-      columnNumber: 40
-    }
-  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19") : __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 258,
-      columnNumber: 76
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260,
+      lineNumber: 243,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
@@ -1559,28 +1495,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 244,
       columnNumber: 25
-    }
-  }), name == '0' ? __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 262,
-      columnNumber: 40
-    }
-  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19") : __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 262,
-      columnNumber: 75
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 247,
       columnNumber: 25
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1588,28 +1510,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 248,
       columnNumber: 25
-    }
-  }), name == '0' ? __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 266,
-      columnNumber: 40
-    }
-  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19") : __jsx("h7", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 266,
-      columnNumber: 70
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268,
+      lineNumber: 251,
       columnNumber: 25
     }
   }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1617,7 +1525,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269,
+      lineNumber: 252,
       columnNumber: 25
     }
   }), __jsx("button", {
@@ -1627,7 +1535,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 254,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23")))), JSON.stringify(name));
