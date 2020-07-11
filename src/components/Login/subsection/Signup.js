@@ -193,17 +193,20 @@ const StyledWrapper = styled.div`
 
 const Signup = () => {
 
-    const [name, setName] = useState('');
-    const [surname, setSurname] = useState('');
-    const [cardid, setCardid] = useState('');
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmpassword, setConfirmpassword] = useState('');
+    const [name, setName] = useState('ex');
+    const [surname, setSurname] = useState('ex');
+    const [cardid, setCardid] = useState('ex');
+    const [username, setUsername] = useState('ex');
+    const [password, setPassword] = useState('ex');
+    const [confirmpassword, setConfirmpassword] = useState('ex');
 
 
     const Registeraccount = async () => {
 
-       
+        if(name == 'ex' || surname == 'ex' || cardid == 'ex' || username =='ex' || password == 'ex'){
+            alert("กรุณากรอกข้อมูล");
+        }
+        else{
             const regis = await Axios.post('http://localhost:3001/signup/register', {
                 firstname: name,
                 lastname: surname,
@@ -212,6 +215,8 @@ const Signup = () => {
                 password: password
             })
             alert(JSON.stringify(regis.data));
+        }
+           
         
     }
 
@@ -227,7 +232,7 @@ const Signup = () => {
                 <form>
                     <div className="content-signup">
                         <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
-                        
+
                         <h5>ชื่อ</h5>
                         <input type="text" onChange={e => setName(e.target.value)} />
                         

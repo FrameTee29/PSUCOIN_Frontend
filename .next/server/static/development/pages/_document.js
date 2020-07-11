@@ -1340,44 +1340,48 @@ const Signup = () => {
   const {
     0: name,
     1: setName
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
   const {
     0: surname,
     1: setSurname
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
   const {
     0: cardid,
     1: setCardid
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
   const {
     0: username,
     1: setUsername
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
   const {
     0: password,
     1: setPassword
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
   const {
     0: confirmpassword,
     1: setConfirmpassword
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('ex');
 
   const Registeraccount = async () => {
-    const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
-      firstname: name,
-      lastname: surname,
-      cid: cardid,
-      username: username,
-      password: password
-    });
-    alert(JSON.stringify(regis.data));
+    if (name == 'ex' || surname == 'ex' || cardid == 'ex' || username == 'ex' || password == 'ex') {
+      alert("กรุณากรอกข้อมูล");
+    } else {
+      const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
+        firstname: name,
+        lastname: surname,
+        cid: cardid,
+        username: username,
+        password: password
+      });
+      alert(JSON.stringify(regis.data));
+    }
   };
 
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 224,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1385,7 +1389,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
+      lineNumber: 226,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1393,14 +1397,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223,
+      lineNumber: 228,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 229,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1409,14 +1413,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225,
+      lineNumber: 230,
       columnNumber: 21
     }
   })), __jsx("form", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227,
+      lineNumber: 232,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1424,7 +1428,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 233,
       columnNumber: 21
     }
   }, __jsx("span", {
@@ -1432,14 +1436,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 234,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 236,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
@@ -1448,14 +1452,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 232,
+      lineNumber: 237,
       columnNumber: 25
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 240,
       columnNumber: 25
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
@@ -1464,14 +1468,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 241,
       columnNumber: 25
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 244,
       columnNumber: 25
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
@@ -1480,14 +1484,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 245,
       columnNumber: 25
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243,
+      lineNumber: 248,
       columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
@@ -1495,14 +1499,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 249,
       columnNumber: 25
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 252,
       columnNumber: 25
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1510,14 +1514,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 253,
       columnNumber: 25
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 256,
       columnNumber: 25
     }
   }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1525,7 +1529,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 257,
       columnNumber: 25
     }
   }), __jsx("button", {
@@ -1535,7 +1539,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 259,
       columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23")))), JSON.stringify(name));
