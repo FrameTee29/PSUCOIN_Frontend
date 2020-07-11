@@ -1320,15 +1320,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\Signup.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
+
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Signup__StyledWrapper",
   componentId: "zykk5t-0"
-})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
+})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}.content-signup h7{font-family:'Mali-Italic';color:red;font-size:13px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
 
 const Signup = () => {
   const {
@@ -1344,10 +1350,6 @@ const Signup = () => {
     1: setCardid
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
-    0: email,
-    1: setEmail
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  const {
     0: username,
     1: setUsername
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
@@ -1360,13 +1362,45 @@ const Signup = () => {
     1: setConfirmpassword
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
 
-  const Registeraccount = async () => {};
+  const Registeraccount = async () => {
+    if (name != '' && surname != '' && cardid != '' && username != '' && password != '') {
+      const regis = await axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:3001/signup/register', {
+        firstname: name,
+        lastname: surname,
+        cid: cardid,
+        username: username,
+        password: password
+      });
+      alert(regis);
+      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
+    }
+
+    if (name == '') {
+      setName('0');
+    }
+
+    if (surname == '') {
+      setSurname('0');
+    }
+
+    if (cardid == '' || cardid.length != 13) {
+      setCardid('0');
+    }
+
+    if (username == '') {
+      setUsername('0');
+    }
+
+    if (password == '') {
+      setPassword('0');
+    }
+  };
 
   return __jsx(StyledWrapper, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 238,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1374,7 +1408,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 240,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1382,14 +1416,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 242,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 243,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1398,7 +1432,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 244,
       columnNumber: 21
     }
   })), __jsx("div", {
@@ -1406,131 +1440,189 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
-      columnNumber: 17
+      lineNumber: 247,
+      columnNumber: 21
     }
   }, __jsx("span", {
     class: "badge badge-pill badge-success register",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214,
-      columnNumber: 21
+      lineNumber: 248,
+      columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215,
-      columnNumber: 21
+      lineNumber: 249,
+      columnNumber: 25
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
+    type: "text",
     onChange: e => setName(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216,
-      columnNumber: 21
+      lineNumber: 250,
+      columnNumber: 25
+    }
+  }), name == '0' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 251,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 251,
+      columnNumber: 66
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217,
-      columnNumber: 21
+      lineNumber: 253,
+      columnNumber: 25
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
+    type: "text",
     onChange: e => setSurname(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218,
-      columnNumber: 21
+      lineNumber: 254,
+      columnNumber: 25
+    }
+  }), name == '0' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 255,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 255,
+      columnNumber: 69
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
-      columnNumber: 21
+      lineNumber: 257,
+      columnNumber: 25
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
+    type: "text",
     onChange: e => setCardid(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220,
-      columnNumber: 21
+      lineNumber: 258,
+      columnNumber: 25
+    }
+  }), name == '0' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 259,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 259,
+      columnNumber: 76
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221,
-      columnNumber: 21
+      lineNumber: 261,
+      columnNumber: 25
     }
-  }, "\u0E2D\u0E35\u0E40\u0E21\u0E25\u0E4C"), __jsx("input", {
-    onChange: e => setEmail(e.target.value),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 222,
-      columnNumber: 21
-    }
-  }), __jsx("h5", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 223,
-      columnNumber: 21
-    }
-  }, "Username"), __jsx("input", {
+  }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
     onChange: e => setUsername(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
-      columnNumber: 21
+      lineNumber: 262,
+      columnNumber: 25
+    }
+  }), name == '0' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 263,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 263,
+      columnNumber: 75
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225,
-      columnNumber: 21
+      lineNumber: 265,
+      columnNumber: 25
     }
-  }, "Password"), __jsx("input", {
+  }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
     onChange: e => setPassword(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226,
-      columnNumber: 21
+      lineNumber: 266,
+      columnNumber: 25
+    }
+  }), name == '0' ? __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 267,
+      columnNumber: 40
+    }
+  }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19") : __jsx("h7", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 267,
+      columnNumber: 70
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227,
-      columnNumber: 21
+      lineNumber: 269,
+      columnNumber: 25
     }
-  }, "Confirm password"), __jsx("input", {
+  }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
     onChange: e => setConfirmpassword(e.target.value),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
-      columnNumber: 21
+      lineNumber: 270,
+      columnNumber: 25
     }
   }), __jsx("button", {
-    type: "button",
+    type: "submit",
     class: "btn btn-primary BTN-register",
     onClick: () => Registeraccount(),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
-      columnNumber: 21
+      lineNumber: 272,
+      columnNumber: 25
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23"))), JSON.stringify(name));
 };

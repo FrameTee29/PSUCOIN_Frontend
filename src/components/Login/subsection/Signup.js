@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import Route from 'next/router';
+import Axios from 'axios';
 const StyledWrapper = styled.div`
 
     .container-signup{
@@ -40,7 +42,12 @@ const StyledWrapper = styled.div`
         border-style:solid;
         border-radius:20px;
         padding:20px;
-  
+
+    }
+    .content-signup h7{
+        font-family:'Mali-Italic';
+        color:red;
+        font-size:13px;
 
     }
 
@@ -186,18 +193,45 @@ const StyledWrapper = styled.div`
 
 const Signup = () => {
 
-    const [name,setName] = useState('');
-    const [surname,setSurname] = useState('');
-    const [cardid,setCardid] = useState('');
-    const [email,setEmail] = useState('');
-    const [username,setUsername] = useState('');
-    const [password,setPassword] = useState('');
-    const [confirmpassword,setConfirmpassword] = useState('');
-    
-
-    const Registeraccount = async ()=>{
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [cardid, setCardid] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmpassword, setConfirmpassword] = useState('');
 
 
+    const Registeraccount = async () => {
+
+        if (name != '' && surname != '' && cardid != '' && username != '' && password != '') {
+            const regis = await Axios.post('http://localhost:3001/signup/register', {
+                firstname: name,
+                lastname: surname,
+                cid: cardid,
+                username: username,
+                password: password
+            })
+            alert(regis );
+            Route.push('/');
+        }
+
+        if (name == '') {
+            setName('0');
+        }
+        if (surname == '') {
+            setSurname('0');
+        }
+
+        if (cardid == '' || cardid.length != 13) {
+            setCardid('0');
+        }
+
+        if (username == '') {
+            setUsername('0');
+        }
+        if (password == '') {
+            setPassword('0');
+        }
     }
 
     return (
@@ -209,26 +243,35 @@ const Signup = () => {
                     <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5>
                     <img className="img-psu" src="/static/images/coin.png" />
                 </div>
+              
+                    <div className="content-signup">
+                        <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
+                        <h5>ชื่อ</h5>
+                        <input type="text" onChange={e => setName(e.target.value)} />
+                        {name == '0' ? <h7>*กรุณากรอกชื่อ</h7> : <h7></h7>}
 
-                <div className="content-signup">
-                    <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
-                    <h5>ชื่อ</h5>
-                    <input onChange={e => setName(e.target.value)}/>
-                    <h5>นามสกุล</h5>
-                    <input onChange={e => setSurname(e.target.value)}/>
-                    <h5>เลขบัตรประชาชน</h5>
-                    <input onChange={e => setCardid(e.target.value)}/>
-                    <h5>อีเมล์</h5>
-                    <input onChange={e => setEmail(e.target.value)}/>
-                    <h5>Username</h5>
-                    <input onChange={e => setUsername(e.target.value)}/>
-                    <h5>Password</h5>
-                    <input onChange={e => setPassword(e.target.value)}/>
-                    <h5>Confirm password</h5>
-                    <input onChange={e => setConfirmpassword(e.target.value)}/>
-                    <button type="button" class="btn btn-primary BTN-register" onClick={()=>Registeraccount()}>สมัคร</button>
-                </div>
+                        <h5>นามสกุล</h5>
+                        <input type="text" onChange={e => setSurname(e.target.value)} />
+                        {name == '0' ? <h7>*กรุณากรอกนามสกุล</h7> : <h7></h7>}
 
+                        <h5>เลขบัตรประชาชน</h5>
+                        <input type="text" onChange={e => setCardid(e.target.value)} />
+                        {name == '0' ? <h7>*กรุณากรอกเลขบัตรประชาชน</h7> : <h7></h7>}
+
+                        <h5>ชื่อผู้ใช้งาน</h5>
+                        <input  onChange={e => setUsername(e.target.value)} />
+                        {name == '0' ? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7> : <h7></h7>}
+
+                        <h5>รหัสผ่าน</h5>
+                        <input  onChange={e => setPassword(e.target.value)} />
+                        {name == '0' ? <h7>*กรุณากรอกรหัสผ่าน</h7> : <h7></h7>}
+
+                        <h5>ยืนยันรหัสผ่าน</h5>
+                        <input onChange={e => setConfirmpassword(e.target.value)} />
+
+                        <button type="submit" class="btn btn-primary BTN-register" onClick={() => Registeraccount()}>สมัคร</button>
+                    </div>
+                
 
             </div>
             {JSON.stringify(name)}
