@@ -209,44 +209,51 @@ const Signup = () => {
 
     const Registeraccount = async () => {
 
-        if(name == '' && surname == '' && cardid == '' && username =='' && password == ''){
+        if (name == '' && surname == '' && cardid == '' && username == '' && password == '') {
             alert("กรุณากรอกข้อมูล");
         }
-        else{
-            if(name == ''){
+        else {
+            if (name == '') {
                 setName('ex');
             }
-        
-            if(surname == ''){
+
+            if (surname == '') {
                 setSurname('ex');
             }
 
-            if(cardid == '' || cardid.length != 13){
+            if (cardid == '' || cardid.length != 13) {
                 setCardid('ex');
             }
 
-            if(username == ''){
+            if (username == '') {
                 setUsername('ex');
             }
 
-            if(password == ''){
+            if (password == '') {
                 setPassword('ex');
             }
 
-        }
-        
+            else {
+                const regis = await Axios.post('http://localhost:3001/signup/register', {
+                    firstname: name,
+                    lastname: surname,
+                    cid: cardid,
+                    username: username,
+                    password: password
+                })
+                if (regis.data == "มีผู้ใช่งานชื่อนี้แล้ว กรุณาเปลี่ยนชื่อ") {
+                    alert("มีผู้ใช่งานชื่อนี้แล้ว");
+                }
+                else {
+                    alert("สมัครเรียบร้อย");
+                    window.location.reload(false)
+                }
 
-        
-            // const regis = await Axios.post('http://localhost:3001/signup/register', {
-            //     firstname: name,
-            //     lastname: surname,
-            //     cid: cardid,
-            //     username: username,
-            //     password: password
-            // })
-            // alert(JSON.stringify(regis.data));
-           
-        
+            }
+
+        }
+
+
     }
 
     return (
@@ -258,38 +265,38 @@ const Signup = () => {
                     <h5>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</h5>
                     <img className="img-psu" src="/static/images/coin.png" />
                 </div>
-                
-                    <div className="content-signup">
-                        <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
 
-                        <h5>ชื่อ</h5>
-                        <input type="text" onChange={e => setName(e.target.value)} />
-                        {name == 'ex'? <h7>*กรุณากรอกชื่อ</h7>:<h7></h7>}
+                <div className="content-signup">
+                    <span class="badge badge-pill badge-success register">สมัครบัญชี</span>
 
-                        <h5>นามสกุล</h5>
-                        <input type="text" onChange={e => setSurname(e.target.value)} />
-                        {surname == 'ex'? <h7>*กรุณากรอกนามสกุล</h7>:<h7></h7>}
+                    <h5>ชื่อ</h5>
+                    <input type="text" onChange={e => setName(e.target.value)} />
+                    {name == 'ex' ? <h7>*กรุณากรอกชื่อ</h7> : <h7></h7>}
 
-                        <h5>เลขบัตรประชาชน</h5>
-                        <input type="text" onChange={e => setCardid(e.target.value)} />
-                        {cardid == 'ex'? <h7>*กรุณากรอกเลขบัตรประชาชน</h7>:<h7></h7>}
+                    <h5>นามสกุล</h5>
+                    <input type="text" onChange={e => setSurname(e.target.value)} />
+                    {surname == 'ex' ? <h7>*กรุณากรอกนามสกุล</h7> : <h7></h7>}
 
-                        <h5>ชื่อผู้ใช้งาน</h5>
-                        <input onChange={e => setUsername(e.target.value)} />
-                        {username == 'ex'? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7>:<h7></h7>}
+                    <h5>เลขบัตรประชาชน</h5>
+                    <input type="text" onChange={e => setCardid(e.target.value)} />
+                    {cardid == 'ex' ? <h7>*กรุณากรอกเลขบัตรประชาชน</h7> : <h7></h7>}
 
-                        <h5>รหัสผ่าน</h5>
-                        <input onChange={e => setPassword(e.target.value)} />
-                        {password == 'ex'? <h7>*กรุณากรอกรหัสผ่าน</h7>:<h7></h7>}
+                    <h5>ชื่อผู้ใช้งาน</h5>
+                    <input onChange={e => setUsername(e.target.value)} />
+                    {username == 'ex' ? <h7>*กรุณากรอกชื่อผู้ใช้งาน</h7> : <h7></h7>}
 
-                        <h5>ยืนยันรหัสผ่าน</h5>
-                        <input onChange={e => setConfirmpassword(e.target.value)} />
-                        {password == confirmpassword? <h6 className="correct-font">รหัสถูกต้อง</h6>:<h7></h7>}
+                    <h5>รหัสผ่าน</h5>
+                    <input type="password" onChange={e => setPassword(e.target.value)} />
+                    {password == 'ex' ? <h7>*กรุณากรอกรหัสผ่าน</h7> : <h7></h7>}
+
+                    <h5>ยืนยันรหัสผ่าน</h5>
+                    <input type="password" onChange={e => setConfirmpassword(e.target.value)} />
+                    {password == confirmpassword && password != '' && confirmpassword != '' ? <h6 className="correct-font">รหัสถูกต้อง</h6> : <h7></h7>}
 
 
-                        <button type="submit" class="btn btn-primary BTN-register" onClick={() => Registeraccount()}>สมัคร</button>
-                    </div>
-                
+                    <button type="submit" class="btn btn-primary BTN-register" onClick={() => Registeraccount()}>สมัคร</button>
+                </div>
+
 
             </div>
             {JSON.stringify(name)}
