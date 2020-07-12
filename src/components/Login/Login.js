@@ -79,6 +79,7 @@ const StyledWrapper = styled.div`
         background-size: cover;
         display:flex;
         justify-content:center;
+        height:100vh;
         padding-top:70px;
         padding-bottom:70px;
     }
