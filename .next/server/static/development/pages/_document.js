@@ -1334,7 +1334,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Signup__StyledWrapper",
   componentId: "zykk5t-0"
-})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}.content-signup h7{font-family:'Mali-Italic';color:red;font-size:13px;}.correct-font{font-family:'Mali-Italic';color:green;font-size:13px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
+})([".container-signup{display:grid;grid-template-columns:1fr 350px;font-family:'Mali-Bold';background-color:white;max-width:960px;padding:20px;border-radius:20px;}.img-psu{width:400px;}.content-psuphuket{display:flex;flex-direction:column;justify-content:center;align-items:center;}.content-psuphuket h5{font-size:40px;text-align:center;}.register{font-size:35px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:20px;}.content-signup h7{font-family:'Mali-Italic';color:red;font-size:13px;}.correct-font{font-family:'Mali-Italic';color:green;font-size:13px;}input{color:blue;}.content-signup input{width:100%;margin:5px 0px 5px 0px;}.content-signup h5{margin-top:5px;font-size:15px;}.BTN-register{width:100%;}@media only screen and (max-width:768px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:100%;padding:20px;border-radius:20px;}.img-psu{width:300px;}.register{font-size:25px;width:100%;margin-bottom:5px;}.content-psuphuket h5{font-size:25px;text-align:center;}}@media only screen and (max-width:480px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:450px;padding:20px;border-radius:20px;}.img-psu{width:300px;}.content-psuphuket h5{font-size:30px;text-align:center;}}@media only screen and (max-width:425px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:390px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:10px;}}@media only screen and (max-width:375px){.container-signup{display:grid;grid-template-columns:1fr;background-color:white;width:300px;padding:20px;border-radius:20px;}.img-psu{width:180px;}.content-psuphuket h5{font-size:15px;text-align:center;}.register{font-size:20px;width:100%;margin-bottom:5px;}.content-signup{border-color:black;border-style:solid;border-radius:20px;padding:10px;}.content-signup h5{margin-top:5px;font-size:15px;}}"]);
 
 const Signup = () => {
   const {
@@ -1407,7 +1407,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260,
+      lineNumber: 261,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1415,7 +1415,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262,
+      lineNumber: 263,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1423,14 +1423,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264,
+      lineNumber: 265,
       columnNumber: 17
     }
   }, __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265,
+      lineNumber: 266,
       columnNumber: 21
     }
   }, "\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E2A\u0E07\u0E02\u0E25\u0E32\u0E19\u0E04\u0E23\u0E34\u0E19\u0E17\u0E23\u0E4C \u0E27\u0E34\u0E17\u0E22\u0E32\u0E40\u0E02\u0E15 \u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("img", {
@@ -1439,7 +1439,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266,
+      lineNumber: 267,
       columnNumber: 21
     }
   })), __jsx("div", {
@@ -1447,7 +1447,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269,
+      lineNumber: 270,
       columnNumber: 17
     }
   }, __jsx("span", {
@@ -1455,14 +1455,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 271,
       columnNumber: 21
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E1A\u0E31\u0E0D\u0E0A\u0E35"), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 273,
       columnNumber: 21
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D"), __jsx("input", {
@@ -1471,28 +1471,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273,
+      lineNumber: 274,
       columnNumber: 21
     }
   }), name == 'ex' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 275,
       columnNumber: 37
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 275,
       columnNumber: 63
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276,
+      lineNumber: 277,
       columnNumber: 21
     }
   }, "\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25"), __jsx("input", {
@@ -1501,28 +1501,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277,
+      lineNumber: 278,
       columnNumber: 21
     }
   }), surname == 'ex' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 279,
       columnNumber: 40
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E19\u0E32\u0E21\u0E2A\u0E01\u0E38\u0E25") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 279,
       columnNumber: 69
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 280,
+      lineNumber: 281,
       columnNumber: 21
     }
   }, "\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19"), __jsx("input", {
@@ -1531,28 +1531,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281,
+      lineNumber: 282,
       columnNumber: 21
     }
   }), cardid == 'ex' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282,
+      lineNumber: 283,
       columnNumber: 39
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E40\u0E25\u0E02\u0E1A\u0E31\u0E15\u0E23\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E0A\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282,
+      lineNumber: 283,
       columnNumber: 75
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284,
+      lineNumber: 285,
       columnNumber: 21
     }
   }, "\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"), __jsx("input", {
@@ -1560,28 +1560,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285,
+      lineNumber: 286,
       columnNumber: 21
     }
   }), username == 'ex' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 287,
       columnNumber: 41
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 287,
       columnNumber: 76
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 289,
       columnNumber: 21
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1590,28 +1590,28 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289,
+      lineNumber: 290,
       columnNumber: 21
     }
   }), password == 'ex' ? __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 291,
       columnNumber: 41
     }
   }, "*\u0E01\u0E23\u0E38\u0E13\u0E32\u0E01\u0E23\u0E2D\u0E01\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290,
+      lineNumber: 291,
       columnNumber: 71
     }
   }), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292,
+      lineNumber: 293,
       columnNumber: 21
     }
   }, "\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E23\u0E2B\u0E31\u0E2A\u0E1C\u0E48\u0E32\u0E19"), __jsx("input", {
@@ -1620,7 +1620,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293,
+      lineNumber: 294,
       columnNumber: 21
     }
   }), password == confirmpassword && password != '' && confirmpassword != '' ? __jsx("h6", {
@@ -1628,14 +1628,14 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294,
+      lineNumber: 295,
       columnNumber: 95
     }
   }, "\u0E23\u0E2B\u0E31\u0E2A\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07") : __jsx("h7", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294,
+      lineNumber: 295,
       columnNumber: 143
     }
   }), __jsx("button", {
@@ -1645,7 +1645,7 @@ const Signup = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 298,
       columnNumber: 21
     }
   }, "\u0E2A\u0E21\u0E31\u0E04\u0E23"))), JSON.stringify(name));
