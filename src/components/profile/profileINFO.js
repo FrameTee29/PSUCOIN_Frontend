@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { useEffect, useState } from "react";
 import Axios from "axios";
-
 import { FaUserCircle, } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { MdChangeHistory } from "react-icons/md";
 import { AiOutlineFieldNumber } from "react-icons/ai";
 import { FiCreditCard } from "react-icons/fi";
 import Slidenav from './subsection/slidenav';
+import DrawerToggleButtonnav from '../SideDrawer/DrawerToggleButtonnav';
+import SideDrawer from '../SideDrawer/SideDrawer';
 
 const StyledWrapper = styled.div`
     
@@ -124,6 +125,12 @@ const StyledWrapper = styled.div`
         max-width: 300px;
     }
 
+    .column-slide-change-hamburger{
+            display:none;
+        }
+    
+
+
     @media only screen and (max-width:768px){
         
         .detail-balance-coin{
@@ -132,19 +139,18 @@ const StyledWrapper = styled.div`
         }
 
         .detail-balance-coin strong{
-        font-family:'Krub-Regular';
-        font-size: 25px;
-        margin-left: 10px;
-        font-weight: 700;
-        color: rgb(29, 77, 160);
-    }
+            font-family:'Krub-Regular';
+            font-size: 25px;
+            margin-left: 10px;
+            font-weight: 700;
+            color: rgb(29, 77, 160);
+        }
+
+        
 
 }
 
     @media only screen and (max-width:425px){
-        .column-slide{
-            display:none;
-        }
         .row-container{
             display:flex;
             flex-direction:column;
@@ -164,9 +170,9 @@ const StyledWrapper = styled.div`
         }
     
         .img_profile{
-        width:200px;
-        height:200px;
-        border-radius:100px;
+            width:200px;
+            height:200px;
+            border-radius:100px;
         }
         .account-profile-img{
             margin:0px;
@@ -177,11 +183,19 @@ const StyledWrapper = styled.div`
         }
     
         .account-section-item-label{
-        display: flex;
-        align-items: center;
-        flex-basis: 180px;
-        font-size:15px;
+            display: flex;
+            align-items: center;
+            flex-basis: 180px;
+            font-size:15px;
         
+        }
+        .column-slide{
+            display:none;
+        }
+
+        .column-slide-change-hamburger{
+            display:flex;
+            margin-bottom:10px;
         }
     }
     @media only screen and (max-width:415px){
@@ -228,6 +242,10 @@ const StyledWrapper = styled.div`
 
         .account-section-item-label-name{
             font-size:20px;
+        }
+
+        .column-slide{
+            display:none;
         }
     }
 
@@ -358,11 +376,16 @@ const profileINFO = (props) => {
         getUser()
     }, [])
 
+
+
     return (
         <StyledWrapper>
             <div className="container">
                 <div className="row-container">
                     <div className="column-slide">
+                        <Slidenav />
+                    </div>
+                    <div className="column-slide-change-hamburger">
                         <Slidenav />
                     </div>
                     <div className="column-content">

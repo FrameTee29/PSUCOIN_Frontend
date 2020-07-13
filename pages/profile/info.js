@@ -31,7 +31,7 @@ const Profile = () => {
             <Topbar drawerToggleClickHandler={drawerToggleClickHandler} />
             <SideDrawer show={sideDrawerOpen} />
             {backdrop}
-            <main style={{ marginTop: '64px' }}>
+            <main style={{ marginTop: '20px' }}>
                 <ProfileINFO/>
             </main>
         </div>
