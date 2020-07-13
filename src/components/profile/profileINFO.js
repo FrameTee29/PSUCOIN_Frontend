@@ -9,6 +9,7 @@ import { FiCreditCard } from "react-icons/fi";
 import Slidenav from './subsection/slidenav';
 import DrawerToggleButtonnav from '../SideDrawer/DrawerToggleButtonnav';
 import SideDrawer from '../SideDrawer/SideDrawer';
+import Slidenav2 from './subsection/slidenav2';
 
 const StyledWrapper = styled.div`
     
@@ -147,6 +148,7 @@ const StyledWrapper = styled.div`
         }
 
         
+        
 
 }
 
@@ -159,6 +161,7 @@ const StyledWrapper = styled.div`
         }
 
         .column-content{
+            margin-top:80px;
             max-width: 425px;
         }
 
@@ -195,8 +198,11 @@ const StyledWrapper = styled.div`
 
         .column-slide-change-hamburger{
             display:flex;
+            width:100%;
+            justify-content:space-evenly;
             margin-bottom:10px;
         }
+       
     }
     @media only screen and (max-width:415px){
         .column-slide{
@@ -386,7 +392,7 @@ const profileINFO = (props) => {
                         <Slidenav />
                     </div>
                     <div className="column-slide-change-hamburger">
-                        <Slidenav />
+                        <Slidenav2/>
                     </div>
                     <div className="column-content">
                         <div className="info-content">
