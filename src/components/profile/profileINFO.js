@@ -10,26 +10,8 @@ import { FiCreditCard } from "react-icons/fi";
 import Slidenav from './subsection/slidenav';
 
 const StyledWrapper = styled.div`
-    display:block;
-    width:100%;
-    font-family:'Krub-Bold';
-
     
-    @media (min-width: 425px){
-        .container {
-            padding: 0px 20px;
-        }
-    } 
-    @media (min-width: 1024px){
-        .container {
-            padding: 0px 40px;
-        }
-    } 
-    @media (min-width: 1440px){
-        .container {
-            padding: 0px 80px;
-        }
-    } 
+    font-family:'Krub-Bold';
     .container{
         position: relative;
         width: 100%;
@@ -140,6 +122,32 @@ const StyledWrapper = styled.div`
         display:flex;
         max-width: 300px;
     }
+
+    @media only screen and (max-width:768px){
+
+        .detail-balance-coin{
+            font-size:15px;
+            font-family:'Krub-Regular';
+        }
+
+        .detail-balance-coin strong{
+        font-family:'Krub-Regular';
+        font-size: 25px;
+        margin-left: 10px;
+        font-weight: 700;
+        color: rgb(29, 77, 160);
+    }
+
+    @media only screen and (max-width:425px){
+
+        .row-container{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        padding:60px 0px;
+    }
+    
+    }
     
 `
 
@@ -148,7 +156,7 @@ const profileINFO = (props) => {
     const [username, setUsername] = useState('');
     const [profileuser, setProfile] = useState({});
     const [key, setKey] = useState({});
-    const [coin,setCoin]=useState(0);
+    const [coin, setCoin] = useState(0);
 
     const getUser = async () => {
         const user = await Axios.get(`http://localhost:3001/users/${sessionStorage.getItem('username')}`, { headers: { Authorization: `Bearer ${sessionStorage.getItem('token')}` } })
@@ -180,7 +188,7 @@ const profileINFO = (props) => {
                             <div className="page-body">
                                 <div className="account-profile">
                                     <div className="account-profile-img">
-                                        <img src="/static/images/picture2.png" className="img_profile" onClick={()=>getBalance()}/>
+                                        <img src="/static/images/picture2.png" className="img_profile" onClick={() => getBalance()} />
                                     </div>
                                     <div className="account-profile-detail">
                                         <h3 className="detail-name">คุณ {profileuser.firstname} {profileuser.lastname} </h3>
