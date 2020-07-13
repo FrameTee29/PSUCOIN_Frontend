@@ -181,6 +181,13 @@ const StyledWrapper = styled.div`
             margin:0px;
         }
 
+        .page-header h2{
+            display:flex;
+            width:100%;
+            font-size:25px;
+            margin-bottom:10px;
+        }
+
         .account-profile-detail{
             margin-top:10px;
         }
@@ -201,6 +208,11 @@ const StyledWrapper = styled.div`
             width:100%;
             justify-content:space-evenly;
             margin-bottom:10px;
+        }
+
+        .detail-name{
+            font-size:18px;
+            font-family:'Krub-Regular';
         }
        
     }
@@ -226,6 +238,12 @@ const StyledWrapper = styled.div`
             justify-content:center;
         }
     
+        .page-header h2{
+            display:flex;
+            width:100%;
+            font-size:25px;
+            margin-bottom:10px;
+        }
         .img_profile{
         width:200px;
         height:200px;
@@ -253,6 +271,11 @@ const StyledWrapper = styled.div`
         .column-slide{
             display:none;
         }
+
+        .detail-name{
+            font-size:18px;
+            font-family:'Krub-Regular';
+        }
     }
 
     @media only screen and (max-width:375px){
@@ -275,6 +298,13 @@ const StyledWrapper = styled.div`
             flex-direction:column; 
             align-items:center;
             justify-content:center;
+        }
+
+        .page-header h2{
+            display:flex;
+            width:100%;
+            font-size:25px;
+            margin-bottom:10px;
         }
     
         .img_profile{
@@ -299,6 +329,11 @@ const StyledWrapper = styled.div`
 
         .account-section-item-label-name{
             font-size:15px;
+        }
+
+        .detail-name{
+            font-size:18px;
+            font-family:'Krub-Regular';
         }
     }
 
@@ -327,13 +362,21 @@ const StyledWrapper = styled.div`
         }
 
         .detail-balance-coin strong{
-        font-family:'Krub-Regular';
-        font-size: 20px;
-        margin-left: 10px;
-        font-weight: 700;
-        color: rgb(29, 77, 160);
+            font-family:'Krub-Regular';
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: 700;
+            color: rgb(29, 77, 160);
         }
     
+        .page-header h2{
+            display:flex;
+            width:100%;
+            font-size:25px;
+            margin-bottom:10px;
+        }
+        
+  
         .img_profile{
             width:200px;
             height:200px;
@@ -356,6 +399,12 @@ const StyledWrapper = styled.div`
 
         .account-section-item-label-name{
             font-size:13px;
+        }
+
+
+        .detail-name{
+            font-size:18px;
+            font-family:'Krub-Regular';
         }
     }
     

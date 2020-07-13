@@ -47,8 +47,8 @@ span:hover{
     ul{
     font-family:'Krub-Regular';
     color: rgb(82, 82, 82);
-    font-size:20px;
-    font-weight:500;
+    font-size:18px;
+    font-weight:600;
     display:grid;
     grid-template-columns:200px 200px;
     padding:0px;
@@ -60,8 +60,8 @@ span:hover{
     ul{
     font-family:'Krub-Regular';
     color: rgb(82, 82, 82);
-    font-size: 20px;
-    font-weight:500;
+    font-size:15px;
+    font-weight:600;
     display:grid;
     grid-template-columns:160px 160px;
     padding:0px;
