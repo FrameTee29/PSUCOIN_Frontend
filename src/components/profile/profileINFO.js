@@ -125,7 +125,7 @@ const StyledWrapper = styled.div`
     }
 
     @media only screen and (max-width:768px){
-
+        
         .detail-balance-coin{
             font-size:15px;
             font-family:'Krub-Regular';
@@ -142,7 +142,9 @@ const StyledWrapper = styled.div`
 }
 
     @media only screen and (max-width:425px){
-        
+        .column-slide{
+            display:none;
+        }
         .row-container{
             display:flex;
             flex-direction:column;
@@ -183,7 +185,9 @@ const StyledWrapper = styled.div`
         }
     }
     @media only screen and (max-width:415px){
-        
+        .column-slide{
+            display:none;
+        }
         .row-container{
             display:flex;
             flex-direction:column;
@@ -228,7 +232,9 @@ const StyledWrapper = styled.div`
     }
 
     @media only screen and (max-width:375px){
-        
+        .column-slide{
+            display:none;
+        }
         .row-container{
             display:flex;
             flex-direction:column;
@@ -283,6 +289,10 @@ const StyledWrapper = styled.div`
 
         .column-content{
             max-width: 320px;
+        }
+
+        .column-slide{
+            display:none;
         }
 
         .account-profile{
