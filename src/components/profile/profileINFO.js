@@ -182,6 +182,104 @@ const StyledWrapper = styled.div`
         
         }
     }
+
+    @media only screen and (max-width:375px){
+        
+        .row-container{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            padding:0px;
+        }
+
+        .column-content{
+            max-width: 375px;
+        }
+
+        .account-profile{
+            display: flex;
+            flex-direction:column; 
+            align-items:center;
+            justify-content:center;
+        }
+    
+        .img_profile{
+            width:200px;
+            height:200px;
+            border-radius:100px;
+        }
+        .account-profile-img{
+            margin:0px;
+        }
+
+        .account-profile-detail{
+            margin-top:10px;
+        }
+    
+        .account-section-item-label{
+            display: flex;
+            align-items: center;
+            flex-basis: 180px;
+            font-size:15px;
+        }
+
+        .account-section-item-label-name{
+            font-size:15px;
+        }
+    }
+
+    @media only screen and (max-width:320px){
+        
+        .row-container{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            padding:0px;
+        }
+
+        .column-content{
+            max-width: 320px;
+        }
+
+        .account-profile{
+            display: flex;
+            flex-direction:column; 
+            align-items:center;
+            justify-content:center;
+        }
+
+        .detail-balance-coin strong{
+        font-family:'Krub-Regular';
+        font-size: 36px;
+        margin-left: 10px;
+        font-weight: 700;
+        color: rgb(29, 77, 160);
+        }
+    
+        .img_profile{
+            width:200px;
+            height:200px;
+            border-radius:100px;
+        }
+        .account-profile-img{
+            margin:0px;
+        }
+
+        .account-profile-detail{
+            margin-top:10px;
+        }
+    
+        .account-section-item-label{
+            display: flex;
+            align-items: center;
+            flex-basis: 180px;
+            font-size:15px;
+        }
+
+        .account-section-item-label-name{
+            font-size:15px;
+        }
+    }
     
 `
 
