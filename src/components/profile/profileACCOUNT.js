@@ -11,11 +11,8 @@ import Slidenav2 from './subsection/slidenav2';
 
 const StyledWrapper = styled.div`
    
-    
     font-family:'Krub-Bold';
 
-    
-    
     .container{
         position: relative;
         width: 100%;
@@ -37,30 +34,19 @@ const StyledWrapper = styled.div`
         flex-basis: calc(100% - 260px);
         max-width: calc(100% - 260px);
     }
-
-    .info-content{
-        
-        max-width: 100%;
-    }
-
     .page-header{
-       display:flex;
-       width:100%;
-       margin-bottom:10px;
+       margin-bottom:20px;
     }
 
     .dashedline{
         display:flex;
-        width:100%;
-        margin-bottom:10px;
+        margin-bottom:15px;
         margin-top:10px;
         border-bottom: 2px dashed #d9dee3;
     }
 
     .account-section{
         color: rgb(82, 82, 82);
-        font-weight: 500;
-        font-size: 24px;
     }
 
     .detail-head{
@@ -72,26 +58,26 @@ const StyledWrapper = styled.div`
 
     .account-section-item{
         display: flex;
+        flex-direction:row;
         font-family:'Krub-Regular';
+        font-size: 18px;
         font-weight: 500;
-        font-size: 20px;
-        align-items: center;
         margin-bottom: 8px;
     }
 
-    .account-section-item-label-name{
-        display:flex;
-        max-width:600px;
-    }
     .account-section-item-label{
-        display: flex;
-        font-family:'Krub-Regular';
-        align-items: center;
-        flex-basis: 260px;
-        margin-right: 10px;
-   
+        display:flex;
+        max-width: 260px;
+        flex-basis:220px;  
     }
+    
+    .label{
+        flex-basis: calc(100% - 220px);
+        max-width: calc(100% - 220px);
+        word-wrap: break-word;
+    } 
     .icon-item{
+        
         font-size:24px;
         margin-right:20px;
     }
@@ -100,141 +86,7 @@ const StyledWrapper = styled.div`
         font-size:24px;
         margin-right:20px;
     }
-    .label{
-        max-width: 620px;
-        word-wrap: break-word;
-    }
-
-
-    @media only screen and (max-width:1024px){
-        
-        .detail-balance-coin{
-            font-size:15px;
-            font-family:'Krub-Regular';
-        }
-
-        .detail-balance-coin strong{
-            font-family:'Krub-Regular';
-            font-size: 25px;
-            margin-left: 10px;
-            font-weight: 700;
-            color: rgb(29, 77, 160);
-        }
-
-        .account-section-item-label{
-            display: flex;
-            font-family:'Krub-Regular';
-            align-items: center;
-            flex-basis: 200px;
-            margin-right: 10px;
-   
-        }
-
-        .label{
-            max-width: 500px;
-            font-size:18px;
-            word-wrap: break-word;
-        }
-    }
-
-    @media only screen and (max-width:768px){
-
-        .container{
-        position: relative;
-        max-width: 768px;
-        }
-
-        .row-container{
-            flex-direction:column;
-            padding:0px;
-        }
-        .column-slide{
-            display:none;
-        }
-
-        .column-content{
-            max-width: 100%;
-        }
-        
-    }
-
-    @media only screen and (max-width:425px){
-
-        .container{
-        position: relative;
-        max-width: 425px;
-        }
-
-    .row-container{
-        display:flex;
-        width:100%;
-        padding:60px 0px;
-    }
-
-
-    .page-header{
-       display:flex;
-       width:100%;
-       margin-bottom:10px;
-    }
-
-    .dashedline{
-        display:flex;
-        width:100%;
-        margin-bottom:10px;
-        margin-top:10px;
-        border-bottom: 2px dashed #d9dee3;
-    }
-
-    .account-section{
-        color: rgb(82, 82, 82);
-        font-weight: 500;
-        font-size: 24px;
-    }
-
-    .detail-head{
-        font-family:'Krub-Regular';
-        font-weight: 500;
-        font-size: 20px;
-        margin-bottom:20px;
-    }
-
-    .account-section-item{
-        display: flex;
-        font-family:'Krub-Regular';
-        font-weight: 500;
-        font-size: 20px;
-        align-items: center;
-        margin-bottom: 8px;
-    }
-
-    .account-section-item-label-name{
-        display:flex;
-        max-width:600px;
-    }
-    .account-section-item-label{
-        display: flex;
-        font-family:'Krub-Regular';
-        align-items: center;
-        flex-basis: 260px;
-        margin-right: 10px;
-   
-    }
-    .icon-item{
-        font-size:24px;
-        margin-right:20px;
-    }
-    .icon-item-key{
-        cursor: pointer;
-        font-size:24px;
-        margin-right:20px;
-    }
-    .label{
-        max-width: 620px;
-        word-wrap: break-word;
-    }
-        
-    }   
+    
     
 `
 
@@ -264,38 +116,40 @@ const profileACCOUNT = (props) => {
                     <div className="column-slide">
                         <Slidenav />
                     </div>
-                    <div className="column-slide-change-hamburger">
-                        <Slidenav2/>
-                    </div>
+
                     <div className="column-content">
+
                         <div className="info-content">
                             <div className="page-header">
                                 <h2>บัญชีของฉัน</h2>
                             </div>
                             <div className="dashedline"></div>
                         </div>
+
                         <div className="account-section">
+
                             <div className="detail-head">กุญแจของฉัน</div>
+
                             <div className="account-section-item">
-                                <div className="account-section-item-label"><FaKey className="icon-item" />กุญแจสาธารณะ </div>
-                                <div className="account-section-item-label-name">
-                                    <div className="label">{key.publickey}
-                                        <CopyToClipboard text={key.publickey} onCopy={() => setCopied(true)}>
-                                            <AiOutlineCopy className="icon-item-key" />
-                                        </CopyToClipboard>
-                                    </div>
+                                <div className="account-section-item-label"><FaKey className="icon-item" />กุญแจสาธารณะ</div>
+                                <div className="label">{key.publickey}
+                                    <CopyToClipboard text={key.publickey} onCopy={() => setCopied(true)}>
+                                        <AiOutlineCopy className="icon-item-key" />
+                                    </CopyToClipboard>
                                 </div>
                             </div>
+
                             <div className="account-section-item">
                                 <div className="account-section-item-label"><RiGitRepositoryPrivateLine className="icon-item" />กุญแจส่วนตัว </div>
-                                <div className="account-section-item-label-name">
-                                    <div className="label">{key.privatekey}
-                                        <CopyToClipboard text={key.privatekey} onCopy={() => setCopied(true)}>
-                                            <AiOutlineCopy className="icon-item-key" />
-                                        </CopyToClipboard></div>
+                                <div className="label">{key.privatekey}
+                                    <CopyToClipboard text={key.privatekey} onCopy={() => setCopied(true)}>
+                                        <AiOutlineCopy className="icon-item-key" />
+                                    </CopyToClipboard>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
