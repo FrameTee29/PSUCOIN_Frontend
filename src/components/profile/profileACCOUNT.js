@@ -10,8 +10,8 @@ import Slidenav from './subsection/slidenav';
 import Slidenav2 from './subsection/slidenav2';
 
 const StyledWrapper = styled.div`
-    display:block;
-    width:100%;
+   
+    
     font-family:'Krub-Bold';
 
     
@@ -139,6 +139,11 @@ const StyledWrapper = styled.div`
 
     @media only screen and (max-width:768px){
 
+        .container{
+        position: relative;
+        max-width: 768px;
+        }
+
         .row-container{
             flex-direction:column;
             padding:0px;
@@ -147,7 +152,87 @@ const StyledWrapper = styled.div`
             display:none;
         }
 
+        .column-content{
+            max-width: 100%;
+        }
         
+    }
+
+    @media only screen and (max-width:425px){
+
+        .container{
+        position: relative;
+        max-width: 425px;
+        }
+
+    .row-container{
+        display:flex;
+        width:100%;
+        padding:60px 0px;
+    }
+
+
+    .page-header{
+       display:flex;
+       width:100%;
+       margin-bottom:10px;
+    }
+
+    .dashedline{
+        display:flex;
+        width:100%;
+        margin-bottom:10px;
+        margin-top:10px;
+        border-bottom: 2px dashed #d9dee3;
+    }
+
+    .account-section{
+        color: rgb(82, 82, 82);
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .detail-head{
+        font-family:'Krub-Regular';
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom:20px;
+    }
+
+    .account-section-item{
+        display: flex;
+        font-family:'Krub-Regular';
+        font-weight: 500;
+        font-size: 20px;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .account-section-item-label-name{
+        display:flex;
+        max-width:600px;
+    }
+    .account-section-item-label{
+        display: flex;
+        font-family:'Krub-Regular';
+        align-items: center;
+        flex-basis: 260px;
+        margin-right: 10px;
+   
+    }
+    .icon-item{
+        font-size:24px;
+        margin-right:20px;
+    }
+    .icon-item-key{
+        cursor: pointer;
+        font-size:24px;
+        margin-right:20px;
+    }
+    .label{
+        max-width: 620px;
+        word-wrap: break-word;
+    }
         
     }   
     
