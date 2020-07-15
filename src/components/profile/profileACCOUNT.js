@@ -86,6 +86,27 @@ const StyledWrapper = styled.div`
         font-size:24px;
         margin-right:20px;
     }
+
+        .column-slide-change-hamburger{
+            display:none;
+        }
+
+    @media only screen and (max-width:425px){
+        .column-slide{
+        display:none;
+        }
+
+        .column-slide-change-hamburger{
+            display:flex;
+        }
+
+        .row-container{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            padding:0px;
+        }
+    }
     
     
 `
@@ -116,7 +137,9 @@ const profileACCOUNT = (props) => {
                     <div className="column-slide">
                         <Slidenav />
                     </div>
-
+                    <div className="column-slide-change-hamburger">
+                        <Slidenav2/>
+                    </div>
                     <div className="column-content">
 
                         <div className="info-content">
