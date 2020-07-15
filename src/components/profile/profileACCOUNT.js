@@ -106,6 +106,84 @@ const StyledWrapper = styled.div`
             width:100%;
             padding:0px;
         }
+
+        .column-content{
+            margin-top:80px;
+            max-width:425px;
+        }
+        .account-section{
+            display: flex;
+            flex-direction:column;
+        }
+
+        .account-section-item{
+        display: flex;
+        font-size: 16px;
+        margin-bottom: 8px;
+        }
+
+        .account-section-item-label{
+            
+            flex-basis:160px;  
+        }
+
+        .label{
+            flex-basis: calc(100% - 160px);
+            max-width: calc(100% - 160px);
+            word-wrap: break-word;
+        } 
+
+        .column-slide-change-hamburger{
+            display:flex;
+            width:100%;
+            justify-content:space-evenly;
+            margin-bottom:10px;
+        }
+        
+    }
+
+    @media only screen and (max-width:320px){
+        .column-slide{
+        display:none;
+        }
+
+        .column-slide-change-hamburger{
+            display:flex;
+        }
+
+        .row-container{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            padding:0px;
+        }
+
+        .column-content{
+            margin-top:80px;
+            max-width:320px;
+        }
+        .account-section{
+            display: flex;
+            flex-direction:column;
+        }
+
+        .account-section-item{
+        display: flex;
+        font-size: 15px;
+        margin-bottom: 8px;
+        }
+
+        .account-section-item-label{
+            
+            flex-basis:160px;  
+        }
+
+        .label{
+            flex-basis: calc(100% - 160px);
+            max-width: calc(100% - 160px);
+            word-wrap: break-word;
+        } 
+        
     }
     
     
