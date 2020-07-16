@@ -68,6 +68,7 @@ const StyledWrapper = styled.div`
 
     .content-signup h5{
       margin-top:5px;
+      font-size:15px;
     }
 
     .BTN-register{
@@ -153,7 +154,7 @@ const StyledWrapper = styled.div`
 
     .content-signup h5{
       margin-top:5px;
-      font-size:15px;
+      font-size:10px;
     }
 
     }

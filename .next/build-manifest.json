@@ -8,6 +8,13 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
+<<<<<<< HEAD
+=======
+    "/Home": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+>>>>>>> developer
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -19,6 +26,29 @@
     "/_polyfills": [
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
+<<<<<<< HEAD
+=======
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/profile/account": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/profile/info": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/profile/transaction": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/transfer/beforesend": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+>>>>>>> developer
     ]
   }
 }

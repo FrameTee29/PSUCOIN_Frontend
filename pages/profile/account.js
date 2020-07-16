@@ -31,7 +31,7 @@ const Account = () => {
             <Topbar drawerToggleClickHandler={drawerToggleClickHandler} />
             <SideDrawer show={sideDrawerOpen} />
             {backdrop}
-            <main style={{ marginTop: '64px' }}>
+            <main style={{ marginTop: '20px' }}>
                 <ProfileAccount/>
             </main>
         </div>
