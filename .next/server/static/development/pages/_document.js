@@ -886,7 +886,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _src_hoc_withAuth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/hoc/withAuth */ "./src/hoc/withAuth.js");
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\pages\\_document.js";
+var _jsxFileName = "D:\\CoE\\Old_PJ\\PROJECT\\PSUCOIN_Frontend\\pages\\_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1105,7 +1105,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _subsection_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./subsection/Signup */ "./src/components/Login/subsection/Signup.js");
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
+var _jsxFileName = "D:\\CoE\\Old_PJ\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\Login.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1324,7 +1324,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\Signup.js";
+var _jsxFileName = "D:\\CoE\\Old_PJ\\PROJECT\\PSUCOIN_Frontend\\src\\components\\Login\\subsection\\Signup.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1669,7 +1669,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Login_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Login/Login */ "./src/components/Login/Login.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\CoE\\PROJECT\\PSUCOIN_Frontend\\src\\hoc\\withAuth.js";
+var _jsxFileName = "D:\\CoE\\Old_PJ\\PROJECT\\PSUCOIN_Frontend\\src\\hoc\\withAuth.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
